@@ -1,0 +1,236 @@
+:root {
+    --light: #FBF5D2;
+    --soft-gold: #FEE39F;
+    --gold: #EFBB55;
+    --copper: #AD6D15;
+    --bronze: #79380B;
+    --dark: #441004;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* NAVBAR */
+header {
+    background: linear-gradient(to right, var(--bronze), var(--dark));
+    padding: 15px 40px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('../assets/bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(68, 16, 4, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--light);
+}
+
+.overlay h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn {
+    background-color: var(--gold);
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--copper);
+}
+
+/* SOBRE */
+.sobre {
+    padding: 60px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    gap: 40px; /* aumenta esse valor */
+    padding: 60px 120px; /* aumenta lateral */
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-family: 'Cinzel', serif;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--copper);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: var(--soft-gold);
+    text-align: center;
+    padding: 15px;
+}
+
+.hero-pequeno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+
+.hero-pequeno img {
+    width: 300px;
+}
+
+.modelos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modelo {
+    background: var(--soft-gold);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* SUBMENU */
+.submenu {
+    background-color: var(--soft-gold);
+    padding: 12px 40px;
+    display: flex;
+    gap: 25px;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+}
+
+.submenu a:hover {
+    color: var(--copper);
+}
+
+/* HERO PEQUENO AJUSTADO */
+.hero-pequeno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+
+.hero-pequeno img {
+    width: 350px;
+}
+
+/* CONTEÚDO MELHOR DISTRIBUÍDO */
+.conteudo {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px; /* mais espaço vertical e horizontal */
+}
+
+/* CARDS AJUSTADOS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%; /* ESSENCIAL */
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* MODELOS MAIS BONITO */
+.modelo {
+    background: var(--soft-gold);
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.hero-pequeno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    gap: 60px;
+}
