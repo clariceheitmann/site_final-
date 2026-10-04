@@ -39,7 +39,8 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    height: 90vh;
+    min-height: 30vh;
+    padding: 60px 20px;
     background: url('../assets/bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -67,7 +68,7 @@ nav a:hover {
 
 /* BOTÃO */
 .btn {
-    background-color: var(--gold);
+    background-color: var(--soft-gold);
     padding: 12px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -77,12 +78,12 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: var(--copper);
+    background-color: var(--gold);
 }
 
 /* SOBRE */
 .sobre {
-    padding: 60px;
+    padding: 00px 20px;
     text-align: center;
 }
 
@@ -100,13 +101,17 @@ nav a:hover {
 
 .card {
     background: white;
-    padding: 25px;
+    padding: 25px 35px;
     border-radius: 15px;
     width: 100%;
-    max-width: 280px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    max-width: 260px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
 }
 
 .card:hover {
@@ -129,13 +134,14 @@ nav a:hover {
 .linha {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 25px; /* menos espaçado */
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* evita ficar quebrado feio */
 }
 
 /* FOOTER */
 footer {
-    background: var(--dark);
+    background: var(--bronze);
     color: var(--soft-gold);
     text-align: center;
     padding: 15px;
@@ -145,9 +151,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px;
-    gap: 40px;
+    padding: 45px 80px 20px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 
 .hero-pequeno img {
     width: 300px;
@@ -184,35 +193,18 @@ footer {
     color: var(--copper);
 }
 
-/* HERO PEQUENO AJUSTADO */
-.hero-pequeno {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
-    gap: 40px;
-}
 
-.hero-pequeno img {
-    width: 350px;
-}
 
 /* CONTEÚDO MELHOR DISTRIBUÍDO */
 .conteudo {
-    padding: 60px 80px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 60px; /* mais espaço vertical e horizontal */
-}
+    gap: 100px;
 
-/* CARDS AJUSTADOS */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 100%; /* ESSENCIAL */
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 1200px; /* ESSENCIAL */
+    margin: 0 auto; /* centraliza */
+
+    padding: 20px 0 40px; /* remove lateral */
 }
 
 /* MODELOS MAIS BONITO */
@@ -224,13 +216,122 @@ footer {
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.hero-pequeno {
+.card img {
+    width: 100%;
+    height: 180px; /* define altura padrão */
+    object-fit: cover; /* ajusta sem distorcer */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.foto-robo {
+    width: 380px;
+    margin: 0;
+    text-align: center;
+}
+
+.fundo-foto {
+    background-color: var(--soft-gold);
+    border: 2px solid var(--gold);
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(68, 16, 4, 0.12);
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 80px;
-    gap: 60px;
+    justify-content: center;
+
+    height: 260px;
+}
+
+.fundo-foto img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.foto-robo figcaption {
+    margin-top: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: var(--bronze);
+}
+
+.tabela {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela th, .tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabela th {
+    background-color: var(--bronze);
+    color: var(--soft-gold);
+}
+
+.tabela a {
+    color: var(--copper);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.conceitos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 60px; /* espaço lateral (ESSE É O MAIS IMPORTANTE) */
+    row-gap: 35px;    /* espaço vertical */
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 40px; /* cria espaço nas laterais */
+}
+
+.conceitos .card {
+    width: 100%;
+    height: auto; /* remove altura fixa */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 20px 25px;
+}
+
+.conceitos .card p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.conceitos .card {
+    max-width: 100%; /* sobrescreve o 260px só aqui */
+    width: 100%;
+
+    height: auto; /* remove altura travada */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 20px 25px;
+}
+
+.conceitos .card h2 {
+    font-size: 22px;
+}
+
+.conceitos .card p {
+    font-size: 15px;
+    line-height: 1.5;
 }
