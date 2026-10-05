@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 2 - Estacionamento Inteligente</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="index.html">Arduino</a>
+            <a href="../robos/index.html">Robôs</a>
+            <a href="../sensores/index.html">Sensores</a>
+            <a href="../perguntas.html">Perguntas</a>
+        </nav>
+    </header>
+
+    <div class="submenu">
+        <a href="index.html">Visão Geral</a>
+        <a href="desafio1.html">Desafio 1</a>
+        <a href="desafio2.html">Desafio 2</a>
+        <a href="desafio3.html">Desafio 3</a>
+    </div>
+
+    <section class="pagina-desafio">
+
+        <div class="topo-desafio">
+            <span class="tag">Desafio 2</span>
+            <h1>Estacionamento Inteligente</h1>
+            <p>
+                Neste desafio, o objetivo foi desenvolver um sistema de
+                estacionamento utilizando um Arduino, um sensor
+                ultrassônico, um potenciômetro e um LED.
+            </p>
+
+            <p>
+                O sistema utiliza a distância de um objeto para determinar
+                o comportamento do LED, criando um alerta visual para
+                indicar a aproximação de um veículo.
+            </p>
+        </div>
+
+        <div class="grid-duplo">
+            <div class="card destaque">
+                <h2>Proposta do Desafio</h2>
+                <p>
+                    O circuito deveria utilizar um sensor ultrassônico para
+                    medir a distância de um objeto. O potenciômetro deveria
+                    permitir que o usuário definisse a distância limite de
+                    segurança.
+                </p>
+
+                <p>
+                    A partir dessa configuração, o LED deveria indicar
+                    visualmente a proximidade do objeto.
+                </p>
+            </div>
+
+            <div class="card destaque">
+                <h2>Componentes</h2>
+                <ul>
+                    <li>Arduino</li>
+                    <li>Sensor Ultrassônico</li>
+                    <li>LED</li>
+                    <li>Potenciômetro</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-duplo">
+
+            <div class="card destaque">
+                <h3>Como o sistema funciona</h3>
+                <p>
+                    O comportamento do LED muda conforme a distância medida
+                    pelo sensor e o limite configurado no potenciômetro.
+                </p>
+            </div>
+
+            <div class="card destaque">
+                <h3>Desafio adicional</h3>
+                <p>
+                    Além do funcionamento básico, foi proposto modificar o
+                    programa para que o LED piscasse cada vez mais rapidamente
+                    conforme o objeto se aproximasse.
+                </p>
+
+                <p>
+                    Dessa forma, quanto menor fosse a distância, mais rápido
+                    seria o alerta visual, simulando um sistema de assistência
+                    para estacionamento.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="grid-duplo">
+            <div class="card">
+                <h2>Simulação</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
+                </p>
+                <iframe src="https://www.youtube.com/embed/YMUV6nTJbcI?si=k57RYKaxH3KH7V-B"></iframe>
+            </div>
+
+            <div class="card">
+                <h2>Aplicação real</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto fora da simulação,
+                    com sua aplicação prática.
+                </p>
+                <iframe src="https://www.youtube.com/embed/q3nLmZelKnI"></iframe>
+            </div>
+        </div>
+
+        <div class="card codigo">
+            <h2>Código</h2>
+            <p>
+                O código é responsável por realizar a leitura da distância,
+                interpretar o valor configurado pelo potenciômetro e
+                controlar o LED de acordo com a proximidade do objeto.
+            </p>
+            <pre><code>
+const int trig = 9;
+const int echo = 10;
+const int led = 13;
+
+void setup(){
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop(){
+  digitalWrite(trig, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig, LOW);
+
+  long duracao = pulseIn(echo, HIGH);
+  int distancia = duracao * 0.034 / 2;
+
+  if(distancia < 10){
+    digitalWrite(led, HIGH);
+  } else if(distancia < 20){
+    digitalWrite(led, HIGH);
+    delay(300);
+    digitalWrite(led, LOW);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}
+</code></pre>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

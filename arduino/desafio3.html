@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 3 - Ambiente Inteligente</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="index.html">Arduino</a>
+            <a href="../robos/index.html">Robôs</a>
+            <a href="../sensores/index.html">Sensores</a>
+            <a href="../perguntas.html">Perguntas</a>
+        </nav>
+    </header>
+
+    <div class="submenu">
+        <a href="index.html">Visão Geral</a>
+        <a href="desafio1.html">Desafio 1</a>
+        <a href="desafio2.html">Desafio 2</a>
+        <a href="desafio3.html">Desafio 3</a>
+    </div>
+
+    <section class="pagina-desafio">
+
+        <div class="topo-desafio">
+            <span class="tag">Desafio 3</span>
+            <h1>Ambiente Inteligente</h1>
+            <p>
+                Sistema automatizado que reage às condições do ambiente utilizando sensores.
+            </p>
+        </div>
+
+        <div class="grid-duplo">
+
+            <div class="card destaque">
+                <h3>
+                    Proposta do desafio
+                </h3>
+
+                <p>
+                    O sistema deveria realizar a leitura da temperatura e da
+                    umidade da estufa e comparar os valores obtidos com
+                    referências estabelecidas na programação.
+                </p>
+
+                <p>
+                    A partir dessas informações, os LEDs deveriam indicar
+                    visualmente se as condições do ambiente estavam adequadas
+                    ou se algum dos parâmetros estava fora do limite definido.
+                </p>
+            </div>
+
+            <div class="card destaque">
+                <h3>
+                    Componentes utilizados
+                </h3>
+
+                <ul>
+
+                    <li>Arduino</li>
+
+                    <li>LED verde</li>
+
+                    <li>LED vermelho</li>
+
+                    <li>LED amarelo</li>
+
+                    <li>Sensor de temperatura</li>
+
+                    <li>Sensor de umidade</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="card destaque">
+            <h2>Como o sistema funciona</h2>
+            <p>
+                O sistema lê os valores de temperatura e umidade através de sensores analógicos.
+                A partir dessas leituras, ele determina se o ambiente está em condições ideais.
+                Caso a temperatura esteja fora do intervalo aceitável ou a umidade esteja baixa,
+                LEDs indicam o estado do ambiente em tempo real.
+            </p>
+        </div>
+
+        <div class="grid-duplo">
+
+            <div class="card">
+                <h2>Simulação no Tinkercad</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
+                </p>
+                <iframe src="https://www.youtube.com/embed/keSdu6UFd60"></iframe>
+            </div>
+
+            <div class="card">
+                <h2>Aplicação real</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto fora da simulação,
+                    com sua aplicação prática.
+                </p>
+                <iframe src="https://www.youtube.com/embed/yov9PGa2Hv4"></iframe>
+            </div>
+
+        </div>
+
+        <div class="card bloco codigo">
+            <h2>Código Arduino</h2>
+
+            <pre><code>
+const int tempPin = A0;
+const int umidadePin = A1;
+
+const int verde = 8;
+const int amarelo = 10;
+const int vermelho = 12;
+
+void setup() {
+
+  Serial.begin(9600);
+
+  pinMode(verde, OUTPUT);
+  pinMode(amarelo, OUTPUT);
+  pinMode(vermelho, OUTPUT);
+
+}
+
+void loop() {
+
+  int leituraTemp = analogRead(tempPin);
+
+  float tensao = leituraTemp * (5.0 / 1023.0);
+
+  float temperatura = (tensao - 0.5) * 100;
+
+  int umidade = analogRead(umidadePin);
+
+  Serial.print("Temperatura: ");
+  Serial.print(temperatura);
+
+  Serial.print(" C   Umidade: ");
+  Serial.println(umidade);
+
+  digitalWrite(verde, LOW);
+  digitalWrite(amarelo, LOW);
+  digitalWrite(vermelho, LOW);
+
+  bool temperaturaRuim = temperatura > 30 || temperatura < -10;
+  bool umidadeBaixa = umidade < 50;
+
+  if (temperaturaRuim) {
+    digitalWrite(vermelho, HIGH);
+  }
+
+  if (umidadeBaixa) {
+    digitalWrite(amarelo, HIGH);
+  }
+
+  if (!temperaturaRuim && !umidadeBaixa) {
+    digitalWrite(verde, HIGH);
+  }
+
+  delay(500);
+
+}
+        </code></pre>
+        </div>
+
+    </section>

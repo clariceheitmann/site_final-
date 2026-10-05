@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 1 - Iluminação Inteligente</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="index.html">Arduino</a>
+            <a href="../robos/index.html">Robôs</a>
+            <a href="../sensores/index.html">Sensores</a>
+            <a href="../perguntas.html">Perguntas</a>
+        </nav>
+    </header>
+
+    <div class="submenu">
+        <a href="index.html">Visão Geral</a>
+        <a href="desafio1.html">Desafio 1</a>
+        <a href="desafio2.html">Desafio 2</a>
+        <a href="desafio3.html">Desafio 3</a>
+    </div>
+
+    <section class="pagina-desafio">
+
+        <div class="topo-desafio">
+            <span class="tag">Desafio 1</span>
+            <h1>Iluminação Inteligente</h1>
+            <p>
+                Neste desafio, o objetivo foi desenvolver um sistema de
+                iluminação automática utilizando um Arduino, um LED, um
+                sensor de presença/movimento e um sensor de luminosidade.
+            </p>
+        </div>
+
+        <div class="grid-duplo">
+            <div class="card destaque">
+                <h2>Proposta do desafio</h2>
+                <p>
+                    O circuito deveria controlar automaticamente um LED de
+                    acordo com a presença de uma pessoa e com a quantidade
+                    de luz existente no ambiente.
+                </p>
+
+                <p>
+                    Dessa forma, o sistema simula uma iluminação inteligente,
+                    capaz de evitar que a luz permaneça ligada quando não
+                    existe necessidade.
+                </p>
+            </div>
+
+            <div class="card destaque">
+                <h2>Componentes utilizados</h2>
+                <ul>
+                    <li>Arduino Uno</li>
+                    <li>LED</li>
+                    <li>Sensor de presença (PIR)</li>
+                    <li>Sensor de luminosidade (LDR)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card destaque">
+            <h2>Como o sistema funciona</h2>
+            <p>
+                O LED acende apenas quando duas condições são atendidas:
+                presença detectada e ambiente escuro. Caso haja luz ou ausência de movimento,
+                o LED permanece desligado.
+            </p>
+        </div>
+
+        <div class="grid-duplo">
+            <div class="card">
+                <h2>Simulação no Tinkercad</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
+                </p>
+                <iframe src="https://www.youtube.com/embed/mfG8iMOk0UQ?si=zP_e-X5l_d-jDACB"></iframe>
+            </div>
+
+            <div class="card">
+                <h2>Aplicação na vida real</h2>
+                <p>
+                    Vídeo demonstrando o funcionamento do projeto fora da simulação,
+                    com sua aplicação prática.
+                </p>
+                <iframe src="https://www.youtube.com/embed/xsrm7AO8uVc"></iframe>
+            </div>
+        </div>
+
+        <div class="card codigo">
+            <h2>Código do Arduino</h2>
+
+            <p>
+                O código abaixo é responsável por receber as informações
+                dos sensores e controlar o estado do LED de acordo com
+                a lógica proposta no desafio.
+            </p>
+
+            <pre><code>
+const int led = 13;
+const int pir = 2;
+const int ldr = A0;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  pinMode(pir, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int movimento = digitalRead(pir);
+  int luz = analogRead(ldr);
+
+  if (movimento == HIGH && luz < 500) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}
+</code></pre>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

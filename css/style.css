@@ -95,8 +95,10 @@ nav a:hover {
 /* CARDS */
 .cards {
     display: grid;
-    gap: 40px; /* aumenta esse valor */
-    padding: 60px 120px; /* aumenta lateral */
+    gap: 40px;
+    /* aumenta esse valor */
+    padding: 60px 120px;
+    /* aumenta lateral */
 }
 
 .card {
@@ -105,7 +107,7 @@ nav a:hover {
     border-radius: 15px;
     width: 100%;
     text-align: left;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     max-width: 260px;
 }
 
@@ -116,7 +118,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
@@ -134,9 +136,11 @@ nav a:hover {
 .linha {
     display: flex;
     justify-content: center;
-    gap: 25px; /* menos espaçado */
+    gap: 25px;
+    /* menos espaçado */
     margin-bottom: 25px;
-    flex-wrap: wrap; /* evita ficar quebrado feio */
+    flex-wrap: wrap;
+    /* evita ficar quebrado feio */
 }
 
 /* FOOTER */
@@ -201,10 +205,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
 
-    max-width: 1200px; /* ESSENCIAL */
-    margin: 0 auto; /* centraliza */
+    max-width: 1200px;
+    /* ESSENCIAL */
+    margin: 0 auto;
+    /* centraliza */
 
-    padding: 20px 0 40px; /* remove lateral */
+    padding: 20px 0 40px;
+    /* remove lateral */
 }
 
 /* MODELOS MAIS BONITO */
@@ -221,8 +228,10 @@ section {
 
 .card img {
     width: 100%;
-    height: 180px; /* define altura padrão */
-    object-fit: cover; /* ajusta sem distorcer */
+    height: 180px;
+    /* define altura padrão */
+    object-fit: cover;
+    /* ajusta sem distorcer */
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -269,7 +278,8 @@ section {
     overflow: hidden;
 }
 
-.tabela th, .tabela td {
+.tabela th,
+.tabela td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: center;
@@ -290,17 +300,21 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    column-gap: 60px; /* espaço lateral (ESSE É O MAIS IMPORTANTE) */
-    row-gap: 35px;    /* espaço vertical */
+    column-gap: 60px;
+    /* espaço lateral (ESSE É O MAIS IMPORTANTE) */
+    row-gap: 35px;
+    /* espaço vertical */
 
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 40px; /* cria espaço nas laterais */
+    padding: 20px 40px;
+    /* cria espaço nas laterais */
 }
 
 .conceitos .card {
     width: 100%;
-    height: auto; /* remove altura fixa */
+    height: auto;
+    /* remove altura fixa */
 
     display: flex;
     flex-direction: column;
@@ -315,10 +329,12 @@ section {
 }
 
 .conceitos .card {
-    max-width: 100%; /* sobrescreve o 260px só aqui */
+    max-width: 100%;
+    /* sobrescreve o 260px só aqui */
     width: 100%;
 
-    height: auto; /* remove altura travada */
+    height: auto;
+    /* remove altura travada */
 
     display: flex;
     flex-direction: column;
@@ -334,4 +350,175 @@ section {
 .conceitos .card p {
     font-size: 15px;
     line-height: 1.5;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+code {
+    font-family: monospace;
+}
+
+/* CONTAINER GERAL */
+.pagina-desafio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* TOPO */
+.topo-desafio {
+    margin-bottom: 30px;
+}
+
+.topo-desafio h1 {
+    font-family: 'Cinzel', serif;
+    margin: 10px 0;
+}
+
+.tag {
+    background: var(--soft-gold);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* GRID 2 COLUNAS */
+.grid-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* CARDS PADRÃO */
+.card {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* DESTAQUE (primeiros blocos) */
+.card.destaque {
+    border-left: 5px solid var(--gold);
+}
+
+/* BLOCO GRANDE */
+.card.bloco {
+    margin-bottom: 25px;
+}
+
+/* VÍDEO */
+.card iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* CÓDIGO */
+.card.codigo {
+    background: #1e1e2f;
+    color: #fff;
+}
+
+.card.codigo pre {
+    overflow-x: auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+    .grid-duplo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================= */
+/* ARDUINO (ISOLADO) */
+/* ========================= */
+
+.pagina-desafio {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pagina-desafio * {
+    box-sizing: border-box;
+}
+
+/* SOMENTE cards dentro do Arduino */
+.pagina-desafio .card {
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 20px;
+}
+
+/* GRID só dentro do Arduino */
+.pagina-desafio .grid-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* espaçamento geral */
+.pagina-desafio>* {
+    margin-bottom: 30px;
+}
+
+/* vídeos */
+.pagina-desafio .card iframe {
+    height: 200px;
+}
+
+/* ========================= */
+/* ROBÔS - CORREÇÃO FINAL */
+/* ========================= */
+
+.conteudo-robos {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    /* 🔥 flexível */
+
+    gap: 90px;
+
+    max-width: 900px;
+    /* 🔥 controla o bloco inteiro */
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+/* remove limitação de largura SÓ aqui */
+.conteudo-robos .card {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* deixa mais bonito e proporcional */
+.conteudo-robos .card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* listas mais organizadas */
+.conteudo-robos ul {
+    padding-left: 18px;
+    margin: 10px 0;
 }
