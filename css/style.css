@@ -522,3 +522,185 @@ code {
     padding-left: 18px;
     margin: 10px 0;
 }
+
+/* ========================= */
+/* GRID DOS SENSORES */
+/* ========================= */
+
+#catalago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ========================= */
+/* CARD DO SENSOR */
+/* ========================= */
+
+.sensor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Número do sensor */
+.numero-sensor {
+  font-size: 14px;
+  font-weight: bold;
+  color: #CF4A4D;
+}
+
+/* ========================= */
+/* IMAGEM + TEXTO LADO A LADO */
+/* ========================= */
+
+.sensor-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 900px; /* 🔥 largura grande = retangular */
+
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.imagem-sensor {
+  width: 280px;
+  height: 180px;
+
+  background-color: rgba(87, 47, 72, 0.08);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-sensor img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  display: block; /* evita desalinhamento estranho */
+}
+
+/* ========================= */
+/* BLOCO DE INFORMAÇÃO */
+/* ========================= */
+
+.informacao-sensor {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 25px;
+
+  background-color: rgba(87, 47, 72, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* títulos internos */
+.informacao-sensor h4 {
+  margin-top: 10px;
+  color: #572F48;
+}
+
+/* listas */
+.informacao-sensor ul {
+  padding-left: 18px;
+}
+
+/* ========================= */
+/* RESPONSIVO (CELULAR) */
+/* ========================= */
+
+@media (max-width: 768px) {
+  #catalago {
+    grid-template-columns: 1fr;
+  }
+
+  .sensor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .sensor-card h3,
+  .sensor-card .numero-sensor,
+  .sensor-card .categoria {
+    grid-column: span 1;
+  }
+
+  .imagem-sensor {
+    text-align: center;
+  }
+}
+
+.conceitos .card {
+    max-width: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 18px 22px;
+
+    border-radius: 16px;
+}
+
+.informacao-sensor p,
+.informacao-sensor li {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.informacao-sensor h4 {
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* ========================= */
+/* CONTEÚDO INTERNO EM 2 COLUNAS */
+/* ========================= */
+
+.informacao-sensor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  background-color: rgba(87, 47, 72, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* cada bloco ocupa uma coluna */
+.informacao-sensor > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* títulos internos */
+.informacao-sensor h4 {
+  margin: 0;
+  color: #572F48;
+}
+
+/* listas */
+.informacao-sensor ul {
+  padding-left: 18px;
+  margin: 0;
+}

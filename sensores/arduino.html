@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arduino | Indústria 4.0</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="../index.html">Início</a>
+<a href="../robos/index.html">Robôs</a>
+<a href="../arduino/index.html">Arduino</a>
+<a href="./sensores.html">Sensores</a>
+<a href="../perguntas/index.html">Perguntas</a>
+</nav>
+</header>
+
+<div class="submenu">
+        <a href="index.html">Introdução</a>
+        <a href="./arduino.html">Arduino</a>
+        <a href="./sensores.html">Tipos de Sensores</a>
+    </div>
+
+<!-- HERO -->
+<section class="hero-pequeno">
+<div>
+<p class="destaque">Plataforma IoT • Microcontrolador</p>
+<h1>Arduino</h1>
+<p>
+Base da prototipagem eletrônica e da automação. Permite ler sensores,
+processar dados e controlar dispositivos.
+</p>
+</div>
+
+<img src="../img/sensores/arduino.png" alt="Arduino Uno">
+</section>
+
+<!-- CONTEÚDO -->
+<section class="conteudo">
+
+<div class="card">
+<h2>Conceito</h2>
+<p>
+O Arduino é uma plataforma open-source composta por hardware e software,
+utilizada para desenvolver sistemas embarcados e automação.
+</p>
+<ul>
+<li>Ler sensores</li>
+<li>Processar dados</li>
+<li>Controlar atuadores</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Hardware</h2>
+<p><strong>Microcontrolador:</strong> ATmega328P</p>
+<p><strong>Entradas:</strong> Digitais e Analógicas</p>
+<p><strong>Comunicação:</strong> UART, I2C, SPI</p>
+<p><strong>Alimentação:</strong> 5V ou 7–12V</p>
+<p><strong>Clock:</strong> 16 MHz</p>
+</div>
+
+<div class="card">
+<h2>Software</h2>
+<p>Utiliza a Arduino IDE com linguagem baseada em C/C++.</p>
+
+<pre><code>
+void setup() {
+}
+
+void loop() {
+}
+</code></pre>
+</div>
+
+<div class="card">
+<h2>Funcionamento</h2>
+<ul>
+<li>Entrada: sensores</li>
+<li>Processamento: código</li>
+<li>Saída: LEDs, motores</li>
+<li>Comunicação: computador ou IoT</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Características</h2>
+<ul>
+<li>Baixo custo</li>
+<li>Fácil uso</li>
+<li>Versátil</li>
+<li>Open-source</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Sinais</h2>
+<table class="tabela">
+<tr>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+<tr>
+<td>Digital</td>
+<td>0 ou 1</td>
+</tr>
+<tr>
+<td>Analógico</td>
+<td>Valor contínuo</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>Simulação analógica</td>
+</tr>
+</table>
+</div>
+
+</section>
+
+<!-- BLOCO DE CÓDIGOS (mantém separado pra não quebrar layout) -->
+<section class="pagina-desafio">
+
+<h2>Exemplos de Programação</h2>
+
+<div class="card codigo">
+<h3>DHT11</h3>
+
+<pre><code>
+#include &lt;DHT.h&gt;
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  float temp = dht.readTemperature();
+  Serial.println(temp);
+  delay(2000);
+}
+</code></pre>
+
+</div>
+
+<div class="card codigo">
+<h3>HC-SR04</h3>
+
+<pre><code>
+#define trigPin 9
+#define echoPin 10
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duracao = pulseIn(echoPin, HIGH);
+  float distancia = duracao * 0.034 / 2;
+
+  Serial.println(distancia);
+}
+</code></pre>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 - Sensores</p>
+</footer>
+
+</body>
+</html>
