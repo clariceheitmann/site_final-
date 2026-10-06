@@ -704,3 +704,34 @@ code {
   padding-left: 18px;
   margin: 0;
 }
+
+/* ========================= */
+/* PÁGINA DE REFERÊNCIAS */
+/* ========================= */
+
+.referencias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+}
+
+.referencias-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.referencias-grid .botao {
+    margin-top: auto;
+}
+
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .referencias-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
