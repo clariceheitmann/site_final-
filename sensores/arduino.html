@@ -1,140 +1,226 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arduino | Indústria 4.0</title>
+    <title>Arduino | Indústria 4.0</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+    <link rel="stylesheet" href="../css/sensores/sensores.css">
+    <link rel="stylesheet" href="../css/sensores/arduino.css">
 </head>
 
-<body>
+<body class="pagina-sensores-arduino">
 
-<header>
-<nav>
-<a href="../index.html">Início</a>
-<a href="../robos/index.html">Robôs</a>
-<a href="../arduino/index.html">Arduino</a>
-<a href="./sensores.html">Sensores</a>
-<a href="../perguntas/index.html">Perguntas</a>
-<a href="../referencias/index.html">Referências</a>
-</nav>
-</header>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-<div class="submenu">
+    <header class="cabecalho">
+
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <span class="logo-detalhe">✦</span>
+                Indústria 4.0
+            </a>
+        </div>
+
+        <nav class="navegacao">
+            <a href="../index.html" class="nav-link">Início</a>
+            <a href="../robos/index.html" class="nav-link">Robôs</a>
+            <a href="../arduino/index.html" class="nav-link">Arduino</a>
+            <a href="index.html" class="nav-link ativo">Sensores</a>
+            <a href="../perguntas/index.html" class="nav-link">Perguntas</a>
+            <a href="../referencias/index.html" class="nav-link">Referências</a>
+        </nav>
+
+        <div class="detalhe-navbar"></div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SUBNAVBAR
+    ====================================================== -->
+
+    <div class="submenu">
         <a href="index.html">Introdução</a>
-        <a href="./arduino.html">Arduino</a>
-        <a href="./sensores.html">Tipos de Sensores</a>
+        <a href="arduino.html" class="ativo">Arduino</a>
+        <a href="sensores.html">Tipos de Sensores</a>
     </div>
 
-<!-- HERO -->
-<section class="hero-pequeno">
-<div>
-<p class="destaque">Plataforma IoT • Microcontrolador</p>
-<h1>Arduino</h1>
-<p>
-Base da prototipagem eletrônica e da automação. Permite ler sensores,
-processar dados e controlar dispositivos.
-</p>
-</div>
 
-<img src="../img/sensores/arduino.png" alt="Arduino Uno">
-</section>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-<!-- CONTEÚDO -->
-<section class="conteudo">
+    <main>
 
-<div class="card">
-<h2>Conceito</h2>
-<p>
-O Arduino é uma plataforma open-source composta por hardware e software,
-utilizada para desenvolver sistemas embarcados e automação.
-</p>
-<ul>
-<li>Ler sensores</li>
-<li>Processar dados</li>
-<li>Controlar atuadores</li>
-</ul>
-</div>
+        <section class="hero-pequeno">
 
-<div class="card">
-<h2>Hardware</h2>
-<p><strong>Microcontrolador:</strong> ATmega328P</p>
-<p><strong>Entradas:</strong> Digitais e Analógicas</p>
-<p><strong>Comunicação:</strong> UART, I2C, SPI</p>
-<p><strong>Alimentação:</strong> 5V ou 7–12V</p>
-<p><strong>Clock:</strong> 16 MHz</p>
-</div>
+            <div class="hero-pequeno-conteudo">
 
-<div class="card">
-<h2>Software</h2>
-<p>Utiliza a Arduino IDE com linguagem baseada em C/C++.</p>
+                <p class="destaque">Plataforma IoT • Microcontrolador</p>
 
-<pre><code>
+                <h1>Arduino</h1>
+
+                <p>
+                    Base da prototipagem eletrônica e da automação. Permite ler sensores,
+                    processar dados e controlar dispositivos.
+                </p>
+
+            </div>
+
+            <figure class="foto-robo">
+
+                <div class="fundo-foto">
+
+                    <img src="../img/sensores/arduino.png" alt="Arduino Uno">
+
+                </div>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="conteudo">
+
+            <div class="card">
+
+                <h2>Conceito</h2>
+
+                <p>
+                    O Arduino é uma plataforma open-source composta por hardware e software,
+                    utilizada para desenvolver sistemas embarcados e automação.
+                </p>
+
+                <ul>
+                    <li>Ler sensores</li>
+                    <li>Processar dados</li>
+                    <li>Controlar atuadores</li>
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Hardware</h2>
+
+                <p><strong>Microcontrolador:</strong> ATmega328P</p>
+                <p><strong>Entradas:</strong> Digitais e Analógicas</p>
+                <p><strong>Comunicação:</strong> UART, I2C, SPI</p>
+                <p><strong>Alimentação:</strong> 5V ou 7–12V</p>
+                <p><strong>Clock:</strong> 16 MHz</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Software</h2>
+
+                <p>Utiliza a Arduino IDE com linguagem baseada em C/C++.</p>
+
+                <pre><code>
 void setup() {
 }
 
 void loop() {
 }
 </code></pre>
-</div>
 
-<div class="card">
-<h2>Funcionamento</h2>
-<ul>
-<li>Entrada: sensores</li>
-<li>Processamento: código</li>
-<li>Saída: LEDs, motores</li>
-<li>Comunicação: computador ou IoT</li>
-</ul>
-</div>
+            </div>
 
-<div class="card">
-<h2>Características</h2>
-<ul>
-<li>Baixo custo</li>
-<li>Fácil uso</li>
-<li>Versátil</li>
-<li>Open-source</li>
-</ul>
-</div>
 
-<div class="card">
-<h2>Sinais</h2>
-<table class="tabela">
-<tr>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-<tr>
-<td>Digital</td>
-<td>0 ou 1</td>
-</tr>
-<tr>
-<td>Analógico</td>
-<td>Valor contínuo</td>
-</tr>
-<tr>
-<td>PWM</td>
-<td>Simulação analógica</td>
-</tr>
-</table>
-</div>
+            <div class="card">
 
-</section>
+                <h2>Funcionamento</h2>
 
-<!-- BLOCO DE CÓDIGOS (mantém separado pra não quebrar layout) -->
-<section class="pagina-desafio">
+                <ul>
+                    <li>Entrada: sensores</li>
+                    <li>Processamento: código</li>
+                    <li>Saída: LEDs, motores</li>
+                    <li>Comunicação: computador ou IoT</li>
+                </ul>
 
-<h2>Exemplos de Programação</h2>
+            </div>
 
-<div class="card codigo">
-<h3>DHT11</h3>
 
-<pre><code>
+            <div class="card">
+
+                <h2>Características</h2>
+
+                <ul>
+                    <li>Baixo custo</li>
+                    <li>Fácil uso</li>
+                    <li>Versátil</li>
+                    <li>Open-source</li>
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Sinais</h2>
+
+                <table class="tabela">
+
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+
+                    <tr>
+                        <td>Digital</td>
+                        <td>0 ou 1</td>
+                    </tr>
+
+                    <tr>
+                        <td>Analógico</td>
+                        <td>Valor contínuo</td>
+                    </tr>
+
+                    <tr>
+                        <td>PWM</td>
+                        <td>Simulação analógica</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BLOCO DE CÓDIGOS
+        ================================================== -->
+
+        <section class="pagina-desafio">
+
+            <h2>Exemplos de Programação</h2>
+
+
+            <div class="card codigo">
+
+                <h3>DHT11</h3>
+
+                <pre><code>
 #include &lt;DHT.h&gt;
 
 #define DHTPIN 2
@@ -154,12 +240,14 @@ void loop() {
 }
 </code></pre>
 
-</div>
+            </div>
 
-<div class="card codigo">
-<h3>HC-SR04</h3>
 
-<pre><code>
+            <div class="card codigo">
+
+                <h3>HC-SR04</h3>
+
+                <pre><code>
 #define trigPin 9
 #define echoPin 10
 
@@ -179,13 +267,77 @@ void loop() {
 }
 </code></pre>
 
-</div>
+            </div>
 
-</section>
+        </section>
 
-<footer>
-<p>© 2026 - Sensores</p>
-</footer>
+    </main>
+
+    <script src="../js/sensores.js"></script>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">✦</div>
+
+                <h2>Indústria 4.0</h2>
+
+                <p>
+                    Tecnologia, automação e inovação transformando a indústria.
+                </p>
+
+            </div>
+
+
+            <div class="rodape-links">
+
+                <span>NAVEGAÇÃO</span>
+
+                <a href="../index.html">Início</a>
+                <a href="../robos/index.html">Robôs</a>
+                <a href="../arduino/index.html">Arduino</a>
+                <a href="index.html">Sensores</a>
+                <a href="../perguntas/index.html">Perguntas</a>
+                <a href="../referencias/index.html">Referências</a>
+
+            </div>
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="rodape-final">
+
+            <span>© 2026 - Robótica Industrial</span>
+
+            <span>Indústria 4.0</span>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>

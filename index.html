@@ -1,76 +1,351 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Indústria 4.0</title>
 
-    <!-- Fonte elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/animacoes.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="#">Início</a>
-        <a href="robos/index.html">Robôs</a>
-        <a href="arduino/index.html">Arduino</a>
-        <a href="sensores/index.html">Sensores</a>
-        <a href="perguntas.html">Perguntas</a>
-        <a href="referencias/index.html">Referências</a>
-    </nav>
-</header>
+    <!-- =====================================================
+         CABEÇALHO / NAVEGAÇÃO
+    ====================================================== -->
 
-<!-- HERO -->
-<section class="hero">
-    <div class="overlay">
-        <h1>Indústria 4.0</h1>
-        <p>
-            Explorando Arduino, sensores e sistemas inteligentes que conectam o mundo físico ao digital.
-        </p>
-        <a href="sensores/index.html" class="btn">Explorar Conteúdo</a>
-    </div>
-</section>
+    <header class="cabecalho">
 
-<!-- SOBRE -->
-<section class="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>
-        Este site reúne conteúdos sobre Arduino, sensores e aplicações em IoT,
-        apresentando conceitos, exemplos práticos e desafios desenvolvidos ao longo dos estudos.
-    </p>
-</section>
+        <div class="logo">
+            <a href="#" class="logo-link">
+                <span class="logo-detalhe">✦</span>
+                <span>Indústria 4.0</span>
+            </a>
+        </div>
 
-<!-- CARDS -->
-<section class="cards">
-    <section class="cards" id="tipos">
+        <nav class="navegacao">
 
-    <div class="card">
-        <h3>Arduino</h3>
-        <p>Entenda como funciona, seus componentes e exemplos de uso.</p>
-        <a href="arduino/index.html">Acessar</a>
-    </div>
+            <a href="#" class="nav-link ativo">
+                Início
+            </a>
 
-    <div class="card">
-        <h3>Sensores</h3>
-        <p>Explore diferentes tipos de sensores e suas aplicações.</p>
-        <a href="sensores/index.html">Acessar</a>
-    </div>
+            <a href="robos/index.html" class="nav-link">
+                Robôs
+            </a>
 
-    <div class="card">
-        <h3>IoT & Robótica</h3>
-        <p>Veja como dispositivos se conectam para criar sistemas inteligentes.</p>
-        <a href="#">Acessar</a>
-    </div>
-    
-    </section>
-</section>
+            <a href="arduino/index.html" class="nav-link">
+                Arduino
+            </a>
 
-<footer>
-    <p>© 2026 - Projeto Indústria 4.0</p>
-</footer>
+            <a href="sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="./perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
+        </nav>
+
+        <div class="detalhe-navbar"></div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-ornamento hero-ornamento-top"></div>
+
+            <div class="hero-conteudo reveal">
+
+                <span class="hero-tag">
+                    TECNOLOGIA • AUTOMAÇÃO • INOVAÇÃO
+                </span>
+
+                <div class="linha-decorativa"></div>
+
+                <h1>Indústria 4.0</h1>
+
+                <p>
+                    Explorando Arduino, sensores e sistemas inteligentes que conectam o mundo físico ao digital.
+                </p>
+
+                <a href="sensores/index.html" class="botao-principal">
+                    <span>Explorar Conteúdo</span>
+                    <span class="botao-seta">→</span>
+                </a>
+
+            </div>
+
+            <div class="hero-ornamento hero-ornamento-bottom"></div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="sobre secao reveal">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">01</span>
+
+                <div>
+                    <span class="subtitulo-secao">CONHEÇA O PROJETO</span>
+                    <h2>Sobre o Projeto</h2>
+                </div>
+
+            </div>
+
+            <div class="sobre-conteudo">
+
+                <div class="sobre-linha"></div>
+
+                <p>
+                    Este site reúne conteúdos sobre Arduino, sensores e aplicações em IoT,
+                    apresentando conceitos, exemplos práticos e desafios desenvolvidos ao longo dos estudos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARDS -->
+
+        <section class="conteudos secao" id="tipos">
+
+            <div class="titulo-secao reveal">
+
+                <span class="numero-secao">02</span>
+
+                <div>
+                    <span class="subtitulo-secao">EXPLORE</span>
+                    <h2>Áreas do Projeto</h2>
+                </div>
+
+            </div>
+
+
+            <div class="cards-container">
+
+                <!-- Arduino -->
+
+                <article class="card-conteudo reveal">
+
+                    <div class="card-numero">
+                        01
+                    </div>
+
+                    <div class="card-icone">
+                        ⚙
+                    </div>
+
+                    <div class="card-texto">
+
+                        <span class="card-categoria">
+                            ELETRÔNICA
+                        </span>
+
+                        <h3>Arduino</h3>
+
+                        <p>
+                            Entenda como funciona, seus componentes e exemplos de uso.
+                        </p>
+
+                        <a href="arduino/index.html" class="card-link">
+                            Acessar
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Sensores -->
+
+                <article class="card-conteudo card-destaque reveal">
+
+                    <div class="card-numero">
+                        02
+                    </div>
+
+                    <div class="card-icone">
+                        ◉
+                    </div>
+
+                    <div class="card-texto">
+
+                        <span class="card-categoria">
+                            AUTOMAÇÃO
+                        </span>
+
+                        <h3>Sensores</h3>
+
+                        <p>
+                            Explore diferentes tipos de sensores e suas aplicações.
+                        </p>
+
+                        <a href="sensores/index.html" class="card-link">
+                            Acessar
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- IoT & Robótica -->
+
+                <article class="card-conteudo reveal">
+
+                    <div class="card-numero">
+                        03
+                    </div>
+
+                    <div class="card-icone">
+                        ◈
+                    </div>
+
+                    <div class="card-texto">
+
+                        <span class="card-categoria">
+                            TECNOLOGIA
+                        </span>
+
+                        <h3>IoT &amp; Robótica</h3>
+
+                        <p>
+                            Veja como dispositivos se conectam para criar sistemas inteligentes.
+                        </p>
+
+                        <a href="#" class="card-link">
+                            Acessar
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <span class="rodape-simbolo">✦</span>
+
+                <h2>Indústria 4.0</h2>
+
+                <p>
+                    Tecnologia • Automação • Inovação
+                </p>
+
+            </div>
+
+
+            <div class="rodape-links">
+
+                <span>NAVEGAÇÃO</span>
+
+                <a href="#">Início</a>
+                <a href="arduino/index.html">Arduino</a>
+                <a href="sensores/index.html">Sensores</a>
+                <a href="robos/index.html">Robôs</a>
+                <a href="perguntas.html">Perguntas</a>
+
+            </div>
+
+
+            <div class="rodape-projeto">
+
+                <span>PROJETO</span>
+
+                <p>
+                    Um espaço dedicado ao estudo da tecnologia,
+                    automação e dos conceitos da Indústria 4.0.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="rodape-final">
+
+            <p>
+                © 2026 - Projeto Indústria 4.0
+            </p>
+
+            <span>
+                Desenvolvido com tecnologia e criatividade.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+
+    <button
+        id="voltarTopo"
+        class="voltar-topo"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo"
+    >
+        ↑
+    </button>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/global.js"></script>
 
 </body>
+
 </html>

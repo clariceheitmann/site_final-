@@ -3,271 +3,550 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sensores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <title>Sensores | Indústria 4.0</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+    <link rel="stylesheet" href="../css/sensores/sensores.css">
+    <link rel="stylesheet" href="../css/sensores/introducao.css">
 </head>
 
-<body>
+<body class="pagina-sensores-introducao">
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="../arduino/index.html">Arduino</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas/index.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <span class="logo-detalhe">✦</span>
+                Indústria 4.0
+            </a>
+        </div>
+
+        <nav class="navegacao">
+            <a href="../index.html" class="nav-link">Início</a>
+            <a href="../robos/index.html" class="nav-link">Robôs</a>
+            <a href="../arduino/index.html" class="nav-link">Arduino</a>
+            <a href="index.html" class="nav-link ativo">Sensores</a>
+            <a href="../perguntas/index.html" class="nav-link">Perguntas</a>
+            <a href="../referencias/index.html" class="nav-link">Referências</a>
         </nav>
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
-    <!-- SUBMENU -->
+
+    <!-- =====================================================
+         SUBMENU
+    ====================================================== -->
+
     <div class="submenu">
         <a href="index.html">Introdução</a>
         <a href="./arduino.html">Arduino</a>
         <a href="./sensores.html">Tipos de Sensores</a>
     </div>
-    
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
     <main>
 
-<section class="pagina-desafio">
+        <section class="pagina-desafio">
 
-    <!-- HERO -->
-    <div class="topo-desafio">
-        <span class="tag">Tecnologia • Informação</span>
-        <h1>Sensoriamento na Indústria 4.0</h1>
 
-        <p>
-            Descubra como os sensores permitem a aquisição de dados,
-            o monitoramento de processos e a automação inteligente
-            dentro da Indústria 4.0.
-        </p>
-    </div>
+            <!-- =================================================
+                 HERO
+            ================================================== -->
 
-    <!-- HERO COM IMAGEM -->
-    <div class="grid-duplo">
+            <div class="topo-desafio">
 
-        <div class="card destaque">
-            <h2>Introdução</h2>
-            <p>
-                Sensores são essenciais para transformar informações do mundo físico
-                em dados digitais, permitindo automação, controle e tomada de decisões.
-            </p>
-        </div>
+                <span class="tag">Tecnologia • Informação</span>
 
-        <div class="foto-robo">
-            <div class="fundo-foto">
-                <img src="../img/sensores/sensores.png">
+                <h1>Sensoriamento na Indústria 4.0</h1>
+
+                <p>
+                    Descubra como os sensores permitem a aquisição de dados,
+                    o monitoramento de processos e a automação inteligente
+                    dentro da Indústria 4.0.
+                </p>
+
             </div>
-            <figcaption>
-                Sensores utilizados em sistemas de automação e IoT
-            </figcaption>
+
+
+            <!-- =================================================
+                 HERO COM IMAGEM
+            ================================================== -->
+
+            <div class="grid-duplo">
+
+                <div class="card destaque">
+
+                    <h2>Introdução</h2>
+
+                    <p>
+                        Sensores são essenciais para transformar informações do mundo físico
+                        em dados digitais, permitindo automação, controle e tomada de decisões.
+                    </p>
+
+                </div>
+
+
+                <div class="foto-robo">
+
+                    <div class="fundo-foto">
+
+                        <img src="../img/sensores/sensores.png">
+
+                    </div>
+
+                    <figcaption>
+                        Sensores utilizados em sistemas de automação e IoT
+                    </figcaption>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONCEITOS
+            ================================================== -->
+
+            <div class="grid-duplo">
+
+                <div class="card">
+
+                    <h2>O que é Sensoriamento?</h2>
+
+                    <p>
+                        Sensoriamento é o processo de aquisição de grandezas
+                        físicas, químicas ou biológicas por meio de dispositivos
+                        chamados sensores.
+                    </p>
+
+                    <p>
+                        Esses dispositivos convertem as grandezas detectadas
+                        em sinais elétricos, que podem ser analógicos ou digitais,
+                        permitindo que sistemas computacionais processem,
+                        armazenem e utilizem essas informações.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h2>Grandezas monitoradas</h2>
+
+                    <p>
+                        Os sensores podem ser utilizados para detectar diferentes
+                        tipos de grandezas presentes em ambientes industriais.
+                        Entre as principais estão:
+                    </p>
+
+                    <ul>
+                        <li>Temperatura</li>
+                        <li>Pressão</li>
+                        <li>Luminosidade</li>
+                        <li>Umidade</li>
+                        <li>Gases</li>
+                        <li>Movimento</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid-duplo">
+
+                <div class="card">
+
+                    <h2>Sensores e dados</h2>
+
+                    <p>
+                        Após realizar a medição, o sensor transforma a informação
+                        obtida em um sinal que pode ser enviado para um sistema
+                        de controle ou processamento.
+                    </p>
+
+                    <p>
+                        Dessa maneira, informações do ambiente físico podem ser
+                        transformadas em dados digitais utilizados para
+                        monitoramento, controle e tomada de decisões.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h2>Sensoriamento e IoT</h2>
+
+                    <p>
+                        Os sensores possuem papel fundamental na Internet das
+                        Coisas (IoT), pois são responsáveis por coletar informações
+                        do ambiente e disponibilizá-las para sistemas conectados.
+                    </p>
+
+                    <p>
+                        Com isso, equipamentos podem ser monitorados remotamente
+                        e os dados coletados podem ser utilizados para automatizar
+                        processos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 IMPORTÂNCIA
+            ================================================== -->
+
+            <div class="card bloco">
+
+                <h2>Importância do Sensoriamento</h2>
+
+                <p>
+                    Os sensores são fundamentais para a digitalização dos
+                    processos industriais, permitindo que máquinas e sistemas
+                    obtenham informações do ambiente em tempo real.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 BENEFÍCIOS
+            ================================================== -->
+
+            <div class="grid-duplo">
+
+                <div class="card">
+                    <strong>Monitoramento em tempo real</strong>
+                    <p>Acompanhamento contínuo das condições dos processos.</p>
+                </div>
+
+                <div class="card">
+                    <strong>Decisão automatizada</strong>
+                    <p>Dados dos sensores podem ser utilizados para automatizar ações e controles.</p>
+                </div>
+
+                <div class="card">
+                    <strong>Integração com IoT</strong>
+                    <p>Sensores permitem conectar equipamentos e sistemas dentro de redes inteligentes.</p>
+                </div>
+
+                <div class="card">
+                    <strong>Manutenção preditiva</strong>
+                    <p>Identifica falhas antes que aconteçam.</p>
+                </div>
+
+                <div class="card">
+                    <strong>Redução de custos</strong>
+                    <p>Maior eficiência dos processos.</p>
+                </div>
+
+                <div class="card">
+                    <strong>Maior eficiência</strong>
+                    <p>Otimização das operações industriais.</p>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 INTEGRAÇÃO
+            ================================================== -->
+
+            <div class="card bloco">
+
+                <h2>Integração: Sensor + Controle + Comunicação</h2>
+
+                <p>
+                    Em sistemas de automação e Indústria 4.0, o sensor normalmente
+                    faz parte de uma arquitetura que conecta aquisição de dados,
+                    processamento e execução de ações.
+                </p>
+
+
+                <div class="fluxo">
+
+                    <div class="etapa">
+                        <strong>Sensor</strong>
+                        <span>Detecta uma grandeza</span>
+                    </div>
+
+                    <div class="seta">→</div>
+
+                    <div class="etapa">
+                        <strong>Microcontrolador / CLP</strong>
+                        <span>Processa dados</span>
+                    </div>
+
+                    <div class="seta">→</div>
+
+                    <div class="etapa">
+                        <strong>Comunicação</strong>
+                        <span>Transmite dados</span>
+                    </div>
+
+                    <div class="seta">→</div>
+
+                    <div class="etapa">
+                        <strong>Ação</strong>
+                        <span>Executa resposta</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TABELA
+            ================================================== -->
+
+            <div class="card bloco">
+
+                <h2>Protocolos de comunicação</h2>
+
+                <table class="tabela">
+
+                    <tr>
+                        <th>Protocolo</th>
+                        <th>Aplicação</th>
+                        <th>Característica</th>
+                    </tr>
+
+                    <tr>
+                        <td>I2C</td>
+                        <td>Componentes</td>
+                        <td>Duas linhas</td>
+                    </tr>
+
+                    <tr>
+                        <td>SPI</td>
+                        <td>Periféricos</td>
+                        <td>Alta velocidade</td>
+                    </tr>
+
+                    <tr>
+                        <td>UART</td>
+                        <td>Serial</td>
+                        <td>Simples</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wi-Fi / Bluetooth</td>
+                        <td>IoT</td>
+                        <td>Sem fio</td>
+                    </tr>
+
+                    <tr>
+                        <td>4–20 mA</td>
+                        <td>Industrial</td>
+                        <td>Padrão robusto</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+            <!-- =================================================
+                 ARDUINO
+            ================================================== -->
+
+            <div class="card bloco">
+
+                <h2>Arduino: Visão Técnica</h2>
+
+                <p>
+                    O Arduino é uma plataforma de prototipagem baseada em microcontroladores,
+                    utilizada para leitura de sensores, processamento e controle de dispositivos.
+                </p>
+
+            </div>
+
+
+            <div class="grid-duplo">
+
+                <div class="card">
+                    <strong>Leitura de sensores</strong>
+                    <p>Recebe dados do ambiente</p>
+                </div>
+
+                <div class="card">
+                    <strong>Processamento</strong>
+                    <p>Interpreta dados</p>
+                </div>
+
+                <div class="card">
+                    <strong>Controle</strong>
+                    <p>Atua sobre o sistema</p>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 COMPONENTES
+            ================================================== -->
+
+            <div class="card bloco">
+
+                <h2>Componentes do Arduino</h2>
+
+                <table class="tabela">
+
+                    <tr>
+                        <th>Componente</th>
+                        <th>Função</th>
+                    </tr>
+
+                    <tr>
+                        <td>Microcontrolador</td>
+                        <td>Processamento</td>
+                    </tr>
+
+                    <tr>
+                        <td>Entradas analógicas</td>
+                        <td>Leitura de sensores</td>
+                    </tr>
+
+                    <tr>
+                        <td>GPIO</td>
+                        <td>Entradas e saídas digitais</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONCLUSÃO
+            ================================================== -->
+
+            <div class="grid-duplo">
+
+                <div class="card">
+
+                    <h2>Importância dos sensores</h2>
+
+                    <p>
+                        Os sensores permitem que sistemas computacionais obtenham
+                        informações do mundo físico para monitorar e controlar processos.
+                    </p>
+
+                    <p>
+                        Na Indústria 4.0, isso permite integração entre máquinas,
+                        redes e sistemas inteligentes.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h2>Do dado à ação</h2>
+
+                    <ol>
+                        <li>Medição</li>
+                        <li>Processamento</li>
+                        <li>Transmissão</li>
+                        <li>Ação</li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/sensores.js"></script>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">✦</div>
+
+                <h2>Indústria 4.0</h2>
+
+                <p>
+                    Tecnologia, automação e inovação transformando a indústria.
+                </p>
+
+            </div>
+
+
+            <div class="rodape-links">
+
+                <span>NAVEGAÇÃO</span>
+
+                <a href="../index.html">Início</a>
+                <a href="../robos/index.html">Robôs</a>
+                <a href="../arduino/index.html">Arduino</a>
+                <a href="index.html">Sensores</a>
+                <a href="../perguntas/index.html">Perguntas</a>
+                <a href="../referencias/index.html">Referências</a>
+
+            </div>
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p>
+
+            </div>
+
         </div>
 
-    </div>
 
-    <!-- CONCEITOS -->
-    <div class="grid-duplo">
+        <div class="rodape-final">
 
-        <div class="card">
-            <h2>O que é Sensoriamento?</h2>
+            <span>© 2026 - Robótica Industrial</span>
 
-            <p>
-                Sensoriamento é o processo de aquisição de grandezas
-                físicas, químicas ou biológicas por meio de dispositivos
-                chamados sensores.
-            </p>
-
-            <p>
-                Esses dispositivos convertem as grandezas detectadas
-                em sinais elétricos, que podem ser analógicos ou digitais,
-                permitindo que sistemas computacionais processem,
-                armazenem e utilizem essas informações.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Grandezas monitoradas</h2>
-
-            <p>
-                Os sensores podem ser utilizados para detectar diferentes
-                tipos de grandezas presentes em ambientes industriais.
-                Entre as principais estão:
-            </p>
-
-            <ul>
-                <li>Temperatura</li>
-                <li>Pressão</li>
-                <li>Luminosidade</li>
-                <li>Umidade</li>
-                <li>Gases</li>
-                <li>Movimento</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="grid-duplo">
-
-        <div class="card">
-            <h2>Sensores e dados</h2>
-
-            <p>
-                Após realizar a medição, o sensor transforma a informação
-                obtida em um sinal que pode ser enviado para um sistema
-                de controle ou processamento.
-            </p>
-
-            <p>
-                Dessa maneira, informações do ambiente físico podem ser
-                transformadas em dados digitais utilizados para
-                monitoramento, controle e tomada de decisões.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Sensoriamento e IoT</h2>
-
-            <p>
-                Os sensores possuem papel fundamental na Internet das
-                Coisas (IoT), pois são responsáveis por coletar informações
-                do ambiente e disponibilizá-las para sistemas conectados.
-            </p>
-
-            <p>
-                Com isso, equipamentos podem ser monitorados remotamente
-                e os dados coletados podem ser utilizados para automatizar
-                processos.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- IMPORTÂNCIA -->
-    <div class="card bloco">
-        <h2>Importância do Sensoriamento</h2>
-
-        <p>
-            Os sensores são fundamentais para a digitalização dos
-            processos industriais, permitindo que máquinas e sistemas
-            obtenham informações do ambiente em tempo real.
-        </p>
-    </div>
-
-    <!-- BENEFÍCIOS -->
-    <div class="grid-duplo">
-
-        <div class="card"><strong>Monitoramento em tempo real</strong><p>Acompanhamento contínuo das condições dos processos.</p></div>
-        <div class="card"><strong>Decisão automatizada</strong><p>Dados dos sensores podem ser utilizados para automatizar ações e controles.</p></div>
-
-        <div class="card"><strong>Integração com IoT</strong><p>Sensores permitem conectar equipamentos e sistemas dentro de redes inteligentes.</p></div>
-        <div class="card"><strong>Manutenção preditiva</strong><p>Identifica falhas antes que aconteçam.</p></div>
-
-        <div class="card"><strong>Redução de custos</strong><p>Maior eficiência dos processos.</p></div>
-        <div class="card"><strong>Maior eficiência</strong><p>Otimização das operações industriais.</p></div>
-
-    </div>
-
-    <!-- INTEGRAÇÃO -->
-    <div class="card bloco">
-        <h2>Integração: Sensor + Controle + Comunicação</h2>
-
-        <p>
-            Em sistemas de automação e Indústria 4.0, o sensor normalmente
-            faz parte de uma arquitetura que conecta aquisição de dados,
-            processamento e execução de ações.
-        </p>
-
-        <div class="fluxo">
-
-            <div class="etapa"><strong>Sensor</strong><span>Detecta uma grandeza</span></div>
-            <div class="seta">→</div>
-
-            <div class="etapa"><strong>Microcontrolador / CLP</strong><span>Processa dados</span></div>
-            <div class="seta">→</div>
-
-            <div class="etapa"><strong>Comunicação</strong><span>Transmite dados</span></div>
-            <div class="seta">→</div>
-
-            <div class="etapa"><strong>Ação</strong><span>Executa resposta</span></div>
+            <span>Indústria 4.0</span>
 
         </div>
-    </div>
 
-    <!-- TABELA -->
-    <div class="card bloco">
-        <h2>Protocolos de comunicação</h2>
+    </footer>
 
-        <table class="tabela">
-            <tr><th>Protocolo</th><th>Aplicação</th><th>Característica</th></tr>
-            <tr><td>I2C</td><td>Componentes</td><td>Duas linhas</td></tr>
-            <tr><td>SPI</td><td>Periféricos</td><td>Alta velocidade</td></tr>
-            <tr><td>UART</td><td>Serial</td><td>Simples</td></tr>
-            <tr><td>Wi-Fi / Bluetooth</td><td>IoT</td><td>Sem fio</td></tr>
-            <tr><td>4–20 mA</td><td>Industrial</td><td>Padrão robusto</td></tr>
-        </table>
-    </div>
 
-    <!-- ARDUINO -->
-    <div class="card bloco">
-        <h2>Arduino: Visão Técnica</h2>
+</body>
 
-        <p>
-            O Arduino é uma plataforma de prototipagem baseada em microcontroladores,
-            utilizada para leitura de sensores, processamento e controle de dispositivos.
-        </p>
-    </div>
-
-    <div class="grid-duplo">
-        <div class="card"><strong>Leitura de sensores</strong><p>Recebe dados do ambiente</p></div>
-        <div class="card"><strong>Processamento</strong><p>Interpreta dados</p></div>
-        <div class="card"><strong>Controle</strong><p>Atua sobre o sistema</p></div>
-    </div>
-
-    <!-- COMPONENTES -->
-    <div class="card bloco">
-        <h2>Componentes do Arduino</h2>
-
-        <table class="tabela">
-            <tr><th>Componente</th><th>Função</th></tr>
-            <tr><td>Microcontrolador</td><td>Processamento</td></tr>
-            <tr><td>Entradas analógicas</td><td>Leitura de sensores</td></tr>
-            <tr><td>GPIO</td><td>Entradas e saídas digitais</td></tr>
-        </table>
-    </div>
-
-    <!-- CONCLUSÃO -->
-    <div class="grid-duplo">
-
-        <div class="card">
-            <h2>Importância dos sensores</h2>
-
-            <p>
-                Os sensores permitem que sistemas computacionais obtenham
-                informações do mundo físico para monitorar e controlar processos.
-            </p>
-
-            <p>
-                Na Indústria 4.0, isso permite integração entre máquinas,
-                redes e sistemas inteligentes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Do dado à ação</h2>
-
-            <ol>
-                <li>Medição</li>
-                <li>Processamento</li>
-                <li>Transmissão</li>
-                <li>Ação</li>
-            </ol>
-        </div>
-
-    </div>
-
-</section>
-
-</main>
+</html>

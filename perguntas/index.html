@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perguntas | Indústria 4.0</title>
+
+    <!-- FONTES -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/global.css">
+
+    <!-- NAVBAR -->
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- ANIMAÇÕES -->
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+    <!-- CSS DO QUIZ -->
+    <link rel="stylesheet" href="../css/perguntas/perguntas.css">
+
+    <link rel="icon" href="../assets/icon.SA.png">
+</head>
+
+
+<body class="quiz-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">
+                    ✦
+                </span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
+                Início
+            </a>
+
+
+            <a
+                href="../robos/index.html"
+                class="nav-link"
+            >
+                Robôs
+            </a>
+
+
+            <a
+                href="../arduino/index.html"
+                class="nav-link"
+            >
+                Arduino
+            </a>
+
+
+            <a
+                href="../sensores/index.html"
+                class="nav-link"
+            >
+                Sensores
+            </a>
+
+
+            <a
+                href="index.html"
+                class="nav-link ativo"
+            >
+                Perguntas
+            </a>
+
+
+            <a
+                href="../referencias/index.html"
+                class="nav-link"
+            >
+                Referências
+            </a>
+
+        </nav>
+
+
+        <div class="detalhe-navbar"></div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             INTRODUÇÃO
+        ================================================== -->
+
+        <section class="quiz-intro">
+
+            <p class="destaque">
+                Desafio • Indústria 4.0
+            </p>
+
+
+            <h1>
+                Teste seus conhecimentos
+            </h1>
+
+
+            <p>
+                Você estudou os conteúdos do site. Agora é hora de
+                colocar seus conhecimentos em prática!
+            </p>
+
+
+            <div class="quiz-info">
+
+
+                <div>
+
+                    <strong>
+                        10
+                    </strong>
+
+                    <span>
+                        questões
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <span>
+                        alternativas
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        desafio
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                id="iniciarQuiz"
+                class="quiz-botao principal"
+            >
+                Começar desafio
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ÁREA DO QUIZ
+        ================================================== -->
+
+        <section
+            id="areaQuiz"
+            class="area-quiz"
+            hidden
+        >
+
+
+            <!-- BARRA DE ANDAMENTO -->
+
+            <div class="quiz-progresso">
+
+
+                <div class="progresso-topo">
+
+                    <span id="numeroQuestao">
+                        Questão 1 de 10
+                    </span>
+
+
+                    <span id="porcentagem">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="progresso-fundo">
+
+                    <div
+                        id="barraProgresso"
+                        class="progresso-barra"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUESTÃO -->
+
+            <article
+                id="questao"
+                class="questao-card"
+            >
+
+                <!-- O JavaScript coloca o conteúdo aqui -->
+
+            </article>
+
+
+
+            <!-- BOTÃO DE CORREÇÃO -->
+
+            <button
+                id="corrigirQuestao"
+                class="quiz-botao corrigir"
+                disabled
+            >
+                Corrigir questão
+            </button>
+
+
+
+            <!-- CORREÇÃO -->
+
+            <div
+                id="correcao"
+                class="correcao"
+                hidden
+            >
+
+                <!-- O JavaScript coloca a correção aqui -->
+
+            </div>
+
+
+
+            <!-- PRÓXIMA QUESTÃO -->
+
+            <button
+                id="proximaQuestao"
+                class="quiz-botao proxima"
+                hidden
+            >
+                Próxima questão →
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULTADO FINAL
+        ================================================== -->
+
+        <section
+            id="resultadoFinal"
+            class="resultado-final"
+            hidden
+        >
+
+
+            <p class="destaque">
+                Desafio concluído!
+            </p>
+
+
+            <h2>
+                Seu resultado
+            </h2>
+
+
+            <div class="resultado-numero">
+
+                <strong id="pontuacao">
+                    0/10
+                </strong>
+
+
+                <span id="porcentagemFinal">
+                    0%
+                </span>
+
+            </div>
+
+
+            <p id="mensagemFinal">
+                Vamos ver como você se saiu!
+            </p>
+
+
+            <div class="resultado-detalhes">
+
+
+                <div>
+
+                    <strong id="acertos">
+                        0
+                    </strong>
+
+                    <span>
+                        acertos
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="erros">
+                        0
+                    </strong>
+
+                    <span>
+                        erros
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                id="refazerQuiz"
+                class="quiz-botao principal"
+            >
+                Refazer desafio
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         VOLTAR AO TOPO
+    ====================================================== -->
+
+    <button
+        id="voltarTopo"
+        class="voltar-topo"
+    >
+        Topo
+    </button>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Tecnologia, automação e inovação transformando a indústria.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+
+                <a href="../arduino/index.html">
+                    Arduino
+                </a>
+
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+
+                <a href="index.html">
+                    Perguntas
+                </a>
+
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>
+                    SOBRE O PROJETO
+                </span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="rodape-final">
+
+            <span>
+                © 2026 - Perguntas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/script.js"></script>
+
+    <script src="../js/perguntas.js"></script>
+
+
+</body>
+
+</html>

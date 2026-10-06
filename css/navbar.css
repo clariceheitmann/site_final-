@@ -1,0 +1,208 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(42, 11, 11, 0.98),
+            rgba(68, 16, 4, 0.98)
+        );
+
+    border-bottom: 1px solid rgba(239, 187, 85, 0.45);
+
+    box-shadow:
+        0 8px 30px rgba(42, 11, 11, 0.25);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    color: var(--creme);
+
+    transition: var(--transicao);
+}
+
+
+.logo-link:hover {
+    color: var(--dourado);
+}
+
+
+.logo-detalhe {
+    color: var(--dourado);
+
+    font-size: 1.3rem;
+
+    transition: transform var(--transicao);
+}
+
+
+.logo-link:hover .logo-detalhe {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.navegacao {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 30px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    padding: 12px 17px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    color: rgba(251, 245, 210, 0.82);
+
+    transition:
+        color var(--transicao),
+        background var(--transicao);
+}
+
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--dourado);
+
+    transform: translateX(-50%);
+
+    transition: width var(--transicao);
+}
+
+
+.nav-link:hover {
+    color: var(--creme);
+}
+
+
+.nav-link:hover::after,
+.nav-link.ativo::after {
+    width: 65%;
+}
+
+
+.nav-link.ativo {
+    color: var(--dourado);
+}
+
+
+/* =========================================================
+   DETALHE INFERIOR
+========================================================= */
+
+.detalhe-navbar {
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 120px;
+    height: 1px;
+
+    background: var(--dourado);
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .logo {
+        position: static;
+
+        transform: none;
+
+        display: flex;
+        justify-content: center;
+
+        padding-top: 18px;
+    }
+
+    .navegacao {
+        min-height: auto;
+
+        flex-wrap: wrap;
+
+        padding: 10px 20px 18px;
+
+        gap: 3px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .logo-link {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.67rem;
+
+        padding: 9px 8px;
+    }
+
+}

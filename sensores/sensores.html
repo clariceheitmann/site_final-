@@ -2,33 +2,47 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sensores | Indústria 4.0</title>
+  <title>Sensores | Indústria 4.0</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/animacoes.css">
+  <link rel="stylesheet" href="../css/sensores/sensores.css">
 </head>
 
 <body>
 
-<header>
-<nav>
-<a href="../index.html">Início</a>
-<a href="../robos/index.html">Robôs</a>
-<a href="../arduino/index.html">Arduino</a>
-<a href="./sensores.html">Sensores</a>
-<a href="../perguntas/index.html">Perguntas</a>
-<a href="../referencias/index.html">Referências</a>
-</nav>
-</header>
-
-<div class="submenu">
-        <a href="index.html">Introdução</a>
-        <a href="./arduino.html">Arduino</a>
-        <a href="./sensores.html">Tipos de Sensores</a>
+  <header class="cabecalho">
+    <div class="logo">
+      <a href="../index.html" class="logo-link">
+        <span class="logo-detalhe">✦</span>
+        Indústria 4.0
+      </a>
     </div>
+
+    <nav class="navegacao">
+      <a href="../index.html" class="nav-link">Início</a>
+      <a href="../robos/index.html" class="nav-link">Robôs</a>
+      <a href="../arduino/index.html" class="nav-link">Arduino</a>
+      <a href="index.html" class="nav-link ativo">Sensores</a>
+      <a href="../perguntas/index.html" class="nav-link">Perguntas</a>
+      <a href="../referencias/index.html" class="nav-link">Referências</a>
+    </nav>
+
+    <div class="detalhe-navbar"></div>
+  </header>
+
+  <div class="submenu">
+    <a href="index.html">Introdução</a>
+    <a href="arduino.html">Arduino</a>
+    <a href="sensores.html" class="ativo">Tipos de Sensores</a>
+  </div>
 
   <main class="pagina">
 
@@ -56,7 +70,7 @@
 
     <section class="conteudo" id="catalago">
 
-       <!-- ================================================= -->
+      <!-- ================================================= -->
       <!-- DHT22 -->
       <!-- ================================================= -->
 
@@ -2077,18 +2091,194 @@
         <div class="tabela-container">
           <table class="tabela-sensores">
 
-            <thead>
-              <tr>
-                <th>Categoria</th>
-                <th>Sensor</th>
-                <th>Grandeza / Detecção</th>
-                <th>Tipo de Sinal / Interface</th>
-                <th>Aplicação Principal</th>
-              </tr>
-            </thead>
-
+              <thead>
+                <tr>
+                  <th>Sensor</th>
+                  <th>Grandeza / Detecção</th>
+                  <th>Tipo de Sinal / Interface</th>
+                  <th>Aplicação Principal</th>
+                </tr>
+              </thead>
             <tbody>
-              <!-- SUA TABELA FOI MANTIDA COMPLETA -->
+
+              <tr>
+                <td>DHT22</td>
+                <td>Temperatura e umidade</td>
+                <td>Digital</td>
+                <td>Monitoramento ambiental</td>
+              </tr>
+
+              <tr>
+                <td>LDR</td>
+                <td>Luminosidade</td>
+                <td>Analógico</td>
+                <td>Controle de iluminação</td>
+              </tr>
+
+              <tr>
+                <td>MQ-2</td>
+                <td>Gases e fumaça</td>
+                <td>Analógico e Digital</td>
+                <td>Detecção de gases e segurança</td>
+              </tr>
+
+              <tr>
+                <td>PIR HC-SR501</td>
+                <td>Movimento e presença</td>
+                <td>Digital</td>
+                <td>Segurança e automação</td>
+              </tr>
+
+              <tr>
+                <td>ACS712</td>
+                <td>Corrente elétrica</td>
+                <td>Analógico</td>
+                <td>Monitoramento de consumo elétrico</td>
+              </tr>
+
+              <tr>
+                <td>FC-37</td>
+                <td>Presença de água / chuva</td>
+                <td>Analógico e Digital</td>
+                <td>Detecção de chuva</td>
+              </tr>
+
+              <tr>
+                <td>DHT11</td>
+                <td>Temperatura e umidade</td>
+                <td>Digital</td>
+                <td>Monitoramento ambiental</td>
+              </tr>
+
+              <tr>
+                <td>LM35</td>
+                <td>Temperatura</td>
+                <td>Analógico</td>
+                <td>Medição de temperatura</td>
+              </tr>
+
+              <tr>
+                <td>DS18B20</td>
+                <td>Temperatura</td>
+                <td>Digital — 1-Wire</td>
+                <td>Monitoramento de temperatura</td>
+              </tr>
+
+              <tr>
+                <td>BH1750</td>
+                <td>Luminosidade</td>
+                <td>Digital — I2C</td>
+                <td>Medição de intensidade luminosa</td>
+              </tr>
+
+              <tr>
+                <td>HC-SR04</td>
+                <td>Distância</td>
+                <td>Digital</td>
+                <td>Detecção de obstáculos e distância</td>
+              </tr>
+
+              <tr>
+                <td>LJ12A3</td>
+                <td>Proximidade de objetos metálicos</td>
+                <td>Digital</td>
+                <td>Detecção de peças metálicas</td>
+              </tr>
+
+              <tr>
+                <td>LJ18A3</td>
+                <td>Proximidade de objetos</td>
+                <td>Digital</td>
+                <td>Detecção de materiais</td>
+              </tr>
+
+              <tr>
+                <td>MQ-135</td>
+                <td>Qualidade do ar e gases</td>
+                <td>Analógico e Digital</td>
+                <td>Monitoramento da qualidade do ar</td>
+              </tr>
+
+              <tr>
+                <td>Sensor Capacitivo de Umidade do Solo</td>
+                <td>Umidade do solo</td>
+                <td>Analógico</td>
+                <td>Irrigação automatizada</td>
+              </tr>
+
+              <tr>
+                <td>Sensor de Nível — Boia</td>
+                <td>Nível de líquidos</td>
+                <td>Digital</td>
+                <td>Controle de nível de reservatórios</td>
+              </tr>
+
+              <tr>
+                <td>YF-S201</td>
+                <td>Fluxo de líquidos</td>
+                <td>Pulsos digitais</td>
+                <td>Medição de vazão</td>
+              </tr>
+
+              <tr>
+                <td>ZMPT101B</td>
+                <td>Tensão elétrica</td>
+                <td>Analógico</td>
+                <td>Monitoramento de tensão AC</td>
+              </tr>
+
+              <tr>
+                <td>SW-420</td>
+                <td>Vibração</td>
+                <td>Digital</td>
+                <td>Detecção de vibrações</td>
+              </tr>
+
+              <tr>
+                <td>Sensor Hall A3144</td>
+                <td>Campo magnético e rotação</td>
+                <td>Digital</td>
+                <td>Detecção de rotação</td>
+              </tr>
+
+              <tr>
+                <td>MFRC522</td>
+                <td>Identificação RFID</td>
+                <td>SPI / I2C / UART</td>
+                <td>Identificação e controle de acesso</td>
+              </tr>
+
+              <tr>
+                <td>Célula de Carga + HX711</td>
+                <td>Peso e força</td>
+                <td>Digital</td>
+                <td>Sistemas de pesagem</td>
+              </tr>
+
+              <tr>
+                <td>KY-037</td>
+                <td>Som</td>
+                <td>Analógico e Digital</td>
+                <td>Detecção de som e ruído</td>
+              </tr>
+
+              <tr>
+                <td>Sensor de Chama IR</td>
+                <td>Chama e radiação infravermelha</td>
+                <td>Analógico e Digital</td>
+                <td>Detecção de fogo</td>
+              </tr>
+
+              <tr>
+                <td>Encoder Incremental KY-040</td>
+                <td>Posição e rotação</td>
+                <td>Digital</td>
+                <td>Controle de posição e rotação</td>
+              </tr>
+
+            </tbody>
+
+            </tbody>
             </tbody>
 
           </table>
@@ -2104,26 +2294,40 @@
   </button>
 
   <script src="../script.js"></script>
+  <script src="../js/sensores.js"></script>
 
   <footer class="rodape">
-    <div class="container-rodape">
+    <div class="rodape-linha"></div>
 
-      <div class="rodape-info">
-        <h3>Indústria 4.0</h3>
+    <div class="rodape-conteudo">
+      <div class="rodape-marca">
+        <div class="rodape-simbolo">✦</div>
+        <h2>Indústria 4.0</h2>
         <p>Catálogo técnico de sensores e sistemas para automação e IoT!</p>
       </div>
 
-      <div class="rodape-desenvolvedor">
-        <p>Desenvolvido por <strong>Clarice Heitmann - 3B</strong></p>
-        <div class="redes-sociais">
-          <a href="https://github.com/clariceheitmann" target="_blank">GitHub</a>
-        </div>
+      <div class="rodape-links">
+        <span>NAVEGAÇÃO</span>
+        <a href="../index.html">Início</a>
+        <a href="../robos/index.html">Robôs</a>
+        <a href="../arduino/index.html">Arduino</a>
+        <a href="index.html">Sensores</a>
+        <a href="../perguntas/index.html">Perguntas</a>
+        <a href="../referencias/index.html">Referências</a>
       </div>
 
+      <div class="rodape-projeto">
+        <span>DESENVOLVIMENTO</span>
+        <p>Desenvolvido por <strong>Clarice Heitmann - 3B</strong></p>
+        <p>
+          <a href="https://github.com/clariceheitmann" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
     </div>
 
-    <div class="rodape-copyright">
-      <p>&copy; 2026 - Internet das Coisas</p>
+    <div class="rodape-final">
+      <span>&copy; 2026 - Internet das Coisas</span>
+      <span>Indústria 4.0</span>
     </div>
   </footer>
 

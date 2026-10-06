@@ -1,0 +1,219 @@
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    position: relative;
+
+    padding: 70px 7% 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2A0B0B,
+            #441004
+        );
+
+    color: var(--creme);
+
+    overflow: hidden;
+}
+
+
+/* detalhe decorativo */
+
+.rodape::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    top: -180px;
+
+    border: 1px solid rgba(239, 187, 85, 0.15);
+
+    transform: rotate(45deg);
+}
+
+
+.rodape-linha {
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 50px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--dourado),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.rodape-conteudo {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.rodape-marca h2 {
+    margin: 10px 0;
+
+    font-family: "Cinzel", serif;
+
+    color: var(--creme);
+}
+
+
+.rodape-marca p {
+    color: rgba(251, 245, 210, 0.6);
+
+    font-size: 0.9rem;
+}
+
+
+.rodape-simbolo {
+    color: var(--dourado);
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.rodape-links,
+.rodape-projeto {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.rodape-links > span,
+.rodape-projeto > span {
+    margin-bottom: 15px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    color: var(--dourado);
+}
+
+
+.rodape-links a {
+    width: fit-content;
+
+    margin: 3px 0;
+
+    color: rgba(251, 245, 210, 0.72);
+
+    font-size: 0.9rem;
+
+    transition:
+        color var(--transicao),
+        transform var(--transicao);
+}
+
+
+.rodape-links a:hover {
+    color: var(--dourado);
+
+    transform: translateX(5px);
+}
+
+
+.rodape-projeto p {
+    max-width: 350px;
+
+    color: rgba(251, 245, 210, 0.65);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.rodape-final {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 55px auto 0;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(251, 245, 210, 0.12);
+
+    color: rgba(251, 245, 210, 0.45);
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .rodape-marca {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .rodape {
+        padding: 55px 7% 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}

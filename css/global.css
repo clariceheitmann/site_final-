@@ -1,0 +1,209 @@
+/* =========================================================
+   VARIÁVEIS GLOBAIS
+========================================================= */
+
+:root {
+
+    /* Paleta clara */
+    --creme: #FBF5D2;
+    --creme-claro: #FEE39F;
+    --dourado: #EFBB55;
+
+    /* Paleta bronze */
+    --bronze: #AD6D15;
+    --bronze-escuro: #79380B;
+    --marrom-profundo: #441004;
+
+    /* Paleta vinho */
+    --vinho: #A22737;
+    --vinho-claro: #CD9454;
+    --vinho-profundo: #471417;
+    --vermelho-escuro: #660611;
+    --quase-preto: #2A0B0B;
+
+    /* Cores gerais */
+    --texto: #441004;
+    --texto-claro: #FBF5D2;
+    --fundo: #FBF5D2;
+
+    /* Sombras */
+    --sombra-suave: 0 10px 30px rgba(68, 16, 4, 0.12);
+    --sombra-media: 0 15px 40px rgba(68, 16, 4, 0.20);
+    --sombra-forte: 0 20px 60px rgba(42, 11, 11, 0.30);
+
+    /* Bordas */
+    --borda-dourada: rgba(173, 109, 21, 0.45);
+
+    /* Transições */
+    --transicao: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(239, 187, 85, 0.14),
+            transparent 35%
+        ),
+        var(--fundo);
+
+    color: var(--texto);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ELEMENTOS GERAIS
+========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+::selection {
+    background: var(--vinho);
+    color: var(--creme);
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTAINER DAS SEÇÕES
+========================================================= */
+
+.secao {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 110px 0;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SEÇÃO
+========================================================= */
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+
+.numero-secao {
+    font-family: "Cinzel", serif;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: var(--bronze);
+
+    border: 1px solid var(--bronze);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+
+.subtitulo-secao {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+
+    color: var(--bronze);
+}
+
+
+.titulo-secao h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    color: var(--marrom-profundo);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE GLOBAL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .secao {
+        padding: 75px 0;
+    }
+
+    .titulo-secao {
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .titulo-secao {
+        gap: 15px;
+    }
+
+    .numero-secao {
+        width: 40px;
+        height: 40px;
+
+        font-size: 0.85rem;
+    }
+
+    .subtitulo-secao {
+        font-size: 0.62rem;
+    }
+
+}

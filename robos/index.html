@@ -3,216 +3,840 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Robôs Industriais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <title>Robótica Industrial | Indústria 4.0</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+    <!-- CSS específico dos Robôs -->
+    <link rel="stylesheet" href="../css/robos/robos.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="../arduino/index.html">Arduino</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+    <!-- =====================================================
+         NAVBAR PRINCIPAL
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Robôs
+            </a>
+
+            <a href="../arduino/index.html" class="nav-link">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+
+        <!-- DETALHE DECORATIVO -->
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
-    <!-- SUBMENU -->
-    <div class="submenu">
-        <a href="index.html">Introdução</a>
-        <a href="#tipos">Tipos</a>
-        <a href="#conceitos">Conceitos</a>
-        <a href="#comparativo">Comparativo</a>
+
+    <!-- =====================================================
+         SUBMENU DOS ROBÔS
+    ====================================================== -->
+
+    <div class="submenu-robos">
+
+        <a href="#inicio">
+            Introdução
+        </a>
+
+        <a href="#tipos">
+            Tipos
+        </a>
+
+        <a href="#conceitos">
+            Conceitos
+        </a>
+
+        <a href="#comparativo">
+            Comparativo
+        </a>
+
     </div>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="overlay">
-            <h1>Robótica Industrial</h1>
-            <p>
-                Conheça os principais tipos de robôs utilizados na indústria e suas aplicações na Indústria 4.0.
-            </p>
-            <a href="#tipos" class="btn">Conheça cada robô!</a>
-        </div>
-    </section>
 
-    <!-- SOBRE -->
-    <section class="sobre">
-        <h2>Conceitos Básicos</h2>
-    </section>
+    <main id="inicio">
 
-    <!-- CONCEITOS -->
-    <section id="conceitos" class="conceitos">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-        <div class="card">
-            <h2>Internet das Coisas (IoT)</h2>
-            <p>
-                A Internet das Coisas (IoT) conecta objetos à internet para coletar e trocar dados automaticamente,
-                sem intervenção humana. Presente em casas, saúde, transporte e indústria, utiliza sensores e redes
-                para funcionamento. Seus principais benefícios são automação, monitoramento remoto e eficiência.
-            </p>
-        </div>
+        <section class="robos-hero">
 
-        <div class="card">
-            <h2>Robótica Industrial</h2>
-            <p>
-                A robótica industrial consiste no uso de robôs automatizados e programáveis para executar tarefas
-                com alta precisão e repetição, substituindo o trabalho humano em atividades pesadas ou perigosas.
-                Essa tecnologia integra mecânica, eletrônica e computação.
-            </p>
-        </div>
+            <div class="hero-overlay"></div>
 
-        <div class="card">
-            <h2>Automação Industrial</h2>
-            <p>
-                A automação industrial utiliza softwares, robôs e sensores para controlar processos produtivos
-                com pouca intervenção humana. Permite monitoramento em tempo real, maior eficiência,
-                redução de custos e aumento da segurança.
-            </p>
-        </div>
+            <div class="hero-content reveal">
 
-        <div class="card">
-            <h2>Robótica + IoT</h2>
-            <p>
-                A integração entre robótica e IoT (IoRT) permite que máquinas se tornem inteligentes e conectadas,
-                capazes de tomar decisões baseadas em dados em tempo real, sendo aplicada em indústria,
-                logística e sistemas inteligentes.
-            </p>
-        </div>
+                <span class="hero-label">
+                    ROBÓTICA • AUTOMAÇÃO • INDÚSTRIA 4.0
+                </span>
 
-    </section>
+                <h1>
+                    Robótica Industrial
+                </h1>
 
-    <!-- TIPOS -->
-    <section id="tipos" class="tipos-container">
+                <div class="hero-line"></div>
 
-        <section class="sobre">
-            <h2>Nosso Catálago</h2>
+                <p>
+                    Conheça os principais tipos de robôs utilizados na indústria e suas aplicações na Indústria 4.0.
+                </p>
+
+                <a href="#tipos" class="robos-btn">
+                    Conheça cada robô
+                    <span>→</span>
+                </a>
+
+            </div>
+
         </section>
 
-        <div class="linha">
-            <div class="card">
-                <h3>Robô SCARA</h3>
-                <p>Alta velocidade para montagem e posicionamento.</p>
-                <a href="scara.html">Ver mais</a>
+
+        <!-- =====================================================
+             TÍTULO — CONCEITOS
+        ====================================================== -->
+
+        <section class="section-heading">
+
+            <span>INDÚSTRIA 4.0</span>
+
+            <h2>
+                Conceitos Básicos
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONCEITOS
+        ====================================================== -->
+
+        <section id="conceitos" class="conceitos">
+
+            <article class="conceito-card reveal">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <div class="card-icon">
+                    ◈
+                </div>
+
+                <h2>
+                    Internet das Coisas (IoT)
+                </h2>
+
+                <p>
+                    A Internet das Coisas (IoT) conecta objetos à internet para coletar e trocar dados automaticamente,
+                    sem intervenção humana. Presente em casas, saúde, transporte e indústria, utiliza sensores e redes
+                    para funcionamento. Seus principais benefícios são automação, monitoramento remoto e eficiência.
+                </p>
+
+            </article>
+
+
+            <article class="conceito-card reveal">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <div class="card-icon">
+                    ⚙
+                </div>
+
+                <h2>
+                    Robótica Industrial
+                </h2>
+
+                <p>
+                    A robótica industrial consiste no uso de robôs automatizados e programáveis para executar tarefas
+                    com alta precisão e repetição, substituindo o trabalho humano em atividades pesadas ou perigosas.
+                    Essa tecnologia integra mecânica, eletrônica e computação.
+                </p>
+
+            </article>
+
+
+            <article class="conceito-card reveal">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <div class="card-icon">
+                    ◫
+                </div>
+
+                <h2>
+                    Automação Industrial
+                </h2>
+
+                <p>
+                    A automação industrial utiliza softwares, robôs e sensores para controlar processos produtivos
+                    com pouca intervenção humana. Permite monitoramento em tempo real, maior eficiência,
+                    redução de custos e aumento da segurança.
+                </p>
+
+            </article>
+
+
+            <article class="conceito-card reveal">
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <div class="card-icon">
+                    ⌁
+                </div>
+
+                <h2>
+                    Robótica + IoT
+                </h2>
+
+                <p>
+                    A integração entre robótica e IoT (IoRT) permite que máquinas se tornem inteligentes e conectadas,
+                    capazes de tomar decisões baseadas em dados em tempo real, sendo aplicada em indústria,
+                    logística e sistemas inteligentes.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATÁLOGO
+        ====================================================== -->
+
+        <section id="tipos" class="catalogo-section">
+
+            <div class="section-heading section-heading-light">
+
+                <span>CATÁLOGO</span>
+
+                <h2>
+                    Nosso Catálogo
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Explore diferentes tipos de robôs industriais e descubra suas principais características.
+                </p>
+
             </div>
 
-            <div class="card">
-                <h3>Robô Cartesiano</h3>
-                <p>Movimento linear em eixos X, Y e Z.</p>
-                <a href="cartesiano.html">Ver mais</a>
+
+            <div class="catalogo-grid">
+
+                <!-- SCARA -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        01
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô SCARA
+                        </h3>
+
+                        <p>
+                            Alta velocidade para montagem e posicionamento.
+                        </p>
+
+                        <a href="scara.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARTESIANO -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        02
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô Cartesiano
+                        </h3>
+
+                        <p>
+                            Movimento linear em eixos X, Y e Z.
+                        </p>
+
+                        <a href="cartesiano.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CILÍNDRICO -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        03
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô Cilíndrico
+                        </h3>
+
+                        <p>
+                            Área de trabalho em formato cilíndrico.
+                        </p>
+
+                        <a href="cilindrico.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DELTA -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        04
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô Delta
+                        </h3>
+
+                        <p>
+                            Altíssima velocidade para pick and place.
+                        </p>
+
+                        <a href="delta.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICULADO -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        05
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô Articulado
+                        </h3>
+
+                        <p>
+                            Semelhante ao braço humano com múltiplos eixos.
+                        </p>
+
+                        <a href="articulado.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COBOT -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        06
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ COLABORATIVO
+                        </span>
+
+                        <h3>
+                            Robô Cobot
+                        </h3>
+
+                        <p>
+                            Robô colaborativo que trabalha com humanos.
+                        </p>
+
+                        <a href="cobot.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POLAR -->
+
+                <article class="robo-card reveal">
+
+                    <div class="robo-card-number">
+                        07
+                    </div>
+
+                    <div class="robo-card-content">
+
+                        <span class="robo-category">
+                            ROBÔ INDUSTRIAL
+                        </span>
+
+                        <h3>
+                            Robô Polar
+                        </h3>
+
+                        <p>
+                            Movimento baseado em coordenadas esféricas.
+                        </p>
+
+                        <a href="polar.html" class="robo-link">
+                            Ver mais
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
             </div>
 
-            <div class="card">
-                <h3>Robô Cilíndrico</h3>
-                <p>Área de trabalho em formato cilíndrico.</p>
-                <a href="cilindrico.html">Ver mais</a>
+        </section>
+
+
+        <!-- =====================================================
+             COMPARATIVO
+        ====================================================== -->
+
+        <section id="comparativo" class="comparativo-section">
+
+            <div class="section-heading">
+
+                <span>ANÁLISE</span>
+
+                <h2>
+                    Comparativo rápido
+                </h2>
+
+                <div class="heading-line"></div>
+
             </div>
+
+
+            <div class="tabela-wrapper">
+
+                <table class="tabela">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Movimento</th>
+                            <th>Ponto forte</th>
+                            <th>Aplicação</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <a href="cartesiano.html">
+                                    Cartesiano
+                                </a>
+                            </td>
+
+                            <td>
+                                Linear (X, Y, Z)
+                            </td>
+
+                            <td>
+                                Precisão
+                            </td>
+
+                            <td>
+                                Paletização
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="scara.html">
+                                    SCARA
+                                </a>
+                            </td>
+
+                            <td>
+                                Horizontal + eixo Z
+                            </td>
+
+                            <td>
+                                Velocidade
+                            </td>
+
+                            <td>
+                                Montagem
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="articulado.html">
+                                    Articulado
+                                </a>
+                            </td>
+
+                            <td>
+                                Juntas rotativas
+                            </td>
+
+                            <td>
+                                Flexibilidade
+                            </td>
+
+                            <td>
+                                Soldagem
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="cilindrico.html">
+                                    Cilíndrico
+                                </a>
+                            </td>
+
+                            <td>
+                                Rotação + vertical
+                            </td>
+
+                            <td>
+                                Alcance
+                            </td>
+
+                            <td>
+                                Carga
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="delta.html">
+                                    Delta
+                                </a>
+                            </td>
+
+                            <td>
+                                Paralelo
+                            </td>
+
+                            <td>
+                                Velocidade extrema
+                            </td>
+
+                            <td>
+                                Embalagem
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="polar.html">
+                                    Polar
+                                </a>
+                            </td>
+
+                            <td>
+                                Esférico
+                            </td>
+
+                            <td>
+                                Alcance amplo
+                            </td>
+
+                            <td>
+                                Fundição
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <a href="cobot.html">
+                                    Cobot
+                                </a>
+                            </td>
+
+                            <td>
+                                Sensorial
+                            </td>
+
+                            <td>
+                                Segurança
+                            </td>
+
+                            <td>
+                                Montagem
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         BOTÃO VOLTAR AO TOPO
+    ====================================================== -->
+
+    <button id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+            <!-- MARCA -->
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Tecnologia, automação e inovação transformando a indústria.
+                </p>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="index.html">
+                    Robôs
+                </a>
+
+                <a href="../arduino/index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+            <!-- PROJETO -->
+
+            <div class="rodape-projeto">
+
+                <span>
+                    SOBRE O PROJETO
+                </span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="linha">
-            <div class="card">
-                <h3>Robô Delta</h3>
-                <p>Altíssima velocidade para pick and place.</p>
-                <a href="delta.html">Ver mais</a>
-            </div>
 
-            <div class="card">
-                <h3>Robô Articulado</h3>
-                <p>Semelhante ao braço humano com múltiplos eixos.</p>
-                <a href="articulado.html">Ver mais</a>
-            </div>
+        <!-- FINAL -->
 
-            <div class="card">
-                <h3>Robô Cobot</h3>
-                <p>Robô colaborativo que trabalha com humanos.</p>
-                <a href="cobot.html">Ver mais</a>
-            </div>
+        <div class="rodape-final">
 
-            <div class="card">
-                <h3>Robô Polar</h3>
-                <p>Movimento baseado em coordenadas esféricas.</p>
-                <a href="polar.html">Ver mais</a>
-            </div>
+            <span>
+                © 2026 - Robótica Industrial
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
         </div>
 
-    </section>
-
-    <!-- COMPARATIVO -->
-    <section id="comparativo" class="sobre">
-        <h2>Comparativo rápido</h2>
-
-        <table class="tabela">
-            <thead>
-                <tr>
-                    <th>Tipo</th>
-                    <th>Movimento</th>
-                    <th>Ponto forte</th>
-                    <th>Aplicação</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td><a href="cartesiano.html">Cartesiano</a></td>
-                    <td>Linear (X, Y, Z)</td>
-                    <td>Precisão</td>
-                    <td>Paletização</td>
-                </tr>
-
-                <tr>
-                    <td><a href="scara.html">SCARA</a></td>
-                    <td>Horizontal + eixo Z</td>
-                    <td>Velocidade</td>
-                    <td>Montagem</td>
-                </tr>
-
-                <tr>
-                    <td><a href="articulado.html">Articulado</a></td>
-                    <td>Juntas rotativas</td>
-                    <td>Flexibilidade</td>
-                    <td>Soldagem</td>
-                </tr>
-
-                <tr>
-                    <td><a href="cilindrico.html">Cilíndrico</a></td>
-                    <td>Rotação + vertical</td>
-                    <td>Alcance</td>
-                    <td>Carga</td>
-                </tr>
-
-                <tr>
-                    <td><a href="delta.html">Delta</a></td>
-                    <td>Paralelo</td>
-                    <td>Velocidade extrema</td>
-                    <td>Embalagem</td>
-                </tr>
-
-                <tr>
-                    <td><a href="polar.html">Polar</a></td>
-                    <td>Esférico</td>
-                    <td>Alcance amplo</td>
-                    <td>Fundição</td>
-                </tr>
-
-                <tr>
-                    <td><a href="cobot.html">Cobot</a></td>
-                    <td>Sensorial</td>
-                    <td>Segurança</td>
-                    <td>Montagem</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <footer>
-        <p>© 2026 - Robótica Industrial</p>
     </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../js/robos.js"></script>
 
 </body>
 

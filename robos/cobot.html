@@ -3,115 +3,405 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Robôs Industriais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <title>Cobot | Robótica Industrial</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/global.css">
+
+    <!-- NAVBAR -->
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- ANIMAÇÕES -->
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+    <!-- CSS DOS ROBÔS -->
+    <link rel="stylesheet" href="../css/robos/robos.css">
+    <link rel="stylesheet" href="../css/robos/robos-paginas.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="../arduino/index.html">Arduino</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <span class="logo-detalhe">✦</span>
+                Indústria 4.0
+            </a>
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Robôs
+            </a>
+
+            <a href="../arduino/index.html" class="nav-link">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
-    <!-- SUBMENU -->
+
+    <!-- =====================================================
+         SUBMENU DOS ROBÔS
+    ====================================================== -->
+
     <div class="submenu">
-        <a href="index.html">Introdução</a>
-        <a href="./index.html#tipos">Tipos</a>
+
+        <a href="index.html">
+            Introdução
+        </a>
+
+        <a href="index.html#tipos">
+            Tipos
+        </a>
+
     </div>
 
-    <section class="hero-pequeno">
-        <div>
-            <p class="destaque">Robô colaborativo</p>
-            <h1>Cobot</h1>
-            <p>
-                Robô projetado para trabalhar em colaboração direta com humanos.
-            </p>
-        </div>
-        <figure class="foto-robo">
-            <div class="fundo-foto">
-                <img src="../img/robos/robo_colaborativo.png" alt="Robô Colaborativo">
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero-pequeno">
+
+            <div class="hero-pequeno-conteudo">
+
+                <p class="destaque">
+                    Robô colaborativo
+                </p>
+
+                <h1>
+                    Cobot
+                </h1>
+
+                <p>
+                    Robô projetado para trabalhar em colaboração direta com humanos.
+                </p>
+
             </div>
 
-            <figcaption>Robô Colaborativo</figcaption>
-        </figure>
-    </section>
+            <figure class="foto-robo">
 
-    <section class="conteudo-robos">
+                <div class="fundo-foto">
 
-        <div class="card">
-            <h2>Conceito</h2>
-            <p>
-                Os cobots são robôs colaborativos desenvolvidos para operar com segurança ao lado de pessoas,
-                sem necessidade de barreiras de proteção.
-            </p>
-        </div>
+                    <img
+                        src="../img/robos/robo_colaborativo.png"
+                        alt="Robô Colaborativo"
+                    >
 
-        <div class="card">
-            <h2>Princípio de funcionamento</h2>
-            <p>
-                Utilizam sensores e sistemas de controle que detectam contato e força,
-                permitindo parar automaticamente em caso de colisão.
-            </p>
-        </div>
+                </div>
 
-        <div class="card">
-            <h2>Principais características técnicas</h2>
-            <ul>
-                <li>Segurança integrada</li>
-                <li>Fácil programação</li>
-                <li>Flexibilidade</li>
-                <li>Compacto</li>
-            </ul>
-        </div>
+                <figcaption>
+                    Robô Colaborativo
+                </figcaption>
 
-        <div class="card">
-            <h2>Vantagens</h2>
-            <ul>
-                <li>Interação segura com humanos</li>
-                <li>Fácil implementação</li>
-                <li>Versatilidade</li>
-            </ul>
-        </div>
+            </figure>
 
-        <div class="card">
-            <h2>Desvantagens</h2>
-            <ul>
-                <li>Menor capacidade de carga</li>
-                <li>Velocidade reduzida</li>
-                <li>Limitações em tarefas pesadas</li>
-            </ul>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Aplicações industriais</h2>
-            <p>
-                Montagem leve, inspeção, embalagem e tarefas colaborativas em linhas de produção.
-            </p>
-        </div>
 
-        <div class="card">
-            <h2>Integração com IoT</h2>
-            <p>
-                Integração com sistemas inteligentes permite coleta de dados de produção e desempenho.
-            </p>
-        </div>
+        <!-- =================================================
+             CONTEÚDO DO ROBÔ
+        ================================================== -->
 
-        <div class="card">
-            <h2>Modelos comerciais</h2>
-            <div class="modelos">
-                <div class="modelo"><strong>UR10e</strong></div>
-                <div class="modelo"><strong>FANUC CRX</strong></div>
-                <div class="modelo"><strong>Doosan M Series</strong></div>
+        <section class="conteudo-robos">
+
+            <div class="card">
+
+                <h2>
+                    Conceito
+                </h2>
+
+                <p>
+                    Os cobots são robôs colaborativos desenvolvidos para operar com segurança ao lado de pessoas,
+                    sem necessidade de barreiras de proteção.
+                </p>
+
             </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Princípio de funcionamento
+                </h2>
+
+                <p>
+                    Utilizam sensores e sistemas de controle que detectam contato e força,
+                    permitindo parar automaticamente em caso de colisão.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Principais características técnicas
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Segurança integrada
+                    </li>
+
+                    <li>
+                        Fácil programação
+                    </li>
+
+                    <li>
+                        Flexibilidade
+                    </li>
+
+                    <li>
+                        Compacto
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Vantagens
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Interação segura com humanos
+                    </li>
+
+                    <li>
+                        Fácil implementação
+                    </li>
+
+                    <li>
+                        Versatilidade
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Desvantagens
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Menor capacidade de carga
+                    </li>
+
+                    <li>
+                        Velocidade reduzida
+                    </li>
+
+                    <li>
+                        Limitações em tarefas pesadas
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Aplicações industriais
+                </h2>
+
+                <p>
+                    Montagem leve, inspeção, embalagem e tarefas colaborativas em linhas de produção.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Integração com IoT
+                </h2>
+
+                <p>
+                    Integração com sistemas inteligentes permite coleta de dados de produção e desempenho.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>
+                    Modelos comerciais
+                </h2>
+
+                <div class="modelos">
+
+                    <div class="modelo">
+                        <strong>UR10e</strong>
+                    </div>
+
+                    <div class="modelo">
+                        <strong>FANUC CRX</strong>
+                    </div>
+
+                    <div class="modelo">
+                        <strong>Doosan M Series</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Tecnologia, automação e inovação transformando a indústria.
+                </p>
+
+            </div>
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="index.html">
+                    Robôs
+                </a>
+
+                <a href="../arduino/index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+            <div class="rodape-projeto">
+
+                <span>
+                    SOBRE O PROJETO
+                </span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p>
+
+            </div>
+
         </div>
 
-    </section>
+
+        <div class="rodape-final">
+
+            <span>
+                © 2026 - Robótica Industrial
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/robos.js"></script>
+
+</body>
+
+</html>

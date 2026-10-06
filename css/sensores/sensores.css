@@ -1,0 +1,1342 @@
+/* =========================================================
+   SENSORES — CATÁLOGO
+   MESMA ESTÉTICA DA PÁGINA DE ROBÓTICA
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+    --sensor-bordo: #572F48;
+    --sensor-bordo-escuro: #3B2031;
+    --sensor-vinho: #2A0B0B;
+
+    --sensor-dourado: #B88945;
+    --sensor-dourado-claro: #D7B477;
+
+    --sensor-creme: #FFF9F7;
+    --sensor-pergaminho: #F7F0E5;
+
+    --sensor-cinza: #817965;
+    --sensor-texto: #4E4C5E;
+
+    --sensor-borda:
+        rgba(87, 47, 72, 0.15);
+}
+
+
+/* =========================================================
+   FUNDO GERAL
+========================================================= */
+
+body {
+    background:
+        linear-gradient(
+            180deg,
+            #FFF9F7 0%,
+            #F8F0E5 100%
+        );
+
+    color: var(--sensor-texto);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pagina > .hero {
+    position: relative;
+
+    min-height: 560px;
+
+    padding: 90px 9%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.85fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #4A3044,
+            #3B2031 58%,
+            #2A0B0B 100%
+        );
+
+    color: var(--sensor-creme);
+}
+
+
+/* círculo superior direito */
+
+.pagina > .hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    right: -180px;
+    top: -180px;
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.22);
+
+    border-radius: 50%;
+}
+
+
+/* círculo inferior esquerdo */
+
+.pagina > .hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    left: -170px;
+    bottom: -180px;
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.17);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO HERO
+========================================================= */
+
+.pagina > .hero > div {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.pagina > .hero .destaque {
+    margin-bottom: 20px;
+
+    color: var(--sensor-dourado-claro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+
+.pagina > .hero h2 {
+    margin: 0;
+
+    color: #FFF9F7;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(3rem, 5vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+/* linha dourada */
+
+.pagina > .hero h2::after {
+    content: "";
+
+    display: block;
+
+    width: 85px;
+    height: 2px;
+
+    margin-top: 28px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--sensor-dourado),
+            transparent
+        );
+}
+
+
+.pagina > .hero > div > p:last-child {
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    color:
+        rgba(251, 245, 210, 0.78);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   IMAGEM DO HERO
+========================================================= */
+
+.foto-sensor {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255, 249, 247, 0.07);
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.25);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.22);
+
+    backdrop-filter: blur(5px);
+}
+
+
+.foto-sensor::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.18);
+
+    pointer-events: none;
+}
+
+
+.foto-sensor img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-height: 310px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 15px 20px
+            rgba(0, 0, 0, 0.25)
+        );
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.foto-sensor:hover img {
+    transform: scale(1.03);
+}
+
+
+.foto-sensor figcaption {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 18px;
+
+    color:
+        rgba(251, 245, 210, 0.65);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.76rem;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CATÁLOGO
+========================================================= */
+
+#catalago {
+    width: min(1200px, 88%);
+
+    margin: 90px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   CARDS DOS SENSORES
+========================================================= */
+
+.sensor-card {
+    position: relative;
+
+    padding: 38px;
+
+    background:
+        rgba(255, 249, 247, 0.92);
+
+    border:
+        1px solid
+        var(--sensor-borda);
+
+    box-shadow:
+        0 15px 40px
+        rgba(68, 16, 4, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* linha dourada superior */
+
+.sensor-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--sensor-dourado),
+            transparent
+        );
+}
+
+
+.sensor-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(184, 137, 69, 0.38);
+
+    box-shadow:
+        0 25px 55px
+        rgba(68, 16, 4, 0.12);
+}
+
+
+/* =========================================================
+   NÚMERO DO SENSOR
+========================================================= */
+
+.numero-sensor {
+    margin: 0 0 12px;
+
+    color: var(--sensor-dourado);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.sensor-card h3 {
+    margin: 0 0 25px;
+
+    color: var(--sensor-bordo);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 1.55rem;
+
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   IMAGEM DO SENSOR
+========================================================= */
+
+.imagem-sensor {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F7F0E5,
+            #EFE5D6
+        );
+
+    border:
+        1px solid
+        rgba(87, 47, 72, 0.10);
+
+    overflow: hidden;
+}
+
+
+/* moldura interna */
+
+.imagem-sensor::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(184, 137, 69, 0.22);
+
+    pointer-events: none;
+}
+
+
+.imagem-sensor img {
+    position: relative;
+
+    z-index: 2;
+
+    width: auto;
+    max-width: 82%;
+
+    height: auto;
+    max-height: 175px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 12px 12px
+            rgba(68, 16, 4, 0.14)
+        );
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.sensor-card:hover .imagem-sensor img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CATEGORIA
+========================================================= */
+
+.sensor-card .categoria {
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid
+        rgba(87, 47, 72, 0.12);
+
+    color: var(--sensor-cinza);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.88rem;
+}
+
+
+.sensor-card .categoria strong {
+    color: var(--sensor-bordo);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.informacao-sensor {
+    color: var(--sensor-texto);
+}
+
+
+.informacao-sensor h4 {
+    margin:
+        24px 0 8px;
+
+    color: var(--sensor-bordo);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.informacao-sensor h4:first-child {
+    margin-top: 0;
+}
+
+
+.informacao-sensor p {
+    margin: 0 0 12px;
+
+    color: var(--sensor-texto);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+}
+
+
+.informacao-sensor ul {
+    margin:
+        8px 0 18px 20px;
+
+    padding: 0;
+}
+
+
+.informacao-sensor li {
+    margin-bottom: 6px;
+
+    color: var(--sensor-texto);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+}
+
+
+.informacao-sensor li::marker {
+    color: var(--sensor-dourado);
+}
+
+
+/* =========================================================
+   DESTAQUES DENTRO DAS INFORMAÇÕES
+========================================================= */
+
+.informacao-sensor strong {
+    color: var(--sensor-bordo);
+}
+
+
+/* =========================================================
+   TABELA COMPARATIVA
+========================================================= */
+
+.comparativo {
+    position: relative;
+
+    /* IMPORTANTE:
+       faz a tabela ocupar toda a largura do grid */
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin: 90px 0 30px;
+
+    padding: 70px 60px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3B2031,
+            #2A0B0B
+        );
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.22);
+
+    box-shadow:
+        0 25px 60px
+        rgba(42, 11, 11, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORAÇÕES
+========================================================= */
+
+.comparativo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    right: -170px;
+    top: -180px;
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.17);
+
+    border-radius: 50%;
+}
+
+
+.comparativo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    left: -125px;
+    bottom: -125px;
+
+    border:
+        1px solid
+        rgba(239, 187, 85, 0.12);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.comparativo .titulo-secao {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.comparativo .titulo-secao .destaque {
+    margin-bottom: 15px;
+
+    color: #D7B477;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+
+.comparativo .titulo-secao h2 {
+    margin: 0;
+
+    color: #FFF9F7;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(2.2rem, 4vw, 3.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+
+
+.comparativo .titulo-secao h2::after {
+    content: "";
+
+    display: block;
+
+    width: 75px;
+    height: 1px;
+
+    margin: 22px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #B88945,
+            transparent
+        );
+}
+
+
+.comparativo .titulo-secao > p:last-child {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color:
+        rgba(251, 245, 210, 0.70);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ÁREA DA TABELA
+========================================================= */
+
+.tabela-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   TABELA
+========================================================= */
+
+.tabela-sensores {
+    width: 100%;
+
+    min-width: 800px;
+
+    border-collapse: collapse;
+
+    background:
+        rgba(255, 249, 247, 0.035);
+}
+
+
+/* CABEÇALHO */
+
+.tabela-sensores thead {
+    background:
+        rgba(184, 137, 69, 0.16);
+}
+
+
+.tabela-sensores th {
+    padding: 18px 20px;
+
+    color: #D7B477;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    border-bottom:
+        1px solid
+        rgba(239, 187, 85, 0.30);
+}
+
+
+/* CÉLULAS */
+
+.tabela-sensores td {
+    padding: 17px 20px;
+
+    color:
+        rgba(251, 245, 210, 0.76);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 0.86rem;
+
+    line-height: 1.55;
+
+    border-bottom:
+        1px solid
+        rgba(251, 245, 210, 0.09);
+
+    vertical-align: middle;
+}
+
+
+/* LINHAS */
+
+.tabela-sensores tbody tr {
+    transition:
+        background 0.3s ease;
+}
+
+
+.tabela-sensores tbody tr:hover {
+    background:
+        rgba(239, 187, 85, 0.07);
+}
+
+
+/* DESTAQUES */
+
+.tabela-sensores td strong {
+    color:
+        #D7B477;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   COLUNAS
+========================================================= */
+
+.tabela-sensores th:nth-child(1),
+.tabela-sensores td:nth-child(1) {
+    width: 18%;
+}
+
+
+.tabela-sensores th:nth-child(2),
+.tabela-sensores td:nth-child(2) {
+    width: 17%;
+}
+
+
+.tabela-sensores th:nth-child(3),
+.tabela-sensores td:nth-child(3) {
+    width: 23%;
+}
+
+
+.tabela-sensores th:nth-child(4),
+.tabela-sensores td:nth-child(4) {
+    width: 20%;
+}
+
+
+.tabela-sensores th:nth-child(5),
+.tabela-sensores td:nth-child(5) {
+    width: 22%;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .comparativo {
+        padding: 55px 30px;
+    }
+
+    .tabela-sensores {
+        min-width: 760px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .comparativo {
+        width: 100%;
+
+        margin-top: 65px;
+
+        padding:
+            45px 20px;
+    }
+
+    .comparativo .titulo-secao h2 {
+        font-size: 2.2rem;
+    }
+
+    .tabela-container {
+        margin-top: 30px;
+    }
+
+    .tabela-sensores {
+        min-width: 720px;
+    }
+
+    .tabela-sensores th,
+    .tabela-sensores td {
+        padding:
+            14px 15px;
+    }
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+.voltar-topo {
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    z-index: 900;
+
+    width: 48px;
+    height: 48px;
+
+    border:
+        1px solid
+        rgba(184, 137, 69, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            #572F48,
+            #3B2031
+        );
+
+    color: var(--sensor-creme);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(42, 11, 11, 0.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.voltar-topo.visivel {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+.voltar-topo:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #6A3A57,
+            #572F48
+        );
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .pagina > .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding:
+            85px 8%;
+
+        text-align: center;
+    }
+
+    .pagina > .hero h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina > .hero > div > p:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto-sensor {
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    #catalago {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .pagina > .hero {
+        padding:
+            70px 6%;
+    }
+
+    .pagina > .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    #catalago {
+        width: 92%;
+
+        margin-top: 65px;
+    }
+
+    .sensor-card {
+        padding: 28px 24px;
+    }
+
+    .imagem-sensor {
+        height: 200px;
+    }
+
+    .comparativo {
+        width: 92%;
+
+        padding:
+            45px 25px;
+
+        margin:
+            80px auto;
+    }
+
+    .tabela-sensores {
+        min-width: 650px;
+    }
+
+    .voltar-topo {
+        right: 18px;
+        bottom: 18px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .pagina > .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .pagina > .hero .destaque {
+        font-size: 0.62rem;
+
+        letter-spacing: 0.18em;
+    }
+
+    .sensor-card h3 {
+        font-size: 1.35rem;
+    }
+
+    .imagem-sensor {
+        height: 180px;
+    }
+
+    .imagem-sensor img {
+        max-height: 145px;
+    }
+}
+
+/* =========================================================
+   SUBNAVBAR — SENSORES
+========================================================= */
+
+.submenu {
+    position: relative;
+
+    z-index: 900;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 42px;
+
+    padding: 0 30px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #FFF9F7,
+            #F7F0E5
+        );
+
+    border-bottom:
+        1px solid
+        rgba(87, 47, 72, 0.10);
+
+    box-shadow:
+        0 5px 20px
+        rgba(68, 16, 4, 0.06);
+}
+
+
+/* =========================================================
+   LINKS DA SUBNAVBAR
+========================================================= */
+
+.submenu a {
+    position: relative;
+
+    padding: 19px 4px 17px;
+
+    color: var(--sensor-bordo);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* linha dourada */
+
+.submenu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 10px;
+
+    width: 0;
+    height: 1px;
+
+    background:
+        var(--sensor-dourado);
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.submenu a:hover {
+    color:
+        var(--sensor-dourado);
+}
+
+
+.submenu a:hover::after {
+    width: 70%;
+}
+
+
+/* =========================================================
+   LINK ATIVO
+========================================================= */
+
+.submenu a.ativo {
+    color:
+        var(--sensor-dourado);
+}
+
+
+.submenu a.ativo::after {
+    width: 70%;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .submenu {
+        gap: 22px;
+
+        padding:
+            0 15px;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        scrollbar-width: none;
+    }
+
+    .submenu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .submenu a {
+        flex-shrink: 0;
+
+        font-size: 0.62rem;
+    }
+}

@@ -1121,4 +1121,3 @@ refazerQuiz.addEventListener("click", function () {
     });
 
 });
-
