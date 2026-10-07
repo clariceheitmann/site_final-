@@ -2,67 +2,132 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Referências | Sensores</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="./assets/icon.SA.png">
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+    <!-- CSS das referências -->
+    <link rel="stylesheet" href="../css/referencias/referencias.css">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../assets/icon.SA.png">
+
 </head>
+
 
 <body>
 
-    <!-- ========================= -->
-    <!-- CABEÇALHO -->
-    <!-- ========================= -->
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
 
     <header class="cabecalho">
 
         <div class="logo">
-            <h1>Indústria 4.0</h1>
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
         </div>
 
-        <nav id="menu">
 
-            <a href="../index.html">
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
                 Início
             </a>
 
-            <a href="./index.html">
-                Referências
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
             </a>
 
-            <a href="./referencias_sensores.html">
+            <a href="../arduino/index.html" class="nav-link">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
                 Sensores
             </a>
 
-            <a href="./referencias_robos.html">
-                Robôs Industriais
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Referências
             </a>
 
         </nav>
 
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
 
-    <!-- ========================= -->
-    <!-- CONTEÚDO -->
-    <!-- ========================= -->
+
+    <!-- =====================================================
+         SUBMENU — REFERÊNCIAS
+    ====================================================== -->
+
+    <div class="submenu">
+
+        <a href="index.html">
+            Introdução
+        </a>
+
+        <a href="referencias_sensores.html" class="ativo">
+            Sensores
+        </a>
+
+        <a href="referencias_robos.html">
+            Robôs Industriais
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
 
     <main>
 
-        <section class="hero">
 
-            <div>
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero-referencias">
+
+            <div class="hero-referencias-conteudo">
 
                 <p class="destaque">
                     Referências • Sensores
                 </p>
 
-                <h2>
+                <h1>
                     Referências dos Sensores
-                </h2>
+                </h1>
 
                 <p>
                     Fontes utilizadas para a pesquisa e desenvolvimento
@@ -75,278 +140,663 @@
         </section>
 
 
-        <section class="conteudo">
 
-            <article class="card">
+        <!-- =================================================
+             REFERÊNCIAS
+        ================================================== -->
 
-                <h3>Arduino UNO R3</h3>
-
-                <p>
-                    Documentação oficial utilizada como referência para
-                    informações relacionadas à placa Arduino UNO R3.
-                </p>
-
-                <a
-                    href="https://docs.arduino.cc/hardware/uno-rev3/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
-
-            </article>
+        <section class="referencias-conteudo">
 
 
-            <article class="card">
+            <div class="referencias-titulo">
 
-                <h3>Arduino Language Reference</h3>
+                <span>
+                    FONTES CONSULTADAS
+                </span>
+
+                <h2>
+                    Sensores e dispositivos
+                </h2>
 
                 <p>
-                    Referência utilizada para informações relacionadas
-                    à linguagem de programação do Arduino.
+                    Nesta seção estão reunidas as principais fontes utilizadas
+                    para fundamentar as informações apresentadas sobre Arduino,
+                    programação, sensores e suas características, funcionamento
+                    e aplicações.
                 </p>
 
-                <a
-                    href="https://docs.arduino.cc/language-reference/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+            </div>
 
-            </article>
 
 
-            <article class="card">
+            <div class="referencias-grid">
 
-                <h3>Arduino Built-in Examples</h3>
 
-                <p>
-                    Exemplos oficiais utilizados como referência para
-                    programação e utilização do Arduino.
-                </p>
+                <!-- =================================================
+                     01 — ARDUINO UNO R3
+                ================================================== -->
 
-                <a
-                    href="https://docs.arduino.cc/built-in-examples/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                <article class="referencia-card reveal">
 
-            </article>
+                    <span class="numero-referencia">
+                        01
+                    </span>
 
+                    <div class="referencia-linha"></div>
 
-            <article class="card">
+                    <h3>
+                        Arduino UNO R3
+                    </h3>
 
-                <h3>Adafruit</h3>
+                    <p>
+                        Documentação oficial utilizada como referência para
+                        informações relacionadas à placa Arduino UNO R3.
+                    </p>
 
-                <p>
-                    Fonte utilizada para informações relacionadas aos
-                    sensores DHT11, DHT22 e AM2302.
-                </p>
+                    <a
+                        href="https://docs.arduino.cc/hardware/uno-rev3/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
 
-                <a
-                    href="https://www.adafruit.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                        Acessar fonte
 
-            </article>
+                        <span>↗</span>
 
+                    </a>
 
-            <article class="card">
+                </article>
 
-                <h3>Texas Instruments</h3>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    sensor de temperatura LM35.
-                </p>
 
-                <a
-                    href="https://www.ti.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                <!-- =================================================
+                     02 — ARDUINO LANGUAGE REFERENCE
+                ================================================== -->
 
-            </article>
+                <article class="referencia-card reveal">
 
+                    <span class="numero-referencia">
+                        02
+                    </span>
 
-            <article class="card">
+                    <div class="referencia-linha"></div>
 
-                <h3>Analog Devices</h3>
+                    <h3>
+                        Arduino Language Reference
+                    </h3>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    sensor de temperatura DS18B20.
-                </p>
+                    <p>
+                        Referência utilizada para informações relacionadas
+                        à linguagem de programação do Arduino.
+                    </p>
 
-                <a
-                    href="https://www.analog.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                    <a
+                        href="https://docs.arduino.cc/language-reference/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
 
-            </article>
+                        Acessar fonte
 
+                        <span>↗</span>
 
-            <article class="card">
+                    </a>
 
-                <h3>ROHM Semiconductor</h3>
+                </article>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    sensor de luminosidade BH1750.
-                </p>
 
-                <a
-                    href="https://www.rohm.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
 
-            </article>
+                <!-- =================================================
+                     03 — BUILT-IN EXAMPLES
+                ================================================== -->
 
+                <article class="referencia-card reveal">
 
-            <article class="card">
+                    <span class="numero-referencia">
+                        03
+                    </span>
 
-                <h3>NXP</h3>
+                    <div class="referencia-linha"></div>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    módulo RFID MFRC522.
-                </p>
+                    <h3>
+                        Arduino Built-in Examples
+                    </h3>
 
-                <a
-                    href="https://www.nxp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                    <p>
+                        Exemplos oficiais utilizados como referência para
+                        programação e utilização do Arduino.
+                    </p>
 
-            </article>
+                    <a
+                        href="https://docs.arduino.cc/built-in-examples/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
 
+                        Acessar fonte
 
-            <article class="card">
+                        <span>↗</span>
 
-                <h3>AVIA Semiconductor</h3>
+                    </a>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    módulo HX711.
-                </p>
+                </article>
 
-                <a
-                    href="https://www.aviaic.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
 
-            </article>
 
+                <!-- =================================================
+                     04 — ADAFRUIT
+                ================================================== -->
 
-            <article class="card">
+                <article class="referencia-card reveal">
 
-                <h3>Allegro Microsystems</h3>
+                    <span class="numero-referencia">
+                        04
+                    </span>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    sensor magnético A3144.
-                </p>
+                    <div class="referencia-linha"></div>
 
-                <a
-                    href="https://www.allegromicro.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                    <h3>
+                        Adafruit
+                    </h3>
 
-            </article>
+                    <p>
+                        Fonte utilizada para informações relacionadas aos
+                        sensores DHT11, DHT22 e AM2302.
+                    </p>
 
+                    <a
+                        href="https://www.adafruit.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
 
-            <article class="card">
+                        Acessar fonte
 
-                <h3>Hanwei Electronics</h3>
+                        <span>↗</span>
 
-                <p>
-                    Fonte utilizada para informações relacionadas ao
-                    sensor de gás MQ-2.
-                </p>
+                    </a>
 
-                <a
-                    href="https://www.hwsensor.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                </article>
 
-            </article>
 
 
-            <article class="card">
+                <!-- =================================================
+                     05 — TEXAS INSTRUMENTS
+                ================================================== -->
 
-                <h3>Arduino Libraries</h3>
+                <article class="referencia-card reveal">
 
-                <p>
-                    Fonte utilizada como referência para informações
-                    relacionadas ao sensor FC-37.
-                </p>
+                    <span class="numero-referencia">
+                        05
+                    </span>
 
-                <a
-                    href="https://www.arduino.cc/reference/en/libraries/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                    <div class="referencia-linha"></div>
 
-            </article>
+                    <h3>
+                        Texas Instruments
+                    </h3>
 
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        sensor de temperatura LM35.
+                    </p>
 
-            <article class="card">
+                    <a
+                        href="https://www.ti.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
 
-                <h3>Sensirion</h3>
+                        Acessar fonte
 
-                <p>
-                    Fonte utilizada como referência para princípios e
-                    conceitos relacionados à medição.
-                </p>
+                        <span>↗</span>
 
-                <a
-                    href="https://sensirion.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao">
-                    Acessar fonte
-                </a>
+                    </a>
 
-            </article>
+                </article>
+
+
+
+                <!-- =================================================
+                     06 — ANALOG DEVICES
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        06
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Analog Devices
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        sensor de temperatura DS18B20.
+                    </p>
+
+                    <a
+                        href="https://www.analog.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     07 — ROHM SEMICONDUCTOR
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        07
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        ROHM Semiconductor
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        sensor de luminosidade BH1750.
+                    </p>
+
+                    <a
+                        href="https://www.rohm.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     08 — NXP
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        08
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        NXP
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        módulo RFID MFRC522.
+                    </p>
+
+                    <a
+                        href="https://www.nxp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     09 — AVIA SEMICONDUCTOR
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        09
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        AVIA Semiconductor
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        módulo HX711.
+                    </p>
+
+                    <a
+                        href="https://www.aviaic.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     10 — ALLEGRO MICROSYSTEMS
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        10
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Allegro Microsystems
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        sensor magnético A3144.
+                    </p>
+
+                    <a
+                        href="https://www.allegromicro.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     11 — HANWEI ELECTRONICS
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        11
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Hanwei Electronics
+                    </h3>
+
+                    <p>
+                        Fonte utilizada para informações relacionadas ao
+                        sensor de gás MQ-2.
+                    </p>
+
+                    <a
+                        href="https://www.hwsensor.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     12 — ARDUINO LIBRARIES
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        12
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Arduino Libraries
+                    </h3>
+
+                    <p>
+                        Fonte utilizada como referência para informações
+                        relacionadas ao sensor FC-37.
+                    </p>
+
+                    <a
+                        href="https://www.arduino.cc/reference/en/libraries/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     13 — SENSIRION
+                ================================================== -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        13
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Sensirion
+                    </h3>
+
+                    <p>
+                        Fonte utilizada como referência para princípios e
+                        conceitos relacionados à medição.
+                    </p>
+
+                    <a
+                        href="https://sensirion.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-referencia">
+
+                        Acessar fonte
+
+                        <span>↗</span>
+
+                    </a>
+
+                </article>
+
+
+            </div>
 
         </section>
+
 
     </main>
 
 
-    <button id="voltarTopo" class="voltar-topo">
-        Topo
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Pesquisa e desenvolvimento sobre tecnologias aplicadas
+                    à Indústria 4.0.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="../arduino/index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>
+                    DESENVOLVIMENTO
+                </span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+                    <a
+                        href="https://github.com/clariceheitmann"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         BOTÃO VOLTAR AO TOPO
+    ====================================================== -->
+
+    <button
+        id="voltarTopo"
+        class="voltar-topo">
+
+        ↑
+
     </button>
 
 
-    <script src="./js/script.js"></script>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/global.js"></script>
+
 
 </body>
 

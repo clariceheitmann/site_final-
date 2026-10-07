@@ -1,94 +1,409 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Inicio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arduino | Indústria 4.0</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+
+    <!-- CSS específico do Arduino -->
+    <link rel="stylesheet" href="../css/arduino/arduino.css">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../assets/icon.SA.png">
+
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="index.html">Arduino</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
+
+
+    <!-- =====================================================
+         SUBMENU — ARDUINO
+    ====================================================== -->
+
     <div class="submenu">
-        <a href="index.html">Visão Geral</a>
-        <a href="desafio1.html">Desafio 1</a>
-        <a href="desafio2.html">Desafio 2</a>
-        <a href="desafio3.html">Desafio 3</a>
+
+        <a href="index.html" class="ativo">
+            Introdução
+        </a>
+
+        <a href="desafio1.html">
+            Desafio 1
+        </a>
+
+        <a href="desafio2.html">
+            Desafio 2
+        </a>
+
+        <a href="desafio3.html">
+            Desafio 3
+        </a>
+
     </div>
 
-    <section class="hero-pequeno">
-        <div>
-            <p class="destaque">Arduino + Tinkercad</p>
-            <h1>Desafios de Automação</h1>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero-arduino">
+
+        <div class="hero-arduino-conteudo">
+
+            <p class="destaque">
+                Arduino + Tinkercad
+            </p>
+
+            <h1>
+                Desafios de Automação
+            </h1>
+
+            <div class="detalhe-linha"></div>
+
             <p>
                 Projetos desenvolvidos utilizando Arduino no Tinkercad, simulando situações reais
                 da Indústria 4.0 com sensores e automação.
             </p>
+
         </div>
+
     </section>
 
-    <section class="pagina-desafio">
 
-        <div class="card destaque">
-            <h2>Sobre os projetos</h2>
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="arduino-conteudo">
+
+
+        <!-- =================================================
+             SOBRE OS PROJETOS
+        ================================================== -->
+
+        <div class="arduino-card arduino-destaque">
+
+            <span class="arduino-numero">
+                01
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Sobre os projetos
+            </h2>
+
             <p>
                 Os desafios foram desenvolvidos com o objetivo de aplicar conceitos de automação
                 utilizando Arduino, sensores e lógica de programação. Cada projeto simula uma
                 situação real, envolvendo tomada de decisão baseada em dados do ambiente.
             </p>
+
         </div>
 
-        <div class="grid-duplo">
 
-            <div class="card destaque">
-                <h2>Desafio 1 - Iluminação Inteligente</h2>
+
+        <!-- =================================================
+             DESAFIOS
+        ================================================== -->
+
+        <div class="arduino-grid">
+
+
+            <!-- DESAFIO 1 -->
+
+            <article class="arduino-card arduino-destaque">
+
+                <span class="arduino-numero">
+                    02
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Desafio 1 - Iluminação Inteligente
+                </h2>
+
                 <p>
                     Sistema automático que controla um LED com base na presença de pessoas
                     e na luminosidade do ambiente.
                 </p>
-                <a href="desafio1.html">Ver projeto</a>
-            </div>
 
-            <div class="card destaque">
-                <h2>Desafio 2 - Estacionamento Inteligente</h2>
+                <a href="desafio1.html" class="arduino-botao">
+
+                    Ver projeto
+
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- DESAFIO 2 -->
+
+            <article class="arduino-card arduino-destaque">
+
+                <span class="arduino-numero">
+                    03
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Desafio 2 - Estacionamento Inteligente
+                </h2>
+
                 <p>
                     Sistema que utiliza sensor ultrassônico para medir distância e indicar
                     a proximidade de veículos com sinais visuais.
                 </p>
-                <a href="desafio2.html">Ver projeto</a>
-            </div>
 
-        </div>
+                <a href="desafio2.html" class="arduino-botao">
 
-        <!-- SEGUNDA LINHA -->
-        <div class="grid-duplo">
+                    Ver projeto
 
-            <div class="card destaque">
-                <h2>Desafio 3 - Ambiente Inteligente</h2>
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- DESAFIO 3 -->
+
+            <article class="arduino-card arduino-destaque">
+
+                <span class="arduino-numero">
+                    04
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Desafio 3 - Ambiente Inteligente
+                </h2>
+
                 <p>
                     Sistema automatizado que monitora temperatura e umidade, indicando
                     condições ideais ou críticas do ambiente.
                 </p>
-                <a href="desafio3.html">Ver projeto</a>
-            </div>
 
+                <a href="desafio3.html" class="arduino-botao">
 
-            <div></div>
+                    Ver projeto
+
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
 
         </div>
 
-    </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Projetos de automação utilizando Arduino,
+                    sensores e lógica de programação.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>
+                    DESENVOLVIMENTO
+                </span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+
+                    <a href="https://github.com/clariceheitmann" target="_blank" rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+<button id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+    ↑
+</button>
+
+<script src="../js/arduino.js"></script>
+
+<script src="../js/global.js"></script>
+<script src="../js/arduino.js"></script>
+
+</html>

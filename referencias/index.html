@@ -1,67 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Robôs Industriais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <title>Referências | Indústria 4.0</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+    <!-- CSS específico -->
+    <link rel="stylesheet" href="../css/referencias/referencias.css">
+
+    <link rel="icon" href="../assets/icon.SA.png">
 </head>
 
 <body>
 
-    <!-- ========================= -->
-    <!-- CABEÇALHO -->
-    <!-- ========================= -->
+    <!-- =====================================================
+         NAVBAR PRINCIPAL
+    ====================================================== -->
 
     <header class="cabecalho">
 
         <div class="logo">
-            <h1>Indústria 4.0</h1>
+            <a href="../index.html" class="logo-link">
+                <span class="logo-detalhe">✦</span>
+                Indústria 4.0
+            </a>
         </div>
 
-        <nav id="menu">
+        <nav class="navegacao">
 
-            <a href="../index.html">
+            <a href="../index.html" class="nav-link">
                 Início
             </a>
 
-            <a href="./index.html">Referências</a>
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
+            </a>
 
+            <a href="../arduino/index.html" class="nav-link">
+                Arduino
+            </a>
 
-            <a href="./referencias_sensores.html">
+            <a href="../sensores/index.html" class="nav-link">
                 Sensores
             </a>
 
-            <a href="./referencias_robos.html">
-                Robôs Industriais
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
             </a>
 
+            <a href="index.html" class="nav-link ativo">
+                Referências
+            </a>
 
         </nav>
+
+        <div class="detalhe-navbar"></div>
 
     </header>
 
 
-    <!-- ========================= -->
-    <!-- CONTEÚDO -->
-    <!-- ========================= -->
+    <!-- =====================================================
+         SUBNAVBAR — REFERÊNCIAS
+    ====================================================== -->
+
+    <div class="submenu">
+
+        <a href="index.html" class="ativo">
+            Introdução
+        </a>
+
+        <a href="../referencias/referencias_sensores.html">
+            Sensores
+        </a>
+
+        <a href="../referencias/referencias_robos.html">
+            Robôs Industriais
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
 
     <main>
 
-        <section class="hero">
+        <!-- HERO -->
 
-            <div>
+        <section class="hero-referencias">
+
+            <div class="hero-referencias-conteudo">
 
                 <p class="destaque">
                     Fontes consultadas
                 </p>
 
-                <h2>
+                <h1>
                     Referências
-                </h2>
+                </h1>
+
+                <div class="detalhe-linha"></div>
 
                 <p>
                     Nesta seção estão reunidas as principais fontes
@@ -74,72 +125,211 @@
         </section>
 
 
-        <!-- ========================= -->
-        <!-- CATEGORIAS -->
-        <!-- ========================= -->
+        <!-- =================================================
+             CATEGORIAS
+        ================================================== -->
 
-        <section class="conteudo referencias-grid">
+        <section class="referencias-conteudo">
 
-            <article class="card">
+            <div class="referencias-titulo">
 
-                <span class="numero-sensor">
-                    01
-                </span>
+                <span>FONTES DO PROJETO</span>
 
-                <h3>
-                    Referências — Sensores
-                </h3>
+                <h2>
+                    Consulte nossas referências
+                </h2>
 
                 <p>
-                    Fontes utilizadas para pesquisar conceitos,
-                    características, funcionamento e aplicações dos
-                    sensores apresentados no projeto de Indústria 4.0.
+                    Acesse as fontes utilizadas na construção dos conteúdos
+                    apresentados neste projeto de Indústria 4.0.
                 </p>
 
-                <a href="./referencias-sensores.html" class="botao">
-                    Ver referências
-                </a>
-
-            </article>
+            </div>
 
 
-            <article class="card">
+            <div class="referencias-grid">
 
-                <span class="numero-sensor">
-                    02
-                </span>
 
-                <h3>
-                    Referências — Robôs Industriais
-                </h3>
+                <!-- SENSOR -->
 
-                <p>
-                    Fontes utilizadas para pesquisar a classificação,
-                    características, tipos e aplicações dos robôs
-                    industriais.
-                </p>
+                <article class="referencia-card reveal">
 
-                <a href="./referencias-robos.html" class="botao">
-                    Ver referências
-                </a>
+                    <span class="numero-referencia">
+                        01
+                    </span>
 
-            </article>
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Referências — Sensores
+                    </h3>
+
+                    <p>
+                        Fontes utilizadas para pesquisar conceitos,
+                        características, funcionamento e aplicações dos
+                        sensores apresentados no projeto de Indústria 4.0.
+                    </p>
+
+                    <a href="./referencias-sensores.html" class="botao-referencia">
+                        Ver referências
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+
+                <!-- ROBÔS -->
+
+                <article class="referencia-card reveal">
+
+                    <span class="numero-referencia">
+                        02
+                    </span>
+
+                    <div class="referencia-linha"></div>
+
+                    <h3>
+                        Referências — Robôs Industriais
+                    </h3>
+
+                    <p>
+                        Fontes utilizadas para pesquisar a classificação,
+                        características, tipos e aplicações dos robôs
+                        industriais.
+                    </p>
+
+                    <a href="./referencias-robos.html" class="botao-referencia">
+                        Ver referências
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- ========================= -->
-    <!-- VOLTAR AO TOPO -->
-    <!-- ========================= -->
+    <!-- =====================================================
+         VOLTAR AO TOPO
+    ====================================================== -->
 
     <button id="voltarTopo" class="voltar-topo">
-        Topo
+        ↑
     </button>
 
 
-    <script src="./js/script.js"></script>
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Pesquisa e desenvolvimento sobre tecnologias
+                    aplicadas à Indústria 4.0.
+                </p>
+
+            </div>
+
+
+            <div class="rodape-links">
+
+                <span>NAVEGAÇÃO</span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="../arduino/index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>DESENVOLVIMENTO</span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+                    <a href="https://github.com/clariceheitmann"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/global.js"></script>
 
 </body>
 

@@ -1,48 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Desafio 3 - Ambiente Inteligente</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 3 | Ambiente Inteligente</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+
+    <!-- CSS específico do Arduino -->
+    <link rel="stylesheet" href="../css/arduino/arduino.css">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../assets/icon.SA.png">
+
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="index.html">Arduino</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
+
+
+    <!-- =====================================================
+         SUBMENU — ARDUINO
+    ====================================================== -->
+
     <div class="submenu">
-        <a href="index.html">Visão Geral</a>
-        <a href="desafio1.html">Desafio 1</a>
-        <a href="desafio2.html">Desafio 2</a>
-        <a href="desafio3.html">Desafio 3</a>
+
+        <a href="index.html">
+            Introdução
+        </a>
+
+        <a href="desafio1.html">
+            Desafio 1
+        </a>
+
+        <a href="desafio2.html">
+            Desafio 2
+        </a>
+
+        <a href="desafio3.html" class="ativo">
+            Desafio 3
+        </a>
+
     </div>
 
-    <section class="pagina-desafio">
 
-        <div class="topo-desafio">
-            <span class="tag">Desafio 3</span>
-            <h1>Ambiente Inteligente</h1>
+
+    <!-- =====================================================
+         CONTEÚDO DO DESAFIO
+    ====================================================== -->
+
+    <main class="arduino-conteudo">
+
+
+        <!-- =================================================
+             TOPO DO DESAFIO
+        ================================================== -->
+
+        <section class="topo-desafio">
+
+            <span class="tag">
+                Desafio 3
+            </span>
+
+            <h1>
+                Ambiente Inteligente
+            </h1>
+
             <p>
                 Sistema automatizado que reage às condições do ambiente utilizando sensores.
             </p>
-        </div>
 
-        <div class="grid-duplo">
+        </section>
 
-            <div class="card destaque">
+
+
+        <!-- =================================================
+             PROPOSTA + COMPONENTES
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    01
+                </span>
+
+                <div class="arduino-linha"></div>
+
                 <h3>
                     Proposta do desafio
                 </h3>
@@ -58,68 +170,174 @@
                     visualmente se as condições do ambiente estavam adequadas
                     ou se algum dos parâmetros estava fora do limite definido.
                 </p>
-            </div>
 
-            <div class="card destaque">
+            </article>
+
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    02
+                </span>
+
+                <div class="arduino-linha"></div>
+
                 <h3>
                     Componentes utilizados
                 </h3>
 
                 <ul>
 
-                    <li>Arduino</li>
+                    <li>
+                        Arduino
+                    </li>
 
-                    <li>LED verde</li>
+                    <li>
+                        LED verde
+                    </li>
 
-                    <li>LED vermelho</li>
+                    <li>
+                        LED vermelho
+                    </li>
 
-                    <li>LED amarelo</li>
+                    <li>
+                        LED amarelo
+                    </li>
 
-                    <li>Sensor de temperatura</li>
+                    <li>
+                        Sensor de temperatura
+                    </li>
 
-                    <li>Sensor de umidade</li>
+                    <li>
+                        Sensor de umidade
+                    </li>
 
                 </ul>
-            </div>
 
-        </div>
+            </article>
 
-        <div class="card destaque">
-            <h2>Como o sistema funciona</h2>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FUNCIONAMENTO
+        ================================================== -->
+
+        <section class="arduino-card destaque">
+
+            <span class="arduino-numero">
+                03
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Como o sistema funciona
+            </h2>
+
             <p>
                 O sistema lê os valores de temperatura e umidade através de sensores analógicos.
                 A partir dessas leituras, ele determina se o ambiente está em condições ideais.
                 Caso a temperatura esteja fora do intervalo aceitável ou a umidade esteja baixa,
                 LEDs indicam o estado do ambiente em tempo real.
             </p>
-        </div>
 
-        <div class="grid-duplo">
+        </section>
 
-            <div class="card">
-                <h2>Simulação no Tinkercad</h2>
+
+
+        <!-- =================================================
+             VÍDEOS
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <!-- SIMULAÇÃO -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    04
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Simulação no Tinkercad
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
                 </p>
-                <iframe src="https://www.youtube.com/embed/keSdu6UFd60"></iframe>
-            </div>
 
-            <div class="card">
-                <h2>Aplicação real</h2>
+                <div class="video-container">
+
+                    <iframe src="https://www.youtube.com/embed/keSdu6UFd60" title="Simulação do Desafio 3 no Tinkercad"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- APLICAÇÃO REAL -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    05
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Aplicação real
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto fora da simulação,
                     com sua aplicação prática.
                 </p>
-                <iframe src="https://www.youtube.com/embed/yov9PGa2Hv4"></iframe>
-            </div>
 
-        </div>
+                <div class="video-container">
 
-        <div class="card bloco codigo">
-            <h2>Código Arduino</h2>
+                    <iframe src="https://www.youtube.com/embed/yov9PGa2Hv4" title="Aplicação real do Desafio 3"
+                        allowfullscreen>
+                    </iframe>
 
-            <pre><code>
-const int tempPin = A0;
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CÓDIGO
+        ================================================== -->
+
+        <section class="arduino-card codigo">
+
+            <span class="arduino-numero">
+                06
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Código Arduino
+            </h2>
+
+
+            <pre><code>const int tempPin = A0;
 const int umidadePin = A1;
 
 const int verde = 8;
@@ -156,8 +374,8 @@ void loop() {
   digitalWrite(amarelo, LOW);
   digitalWrite(vermelho, LOW);
 
-  bool temperaturaRuim = temperatura > 30 || temperatura < -10;
-  bool umidadeBaixa = umidade < 50;
+  bool temperaturaRuim = temperatura > 30 || temperatura &lt; -10;
+  bool umidadeBaixa = umidade &lt; 50;
 
   if (temperaturaRuim) {
     digitalWrite(vermelho, HIGH);
@@ -174,7 +392,139 @@ void loop() {
   delay(500);
 
 }
-        </code></pre>
+</code></pre>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Projetos de automação utilizando Arduino,
+                    sensores e lógica de programação.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>
+                    DESENVOLVIMENTO
+                </span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+
+                    <a href="https://github.com/clariceheitmann" target="_blank" rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
         </div>
 
-    </section>
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+    <button id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <script src="../js/arduino.js"></script>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/arduino.js"></script>
+
+</body>
+
+</html>

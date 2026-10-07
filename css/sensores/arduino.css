@@ -1,41 +1,76 @@
 /* =========================================================
    SENSORES — ARDUINO
-   DESIGN BASEADO NA PÁGINA DE ROBÓTICA
+   PADRÃO VISUAL DA SEÇÃO
 ========================================================= */
 
 
 /* =========================================================
-   HERO
+   VARIÁVEIS
 ========================================================= */
 
-.hero-pequeno {
+:root {
+    --sensores-bordo: #572F48;
+    --sensores-bordo-escuro: #3B2031;
+    --sensores-bordo-profundo: #2A0B0B;
+
+    --sensores-dourado: #B88945;
+    --sensores-dourado-claro: #D7B477;
+
+    --sensores-creme: #FFF9F7;
+    --sensores-creme-escuro: #F6EFE8;
+
+    --sensores-texto: #4E4C5E;
+    --sensores-cinza: #817965;
+
+    --sensores-sombra:
+        0 18px 45px rgba(59, 32, 49, 0.12);
+
+    --sensores-sombra-forte:
+        0 24px 60px rgba(59, 32, 49, 0.18);
+
+    --sensores-transicao: .3s ease;
+}
+
+
+/* =========================================================
+   HERO / BANNER
+   MESMO MODELO VISUAL DAS OUTRAS PÁGINAS
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno {
     position: relative;
 
-    min-height: 500px;
-
-    padding: 90px 10%;
+    min-height: 390px;
 
     display: grid;
 
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns:
+        1fr 0.8fr;
 
     align-items: center;
 
-    gap: 70px;
+    gap: 60px;
+
+    padding: 70px 9%;
 
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 50%,
-            #4A3044,
-            #3B2031 58%,
-            #2A0B0B
+        linear-gradient(
+            135deg,
+            var(--sensores-bordo-profundo),
+            var(--sensores-bordo-escuro)
         );
+
+    color: var(--sensores-creme);
 }
 
 
-.hero-pequeno::before {
+/* =========================================================
+   DECORAÇÃO SUPERIOR DIREITA
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno::before {
     content: "";
 
     position: absolute;
@@ -43,116 +78,263 @@
     width: 420px;
     height: 420px;
 
-    right: -160px;
-    top: -180px;
+    right: -180px;
+    top: -190px;
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.22);
+        rgba(215, 180, 119, 0.25);
 
-    border-radius: 50%;
-}
-
-
-.hero-pequeno::after {
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    left: -160px;
-    bottom: -150px;
-
-    border:
-        1px solid
-        rgba(239, 187, 85, 0.16);
-
-    border-radius: 50%;
-}
-
-
-.hero-pequeno > * {
-    position: relative;
-
-    z-index: 2;
+    transform: rotate(45deg);
 }
 
 
 /* =========================================================
-   TEXTO
+   DECORAÇÃO INFERIOR ESQUERDA
 ========================================================= */
 
-.hero-pequeno .destaque {
+body.pagina-sensores-arduino .hero-pequeno::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -160px;
+    bottom: -160px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.18);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   ORNAMENTOS EXTRAS
+========================================================= */
+
+body.pagina-sensores-arduino .hero-ornamento {
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.20);
+
+    transform: rotate(45deg);
+}
+
+body.pagina-sensores-arduino .hero-ornamento::before,
+body.pagina-sensores-arduino .hero-ornamento::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.14);
+}
+
+body.pagina-sensores-arduino .hero-ornamento-top {
+    top: -130px;
+    left: -80px;
+}
+
+body.pagina-sensores-arduino .hero-ornamento-bottom {
+    right: -80px;
+    bottom: -130px;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO BANNER
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    color: var(--sensores-creme);
+}
+
+
+/* =========================================================
+   DESTAQUE
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno .destaque {
     display: inline-block;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
-    color: var(--dourado);
+    color: var(--sensores-dourado-claro);
 
     font-family:
         "Cinzel",
         serif;
 
-    font-size: 0.72rem;
+    font-size: .75rem;
 
-    letter-spacing: 0.24em;
+    font-weight: 700;
+
+    letter-spacing: .25em;
 
     text-transform: uppercase;
 }
 
 
-.hero-pequeno h1 {
-    margin-bottom: 25px;
+/* =========================================================
+   TÍTULO
+========================================================= */
 
-    color: #FFF9F7;
+body.pagina-sensores-arduino .hero-pequeno h1 {
+    margin: 0 0 20px;
+
+    color: var(--sensores-creme);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size:
+        clamp(2.2rem, 5vw, 4rem);
 
-    font-weight: 400;
+    font-weight: 700;
 
-    line-height: 1.05;
+    line-height: 1.15;
 }
 
 
-.hero-pequeno h1::after {
+/* =========================================================
+   LINHA DOURADA ABAIXO DO TÍTULO
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno h1::after {
     content: "";
 
     display: block;
 
-    width: 80px;
+    width: 70px;
     height: 2px;
 
-    margin-top: 25px;
+    margin-top: 20px;
 
     background:
         linear-gradient(
             to right,
             transparent,
-            var(--dourado),
+            var(--sensores-dourado),
             transparent
         );
 }
 
 
-.hero-pequeno p {
-    max-width: 600px;
+/* =========================================================
+   TEXTO DO BANNER
+========================================================= */
+
+body.pagina-sensores-arduino .hero-pequeno-conteudo > p:last-child {
+    max-width: 650px;
+
+    margin: 0;
 
     color:
-        rgba(251, 245, 210, 0.80);
+        rgba(255, 249, 247, 0.78);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
 
-    line-height: 1.9;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   IMAGEM DO ARDUINO
+========================================================= */
+
+body.pagina-sensores-arduino .foto-robo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255, 249, 247, 0.07);
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.25);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.22);
+
+    backdrop-filter: blur(5px);
+
+    overflow: hidden;
+}
+
+
+/* Moldura interna */
+
+body.pagina-sensores-arduino .foto-robo::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FUNDO DA FOTO
+========================================================= */
+
+body.pagina-sensores-arduino .fundo-foto {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 
@@ -160,8 +342,14 @@
    IMAGEM
 ========================================================= */
 
-.hero-pequeno img {
+body.pagina-sensores-arduino .foto-robo img {
+    position: relative;
+
+    z-index: 2;
+
     width: 100%;
+
+    max-width: 430px;
 
     max-height: 300px;
 
@@ -169,35 +357,37 @@
 
     filter:
         drop-shadow(
-            0 20px 25px
-            rgba(0, 0, 0, 0.30)
+            0 15px 20px
+            rgba(0, 0, 0, 0.25)
         );
 
     transition:
-        transform 0.5s ease;
+        transform .5s ease;
 }
 
 
-.hero-pequeno:hover img {
-    transform: scale(1.04);
+body.pagina-sensores-arduino .foto-robo:hover img {
+    transform: scale(1.03);
 }
 
 
 /* =========================================================
-   CONTEÚDO
+   CONTEÚDO PRINCIPAL
 ========================================================= */
 
 body.pagina-sensores-arduino .conteudo {
-    width: min(1200px, 88%);
+    width: min(1200px, 90%);
 
-    margin: 75px auto;
+    margin: 0 auto;
+
+    padding: 100px 0;
 
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 25px;
 }
 
 
@@ -218,16 +408,18 @@ body.pagina-sensores-arduino .conteudo .card {
         rgba(87, 47, 72, 0.15);
 
     box-shadow:
-        0 15px 40px
-        rgba(68, 16, 4, 0.08);
+        var(--sensores-sombra);
 
     overflow: hidden;
 
     transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+        transform var(--sensores-transicao),
+        box-shadow var(--sensores-transicao),
+        border-color var(--sensores-transicao);
 }
 
+
+/* Linha dourada */
 
 body.pagina-sensores-arduino .conteudo .card::before {
     content: "";
@@ -244,37 +436,70 @@ body.pagina-sensores-arduino .conteudo .card::before {
         linear-gradient(
             to right,
             transparent,
-            var(--dourado),
+            var(--sensores-dourado),
             transparent
         );
 }
 
 
+/* Detalhe interno */
+
+body.pagina-sensores-arduino .conteudo .card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -60px;
+    top: -60px;
+
+    width: 150px;
+    height: 150px;
+
+    border:
+        1px solid
+        rgba(184, 137, 69, 0.12);
+
+    transform: rotate(45deg);
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
 body.pagina-sensores-arduino .conteudo .card:hover {
     transform: translateY(-6px);
 
+    border-color:
+        rgba(184, 137, 69, 0.40);
+
     box-shadow:
-        0 22px 50px
-        rgba(68, 16, 4, 0.13);
+        var(--sensores-sombra-forte);
 }
 
 
 /* =========================================================
-   TÍTULOS
+   TÍTULOS DOS CARDS
 ========================================================= */
 
 body.pagina-sensores-arduino .conteudo .card h2 {
+    position: relative;
+
+    z-index: 2;
+
     margin-bottom: 20px;
 
-    color: var(--robo-bordo);
+    color: var(--sensores-bordo);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
-    font-size: 1.7rem;
+    font-size: 1.55rem;
 
-    font-weight: 500;
+    font-weight: 700;
+
+    line-height: 1.3;
 }
 
 
@@ -283,15 +508,20 @@ body.pagina-sensores-arduino .conteudo .card h2 {
 ========================================================= */
 
 body.pagina-sensores-arduino .conteudo .card p {
+    position: relative;
+
+    z-index: 2;
+
     margin-bottom: 14px;
 
-    color: #4E4C5E;
+    color: var(--sensores-texto);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.95rem;
+    font-size: .95rem;
 
     line-height: 1.8;
 }
@@ -302,6 +532,10 @@ body.pagina-sensores-arduino .conteudo .card p {
 ========================================================= */
 
 body.pagina-sensores-arduino .conteudo .card ul {
+    position: relative;
+
+    z-index: 2;
+
     margin-left: 22px;
 }
 
@@ -309,16 +543,22 @@ body.pagina-sensores-arduino .conteudo .card ul {
 body.pagina-sensores-arduino .conteudo .card li {
     margin-bottom: 7px;
 
-    color: #4E4C5E;
+    color: var(--sensores-texto);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
+
+    line-height: 1.7;
 }
 
 
-body.pagina-sensores-arduino .conteudo .card li::marker {
-    color: var(--dourado);
+body.pagina-sensores-arduino
+.conteudo
+.card
+li::marker {
+    color: var(--sensores-dourado);
 }
 
 
@@ -326,12 +566,17 @@ body.pagina-sensores-arduino .conteudo .card li::marker {
    INFORMAÇÕES TÉCNICAS
 ========================================================= */
 
-body.pagina-sensores-arduino .conteudo .card strong {
-    color: var(--robo-bordo);
+body.pagina-sensores-arduino
+.conteudo
+.card
+strong {
+    color: var(--sensores-bordo);
 
     font-family:
         "Cinzel",
         serif;
+
+    font-weight: 700;
 }
 
 
@@ -352,30 +597,40 @@ body.pagina-sensores-arduino .tabela th {
     padding: 14px;
 
     background:
-        #572F48;
+        var(--sensores-bordo);
 
-    color: var(--creme);
+    color:
+        var(--sensores-creme);
 
     font-family:
         "Cinzel",
         serif;
 
-    font-size: 0.75rem;
+    font-size: .75rem;
+
+    font-weight: 600;
+
+    letter-spacing: .03em;
 
     text-align: left;
+
+    border-bottom:
+        1px solid
+        rgba(215, 180, 119, 0.30);
 }
 
 
 body.pagina-sensores-arduino .tabela td {
     padding: 13px 14px;
 
-    color: #4E4C5E;
+    color: var(--sensores-texto);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.88rem;
+    font-size: .88rem;
 
     border-bottom:
         1px solid
@@ -383,41 +638,54 @@ body.pagina-sensores-arduino .tabela td {
 }
 
 
+body.pagina-sensores-arduino .tabela tr {
+    transition:
+        background var(--sensores-transicao);
+}
+
+
 body.pagina-sensores-arduino .tabela tr:hover td {
     background:
-        rgba(239, 187, 85, 0.07);
+        rgba(184, 137, 69, 0.07);
 }
 
 
 /* =========================================================
-   EXEMPLOS DE PROGRAMAÇÃO
+   SEÇÃO DE PROGRAMAÇÃO
 ========================================================= */
 
 body.pagina-sensores-arduino .pagina-desafio {
-    width: min(1200px, 88%);
+    width: min(1200px, 90%);
 
     margin: 0 auto 100px;
 }
 
 
-body.pagina-sensores-arduino .pagina-desafio > h2 {
+body.pagina-sensores-arduino
+.pagina-desafio
+> h2 {
     margin-bottom: 40px;
 
-    color: var(--robo-bordo);
+    color: var(--sensores-bordo-escuro);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3rem);
 
-    font-weight: 400;
+    font-weight: 700;
+
+    line-height: 1.2;
 
     text-align: center;
 }
 
 
-body.pagina-sensores-arduino .pagina-desafio > h2::after {
+body.pagina-sensores-arduino
+.pagina-desafio
+> h2::after {
     content: "";
 
     display: block;
@@ -431,7 +699,7 @@ body.pagina-sensores-arduino .pagina-desafio > h2::after {
         linear-gradient(
             to right,
             transparent,
-            var(--dourado),
+            var(--sensores-dourado),
             transparent
         );
 }
@@ -441,7 +709,8 @@ body.pagina-sensores-arduino .pagina-desafio > h2::after {
    CARDS DE CÓDIGO
 ========================================================= */
 
-body.pagina-sensores-arduino .card.codigo {
+body.pagina-sensores-arduino
+.card.codigo {
     position: relative;
 
     margin-bottom: 30px;
@@ -456,15 +725,53 @@ body.pagina-sensores-arduino .card.codigo {
         rgba(87, 47, 72, 0.15);
 
     box-shadow:
-        0 15px 40px
-        rgba(68, 16, 4, 0.08);
+        var(--sensores-sombra);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--sensores-transicao),
+        box-shadow var(--sensores-transicao);
 }
 
 
-body.pagina-sensores-arduino .card.codigo h3 {
+body.pagina-sensores-arduino
+.card.codigo::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--sensores-dourado),
+            transparent
+        );
+}
+
+
+body.pagina-sensores-arduino
+.card.codigo:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        var(--sensores-sombra-forte);
+}
+
+
+body.pagina-sensores-arduino
+.card.codigo
+h3 {
     margin-bottom: 20px;
 
-    color: var(--robo-bordo);
+    color: var(--sensores-bordo);
 
     font-family:
         "Cinzel",
@@ -472,15 +779,19 @@ body.pagina-sensores-arduino .card.codigo h3 {
 
     font-size: 1.15rem;
 
-    letter-spacing: 0.05em;
+    font-weight: 700;
+
+    letter-spacing: .05em;
 }
 
 
 /* =========================================================
-   CÓDIGO
+   BLOCO DE CÓDIGO
 ========================================================= */
 
-body.pagina-sensores-arduino .card.codigo pre {
+body.pagina-sensores-arduino
+.card.codigo
+pre {
     margin: 0;
 
     padding: 28px;
@@ -490,13 +801,13 @@ body.pagina-sensores-arduino .card.codigo pre {
     background:
         linear-gradient(
             135deg,
-            #2A0B0B,
-            #3B2031
+            var(--sensores-bordo-profundo),
+            var(--sensores-bordo-escuro)
         );
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.18);
+        rgba(215, 180, 119, 0.18);
 
     box-shadow:
         inset 0 0 30px
@@ -504,15 +815,16 @@ body.pagina-sensores-arduino .card.codigo pre {
 }
 
 
-body.pagina-sensores-arduino .card.codigo code {
-    color:
-        #F7EED0;
+body.pagina-sensores-arduino
+.card.codigo
+code {
+    color: #F7EED0;
 
     font-family:
         "Courier New",
         monospace;
 
-    font-size: 0.85rem;
+    font-size: .85rem;
 
     line-height: 1.7;
 }
@@ -522,24 +834,42 @@ body.pagina-sensores-arduino .card.codigo code {
    RESPONSIVIDADE
 ========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 
-    .hero-pequeno {
+    body.pagina-sensores-arduino .hero-pequeno {
         grid-template-columns: 1fr;
 
-        text-align: center;
+        min-height: auto;
 
         padding: 80px 8%;
+
+        text-align: center;
     }
 
-    .hero-pequeno p {
+    body.pagina-sensores-arduino .hero-pequeno-conteudo {
+        max-width: 800px;
+
+        margin: 0 auto;
+    }
+
+    body.pagina-sensores-arduino
+    .hero-pequeno-conteudo
+    > p:last-child {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .hero-pequeno h1::after {
+    body.pagina-sensores-arduino
+    .hero-pequeno
+    h1::after {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    body.pagina-sensores-arduino .foto-robo {
+        max-width: 650px;
+
+        margin: 0 auto;
     }
 
     body.pagina-sensores-arduino .conteudo {
@@ -548,14 +878,46 @@ body.pagina-sensores-arduino .card.codigo code {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
-    .hero-pequeno {
-        padding: 65px 6%;
+    body.pagina-sensores-arduino .hero-pequeno {
+        padding: 65px 7%;
     }
 
-    .hero-pequeno h1 {
-        font-size: 2.8rem;
+    body.pagina-sensores-arduino .hero-pequeno h1 {
+        font-size:
+            clamp(2rem, 7vw, 3rem);
+    }
+
+    body.pagina-sensores-arduino .hero-pequeno-conteudo > p:last-child {
+        font-size: .95rem;
+    }
+
+    body.pagina-sensores-arduino .conteudo {
+        padding: 75px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body.pagina-sensores-arduino .hero-pequeno {
+        padding: 55px 6%;
+    }
+
+    body.pagina-sensores-arduino .hero-pequeno h1 {
+        font-size: 2rem;
+    }
+
+    body.pagina-sensores-arduino .hero-pequeno-conteudo > p:last-child {
+        font-size: .88rem;
+    }
+
+    body.pagina-sensores-arduino
+    .hero-pequeno
+    .hero-ornamento {
+        width: 170px;
+        height: 170px;
     }
 
     body.pagina-sensores-arduino .conteudo,
@@ -570,5 +932,11 @@ body.pagina-sensores-arduino .card.codigo code {
 
     body.pagina-sensores-arduino .card.codigo pre {
         padding: 18px;
+    }
+
+    body.pagina-sensores-arduino .tabela {
+        display: block;
+
+        overflow-x: auto;
     }
 }

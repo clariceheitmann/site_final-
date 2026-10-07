@@ -1,50 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Desafio 1 - Iluminação Inteligente</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 1 | Iluminação Inteligente</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+
+    <!-- CSS específico do Arduino -->
+    <link rel="stylesheet" href="../css/arduino/arduino.css">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../assets/icon.SA.png">
+
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="index.html">Arduino</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
+
+
+    <!-- =====================================================
+         SUBMENU — ARDUINO
+    ====================================================== -->
+
     <div class="submenu">
-        <a href="index.html">Visão Geral</a>
-        <a href="desafio1.html">Desafio 1</a>
-        <a href="desafio2.html">Desafio 2</a>
-        <a href="desafio3.html">Desafio 3</a>
+
+        <a href="index.html">
+            Introdução
+        </a>
+
+        <a href="desafio1.html" class="ativo">
+            Desafio 1
+        </a>
+
+        <a href="desafio2.html">
+            Desafio 2
+        </a>
+
+        <a href="desafio3.html">
+            Desafio 3
+        </a>
+
     </div>
 
-    <section class="pagina-desafio">
 
-        <div class="topo-desafio">
-            <span class="tag">Desafio 1</span>
-            <h1>Iluminação Inteligente</h1>
+
+    <!-- =====================================================
+         CONTEÚDO DO DESAFIO
+    ====================================================== -->
+
+    <main class="arduino-conteudo">
+
+
+        <!-- =================================================
+             TOPO DO DESAFIO
+        ================================================== -->
+
+        <section class="topo-desafio">
+
+            <span class="tag">
+                Desafio 1
+            </span>
+
+            <h1>
+                Iluminação Inteligente
+            </h1>
+
             <p>
                 Neste desafio, o objetivo foi desenvolver um sistema de
                 iluminação automática utilizando um Arduino, um LED, um
                 sensor de presença/movimento e um sensor de luminosidade.
             </p>
-        </div>
 
-        <div class="grid-duplo">
-            <div class="card destaque">
-                <h2>Proposta do desafio</h2>
+        </section>
+
+
+
+        <!-- =================================================
+             PROPOSTA + COMPONENTES
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    01
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Proposta do desafio
+                </h2>
+
                 <p>
                     O circuito deveria controlar automaticamente um LED de
                     acordo com a presença de uma pessoa e com a quantidade
@@ -56,49 +172,162 @@
                     capaz de evitar que a luz permaneça ligada quando não
                     existe necessidade.
                 </p>
-            </div>
 
-            <div class="card destaque">
-                <h2>Componentes utilizados</h2>
+            </article>
+
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    02
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Componentes utilizados
+                </h2>
+
                 <ul>
-                    <li>Arduino Uno</li>
-                    <li>LED</li>
-                    <li>Sensor de presença (PIR)</li>
-                    <li>Sensor de luminosidade (LDR)</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="card destaque">
-            <h2>Como o sistema funciona</h2>
+                    <li>
+                        Arduino Uno
+                    </li>
+
+                    <li>
+                        LED
+                    </li>
+
+                    <li>
+                        Sensor de presença (PIR)
+                    </li>
+
+                    <li>
+                        Sensor de luminosidade (LDR)
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FUNCIONAMENTO
+        ================================================== -->
+
+        <section class="arduino-card destaque">
+
+            <span class="arduino-numero">
+                03
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Como o sistema funciona
+            </h2>
+
             <p>
                 O LED acende apenas quando duas condições são atendidas:
                 presença detectada e ambiente escuro. Caso haja luz ou ausência de movimento,
                 o LED permanece desligado.
             </p>
-        </div>
 
-        <div class="grid-duplo">
-            <div class="card">
-                <h2>Simulação no Tinkercad</h2>
+        </section>
+
+
+
+        <!-- =================================================
+             VÍDEOS
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <!-- TINKERCAD -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    04
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Simulação no Tinkercad
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
                 </p>
-                <iframe src="https://www.youtube.com/embed/mfG8iMOk0UQ?si=zP_e-X5l_d-jDACB"></iframe>
-            </div>
 
-            <div class="card">
-                <h2>Aplicação na vida real</h2>
+                <div class="video-container">
+
+                    <iframe src="https://www.youtube.com/embed/mfG8iMOk0UQ?si=zP_e-X5l_d-jDACB"
+                        title="Simulação do Desafio 1 no Tinkercad" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- VIDA REAL -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    05
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Aplicação na vida real
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto fora da simulação,
                     com sua aplicação prática.
                 </p>
-                <iframe src="https://www.youtube.com/embed/xsrm7AO8uVc"></iframe>
-            </div>
-        </div>
 
-        <div class="card codigo">
-            <h2>Código do Arduino</h2>
+                <div class="video-container">
+
+                    <iframe src="https://www.youtube.com/embed/xsrm7AO8uVc" title="Aplicação real do Desafio 1"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CÓDIGO
+        ================================================== -->
+
+        <section class="arduino-card codigo">
+
+            <span class="arduino-numero">
+                06
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Código do Arduino
+            </h2>
 
             <p>
                 O código abaixo é responsável por receber as informações
@@ -106,8 +335,8 @@
                 a lógica proposta no desafio.
             </p>
 
-            <pre><code>
-const int led = 13;
+
+            <pre><code>const int led = 13;
 const int pir = 2;
 const int ldr = A0;
 
@@ -121,16 +350,145 @@ void loop() {
   int movimento = digitalRead(pir);
   int luz = analogRead(ldr);
 
-  if (movimento == HIGH && luz < 500) {
+  if (movimento == HIGH && luz &lt; 500) {
     digitalWrite(led, HIGH);
   } else {
     digitalWrite(led, LOW);
   }
 }
 </code></pre>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Projetos de automação utilizando Arduino,
+                    sensores e lógica de programação.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>
+                    DESENVOLVIMENTO
+                </span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+
+                    <a href="https://github.com/clariceheitmann" target="_blank" rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
         </div>
 
-    </section>
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+    <button id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <script src="../js/arduino.js"></script>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/arduino.js"></script>
+
 
 </body>
 

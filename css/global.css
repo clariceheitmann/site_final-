@@ -24,7 +24,7 @@
     /* Cores gerais */
     --texto: #441004;
     --texto-claro: #FBF5D2;
-    --fundo: #FBF5D2;
+    --fundo: #FFF9F7;
 
     /* Sombras */
     --sombra-suave: 0 10px 30px rgba(68, 16, 4, 0.12);
@@ -56,6 +56,7 @@ html {
 
 
 body {
+
     min-height: 100vh;
 
     background:
@@ -206,4 +207,46 @@ img {
         font-size: 0.62rem;
     }
 
+}
+
+/* =========================================================
+   DETALHE DECORATIVO
+========================================================= */
+
+.detalhe-linha {
+    position: relative;
+    width: 70px;
+    height: 2px;
+    margin: 20px auto 25px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--dourado, #B88945),
+        transparent
+    );
+}
+
+.detalhe-linha::before,
+.detalhe-linha::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid var(--dourado, #B88945);
+
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.detalhe-linha::before {
+    left: -5px;
+}
+
+.detalhe-linha::after {
+    right: -5px;
 }

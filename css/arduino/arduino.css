@@ -1,0 +1,1286 @@
+/* =========================================================
+   VARIÁVEIS — PADRÃO DO SITE
+========================================================= */
+
+:root {
+
+    --arduino-bordo: #572F48;
+    --arduino-bordo-escuro: #3B2031;
+    --arduino-bordo-profundo: #2A0B0B;
+
+    --arduino-dourado: #B88945;
+    --arduino-dourado-claro: #D7B477;
+
+    --arduino-creme: #FFF9F7;
+    --arduino-creme-escuro: #F6EFE8;
+
+    --arduino-texto: #4E4C5E;
+    --arduino-cinza: #817965;
+
+    --arduino-sombra:
+        0 18px 45px rgba(59, 32, 49, 0.12);
+
+    --arduino-sombra-forte:
+        0 24px 60px rgba(59, 32, 49, 0.18);
+
+    --arduino-transicao:
+        0.3s ease;
+}
+
+/* =========================================================
+   BASE 
+========================================================= */
+
+body {
+
+    margin: 0;
+
+    background:
+        var(--arduino-creme);
+
+    color:
+        var(--arduino-texto);
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.submenu {
+
+    position: sticky;
+
+    top: 82px;
+
+    z-index: 900;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 25px;
+
+    background:
+        rgba(246, 239, 232, 0.96);
+
+    border-bottom:
+        1px solid rgba(184, 137, 69, 0.25);
+
+    box-shadow:
+        0 5px 20px rgba(59, 32, 49, 0.07);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+/* Links */
+
+.submenu a {
+
+    position: relative;
+
+    padding: 8px 18px;
+
+    color:
+        var(--arduino-bordo);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    transition:
+        color var(--arduino-transicao),
+        transform var(--arduino-transicao);
+
+}
+
+
+/* Linha */
+
+.submenu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 2px;
+
+    width: 0;
+    height: 1px;
+
+    background:
+        var(--arduino-dourado);
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width var(--arduino-transicao);
+
+}
+
+
+/* Hover */
+
+.submenu a:hover {
+
+    color:
+        var(--arduino-dourado);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* Ativo */
+
+.submenu a:hover::after,
+.submenu a.ativo::after {
+
+    width: 70%;
+
+}
+
+
+.submenu a.ativo {
+
+    color:
+        var(--arduino-dourado);
+
+}
+
+
+/* =========================================================
+   PÁGINA PRINCIPAL — ARDUINO
+========================================================= */
+
+.hero-arduino {
+
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 7%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--arduino-bordo-profundo),
+            var(--arduino-bordo-escuro)
+        );
+
+    color:
+        var(--arduino-creme);
+}
+
+
+/* Elemento decorativo */
+
+.hero-arduino::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: -190px;
+
+    border:
+        1px solid rgba(215, 180, 119, 0.25);
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.hero-arduino::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -160px;
+    bottom: -160px;
+
+    border:
+        1px solid rgba(215, 180, 119, 0.18);
+
+    border-radius: 50%;
+
+}
+
+
+/* Conteúdo */
+
+.hero-arduino-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    text-align: center;
+
+}
+
+
+/* Destaque */
+
+.hero-arduino .destaque {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--arduino-dourado-claro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Título */
+
+.hero-arduino h1 {
+
+    margin: 0 0 20px;
+
+    color:
+        var(--arduino-creme);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-weight:
+        700;
+
+    font-size:
+        clamp(2.2rem, 5vw, 4rem);
+
+    line-height:
+        1.15;
+}
+
+
+/* Texto */
+
+.hero-arduino p:not(.destaque) {
+
+    max-width: 700px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255, 249, 247, 0.78);
+
+    font-size:
+        1.05rem;
+
+}
+
+
+/* =========================================================
+   CONTEÚDO ARDUINO
+========================================================= */
+
+.arduino-conteudo {
+
+    width:
+        min(1200px, 86%);
+
+    margin:
+        0 auto;
+
+    padding:
+        75px 0 90px;
+
+}
+
+
+/* =========================================================
+   TOPO DOS DESAFIOS
+========================================================= */
+
+.topo-desafio {
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto 60px;
+
+    text-align:
+        center;
+
+}
+
+
+/* Tag */
+
+.tag {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        15px;
+
+    padding:
+        6px 15px;
+
+    border:
+        1px solid rgba(184, 137, 69, 0.45);
+
+    color:
+        var(--arduino-dourado);
+
+    background:
+        rgba(184, 137, 69, 0.08);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-weight:
+        700;
+
+    font-size:
+        0.7rem;
+
+    letter-spacing:
+        0.2em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* Título */
+
+.topo-desafio h1 {
+
+    margin:
+        0 0 20px;
+
+    color:
+        var(--arduino-bordo-escuro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-weight:
+        700;
+
+    font-size:
+        clamp(2rem, 4vw, 3.3rem);
+
+    line-height:
+        1.2;
+}
+
+
+/* Linha decorativa */
+
+.topo-desafio h1::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        70px;
+
+    height:
+        2px;
+
+    margin:
+        18px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--arduino-dourado),
+            transparent
+        );
+
+}
+
+
+/* Texto */
+
+.topo-desafio p {
+
+    max-width:
+        800px;
+
+    margin:
+        12px auto;
+
+    color:
+        var(--arduino-cinza);
+
+    font-size:
+        1rem;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.arduino-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        30px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.arduino-card {
+
+    position:
+        relative;
+
+    padding:
+        38px;
+
+    background:
+        rgba(255, 249, 247, 0.92);
+
+    border:
+        1px solid rgba(184, 137, 69, 0.2);
+
+    box-shadow:
+        var(--arduino-sombra);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform var(--arduino-transicao),
+        box-shadow var(--arduino-transicao),
+        border-color var(--arduino-transicao);
+
+}
+
+
+/* Detalhe lateral */
+
+.arduino-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        3px;
+
+    height:
+        0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--arduino-dourado),
+            var(--arduino-bordo)
+        );
+
+    transition:
+        height 0.45s ease;
+
+}
+
+
+/* Hover */
+
+.arduino-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--arduino-sombra-forte);
+
+    border-color:
+        rgba(184, 137, 69, 0.4);
+
+}
+
+
+.arduino-card:hover::before {
+
+    height:
+        100%;
+
+}
+
+
+/* Cards destaque */
+
+.arduino-card.destaque {
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFF9F7,
+            #F8F0EA
+        );
+
+}
+
+
+/* =========================================================
+   NÚMERO DO CARD
+========================================================= */
+
+.arduino-numero {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        rgba(184, 137, 69, 0.5);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.18em;
+
+}
+
+
+/* =========================================================
+   LINHA DECORATIVA
+========================================================= */
+
+.arduino-linha {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    margin:
+        10px 0 20px;
+
+    background:
+        var(--arduino-dourado);
+
+}
+
+
+/* =========================================================
+   TÍTULOS DOS CARDS
+========================================================= */
+
+.arduino-card h2,
+.arduino-card h3 {
+
+    margin:
+        0 0 15px;
+
+    color:
+        var(--arduino-bordo-escuro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    line-height:
+        1.3;
+
+}
+
+
+.arduino-card h2 {
+
+    font-size:
+        1.35rem;
+
+}
+
+
+.arduino-card h3 {
+
+    font-size:
+        1.2rem;
+
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+.arduino-card p {
+
+    margin:
+        0 0 15px;
+
+    color:
+        var(--arduino-texto);
+
+    font-size:
+        0.96rem;
+
+}
+
+
+.arduino-card p:last-child {
+
+    margin-bottom:
+        0;
+
+}
+
+
+/* =========================================================
+   LISTAS
+========================================================= */
+
+.arduino-card ul {
+
+    margin:
+        10px 0 0;
+
+    padding-left:
+        22px;
+
+}
+
+
+.arduino-card li {
+
+    margin:
+        8px 0;
+
+    color:
+        var(--arduino-texto);
+
+}
+
+
+.arduino-card li::marker {
+
+    color:
+        var(--arduino-dourado);
+
+}
+
+
+/* =========================================================
+   VÍDEOS
+========================================================= */
+
+.video-container {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    margin-top:
+        25px;
+
+    aspect-ratio:
+        16 / 9;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--arduino-bordo-profundo);
+
+    border:
+        1px solid rgba(184, 137, 69, 0.3);
+
+    box-shadow:
+        0 12px 30px rgba(42, 11, 11, 0.15);
+
+}
+
+
+.video-container iframe {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    border:
+        0;
+
+    display:
+        block;
+
+}
+
+
+/* Compatibilidade caso iframe esteja direto no card */
+
+.arduino-card > iframe {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    margin-top:
+        25px;
+
+    border:
+        0;
+
+    background:
+        var(--arduino-bordo-profundo);
+
+}
+
+
+/* =========================================================
+   BLOCO DE CÓDIGO
+========================================================= */
+
+.codigo {
+
+    margin-top:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2A0B0B,
+            #3B2031
+        );
+
+    border-color:
+        rgba(215, 180, 119, 0.25);
+
+}
+
+
+.codigo::before {
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--arduino-dourado-claro),
+            var(--arduino-dourado)
+        );
+
+}
+
+
+.codigo h2 {
+
+    color:
+        var(--arduino-creme);
+
+}
+
+
+.codigo p {
+
+    color:
+        rgba(255, 249, 247, 0.72);
+
+}
+
+
+/* Código */
+
+.codigo pre {
+
+    margin:
+        25px 0 0;
+
+    padding:
+        28px;
+
+    overflow-x:
+        auto;
+
+    background:
+        rgba(0, 0, 0, 0.3);
+
+    border:
+        1px solid rgba(215, 180, 119, 0.18);
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.codigo code {
+
+    color:
+        #F6EFE8;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    font-size:
+        0.88rem;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   EFEITO DE SEPARAÇÃO ENTRE SEÇÕES
+========================================================= */
+
+.arduino-conteudo > .arduino-card {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE ENTRADA
+========================================================= */
+
+.arduino-card,
+.topo-desafio {
+
+    animation:
+        arduinoEntrada 0.7s ease both;
+
+}
+
+
+@keyframes arduinoEntrada {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   ATRASOS DOS ELEMENTOS
+========================================================= */
+
+.arduino-grid:nth-of-type(1) .arduino-card:nth-child(2) {
+
+    animation-delay:
+        0.08s;
+
+}
+
+
+.arduino-grid:nth-of-type(2) .arduino-card:nth-child(1) {
+
+    animation-delay:
+        0.12s;
+
+}
+
+
+.arduino-grid:nth-of-type(2) .arduino-card:nth-child(2) {
+
+    animation-delay:
+        0.18s;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .submenu {
+
+        top:
+            0;
+
+        flex-wrap:
+            wrap;
+
+        padding:
+            10px 15px;
+
+    }
+
+
+    .arduino-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .arduino-conteudo {
+
+        width:
+            90%;
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .arduino-card {
+
+        padding:
+            30px;
+
+    }
+
+
+    .hero-arduino {
+
+        min-height:
+            330px;
+
+        padding:
+            60px 7%;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .submenu {
+
+        gap:
+            2px;
+
+    }
+
+
+    .submenu a {
+
+        padding:
+            7px 9px;
+
+        font-size:
+            0.62rem;
+
+    }
+
+
+    .arduino-conteudo {
+
+        width:
+            92%;
+
+        padding:
+            45px 0 60px;
+
+    }
+
+
+    .topo-desafio {
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .topo-desafio h1 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .topo-desafio p {
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .arduino-card {
+
+        padding:
+            25px 22px;
+
+    }
+
+
+    .arduino-card h2 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    .arduino-card h3 {
+
+        font-size:
+            1.05rem;
+
+    }
+
+
+    .arduino-card p {
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .codigo pre {
+
+        padding:
+            20px;
+
+    }
+
+
+    .codigo code {
+
+        font-size:
+            0.76rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .arduino-card,
+    .topo-desafio {
+
+        animation:
+            none;
+
+    }
+
+    .arduino-card {
+
+        transition:
+            none;
+
+    }
+
+}
+
+/* =========================================================
+   ANIMAÇÃO CONTROLADA PELO JAVASCRIPT
+========================================================= */
+
+.arduino-animar {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.arduino-animar.arduino-visivel {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+.voltar-topo {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--arduino-dourado);
+
+    background:
+        var(--arduino-bordo);
+
+    color:
+        var(--arduino-creme);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.1rem;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    z-index: 1000;
+
+}
+
+
+.voltar-topo.visivel {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.voltar-topo:hover {
+
+    background:
+        var(--arduino-dourado);
+
+}
+

@@ -1,6 +1,6 @@
 /* =========================================================
    SENSORES — CATÁLOGO
-   MESMA ESTÉTICA DA PÁGINA DE ROBÓTICA
+   PADRÃO VISUAL DA SEÇÃO ARDUINO
 ========================================================= */
 
 
@@ -11,19 +11,27 @@
 :root {
     --sensor-bordo: #572F48;
     --sensor-bordo-escuro: #3B2031;
-    --sensor-vinho: #2A0B0B;
+    --sensor-bordo-profundo: #2A0B0B;
 
     --sensor-dourado: #B88945;
     --sensor-dourado-claro: #D7B477;
 
     --sensor-creme: #FFF9F7;
-    --sensor-pergaminho: #F7F0E5;
+    --sensor-creme-escuro: #F6EFE8;
 
-    --sensor-cinza: #817965;
     --sensor-texto: #4E4C5E;
+    --sensor-cinza: #817965;
+
+    --sensor-sombra:
+        0 18px 45px rgba(59, 32, 49, 0.12);
+
+    --sensor-sombra-forte:
+        0 24px 60px rgba(59, 32, 49, 0.18);
+
+    --sensor-transicao: .3s ease;
 
     --sensor-borda:
-        rgba(87, 47, 72, 0.15);
+        rgba(184, 137, 69, 0.25);
 }
 
 
@@ -32,12 +40,7 @@
 ========================================================= */
 
 body {
-    background:
-        linear-gradient(
-            180deg,
-            #FFF9F7 0%,
-            #F8F0E5 100%
-        );
+    background: var(--sensor-creme);
 
     color: var(--sensor-texto);
 }
@@ -50,9 +53,9 @@ body {
 .pagina > .hero {
     position: relative;
 
-    min-height: 560px;
+    min-height: 390px;
 
-    padding: 90px 9%;
+    padding: 70px 7%;
 
     display: grid;
 
@@ -61,59 +64,58 @@ body {
 
     align-items: center;
 
-    gap: 70px;
+    gap: 60px;
 
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 45%,
-            #4A3044,
-            #3B2031 58%,
-            #2A0B0B 100%
+        linear-gradient(
+            135deg,
+            var(--sensor-bordo-profundo),
+            var(--sensor-bordo-escuro)
         );
 
     color: var(--sensor-creme);
 }
 
 
-/* círculo superior direito */
+/* =========================================================
+   DETALHES DO HERO
+========================================================= */
 
 .pagina > .hero::before {
     content: "";
 
     position: absolute;
 
-    width: 440px;
-    height: 440px;
+    width: 420px;
+    height: 420px;
 
     right: -180px;
-    top: -180px;
+    top: -190px;
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.22);
+        rgba(215, 180, 119, 0.25);
 
-    border-radius: 50%;
+    transform: rotate(45deg);
 }
 
-
-/* círculo inferior esquerdo */
 
 .pagina > .hero::after {
     content: "";
 
     position: absolute;
 
-    width: 330px;
-    height: 330px;
+    width: 280px;
+    height: 280px;
 
-    left: -170px;
-    bottom: -180px;
+    left: -160px;
+    bottom: -160px;
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.17);
+        rgba(215, 180, 119, 0.18);
 
     border-radius: 50%;
 }
@@ -131,7 +133,9 @@ body {
 
 
 .pagina > .hero .destaque {
-    margin-bottom: 20px;
+    display: inline-block;
+
+    margin-bottom: 15px;
 
     color: var(--sensor-dourado-claro);
 
@@ -139,45 +143,52 @@ body {
         "Cinzel",
         serif;
 
-    font-size: 0.72rem;
+    font-size: .75rem;
 
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: 0.25em;
+    letter-spacing: .25em;
 
     text-transform: uppercase;
 }
 
 
+/* =========================================================
+   TÍTULO DO HERO
+========================================================= */
+
 .pagina > .hero h2 {
     margin: 0;
 
-    color: #FFF9F7;
+    color: var(--sensor-creme);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
     font-size:
-        clamp(3rem, 5vw, 5rem);
+        clamp(2.2rem, 5vw, 4rem);
 
-    font-weight: 400;
+    font-weight: 700;
 
-    line-height: 1.05;
+    line-height: 1.15;
 }
 
 
-/* linha dourada */
+/* =========================================================
+   LINHA DOURADA
+========================================================= */
 
 .pagina > .hero h2::after {
     content: "";
 
     display: block;
 
-    width: 85px;
+    width: 70px;
     height: 2px;
 
-    margin-top: 28px;
+    margin:
+        18px 0 25px;
 
     background:
         linear-gradient(
@@ -189,21 +200,26 @@ body {
 }
 
 
+/* =========================================================
+   TEXTO DO HERO
+========================================================= */
+
 .pagina > .hero > div > p:last-child {
     max-width: 650px;
 
-    margin-top: 28px;
+    margin-top: 0;
 
     color:
-        rgba(251, 245, 210, 0.78);
+        rgba(255, 249, 247, 0.78);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
 
-    line-height: 1.9;
+    line-height: 1.7;
 }
 
 
@@ -233,7 +249,7 @@ body {
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.25);
+        rgba(215, 180, 119, 0.25);
 
     box-shadow:
         0 20px 50px
@@ -252,7 +268,7 @@ body {
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.18);
+        rgba(215, 180, 119, 0.18);
 
     pointer-events: none;
 }
@@ -276,7 +292,7 @@ body {
         );
 
     transition:
-        transform 0.5s ease;
+        transform .5s ease;
 }
 
 
@@ -293,13 +309,14 @@ body {
     margin-top: 18px;
 
     color:
-        rgba(251, 245, 210, 0.65);
+        rgba(255, 249, 247, 0.65);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.76rem;
+    font-size: .76rem;
 
     font-style: italic;
 
@@ -312,16 +329,18 @@ body {
 ========================================================= */
 
 #catalago {
-    width: min(1200px, 88%);
+    width: min(1200px, 90%);
 
-    margin: 90px auto;
+    margin: 0 auto;
+
+    padding: 100px 0;
 
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 25px;
 }
 
 
@@ -335,22 +354,21 @@ body {
     padding: 38px;
 
     background:
-        rgba(255, 249, 247, 0.92);
+        rgba(255, 249, 247, 0.86);
 
     border:
         1px solid
-        var(--sensor-borda);
+        rgba(87, 47, 72, 0.15);
 
     box-shadow:
-        0 15px 40px
-        rgba(68, 16, 4, 0.07);
+        var(--sensor-sombra);
 
     overflow: hidden;
 
     transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
+        transform var(--sensor-transicao),
+        box-shadow var(--sensor-transicao),
+        border-color var(--sensor-transicao);
 }
 
 
@@ -377,15 +395,37 @@ body {
 }
 
 
+/* detalhe geométrico */
+
+.sensor-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -65px;
+    top: -65px;
+
+    border:
+        1px solid
+        rgba(184, 137, 69, 0.12);
+
+    transform: rotate(45deg);
+
+    pointer-events: none;
+}
+
+
 .sensor-card:hover {
     transform: translateY(-7px);
 
     border-color:
-        rgba(184, 137, 69, 0.38);
+        rgba(184, 137, 69, 0.40);
 
     box-shadow:
-        0 25px 55px
-        rgba(68, 16, 4, 0.12);
+        var(--sensor-sombra-forte);
 }
 
 
@@ -394,6 +434,10 @@ body {
 ========================================================= */
 
 .numero-sensor {
+    position: relative;
+
+    z-index: 2;
+
     margin: 0 0 12px;
 
     color: var(--sensor-dourado);
@@ -402,11 +446,11 @@ body {
         "Cinzel",
         serif;
 
-    font-size: 0.68rem;
+    font-size: .68rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.25em;
+    letter-spacing: .25em;
 }
 
 
@@ -415,19 +459,23 @@ body {
 ========================================================= */
 
 .sensor-card h3 {
+    position: relative;
+
+    z-index: 2;
+
     margin: 0 0 25px;
 
     color: var(--sensor-bordo);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
-    font-size: 1.55rem;
+    font-size: 1.45rem;
 
-    font-weight: 500;
+    font-weight: 700;
 
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 
@@ -452,8 +500,8 @@ body {
     background:
         linear-gradient(
             145deg,
-            #F7F0E5,
-            #EFE5D6
+            #F6EFE8,
+            #FFF9F7
         );
 
     border:
@@ -487,9 +535,11 @@ body {
     z-index: 2;
 
     width: auto;
+
     max-width: 82%;
 
     height: auto;
+
     max-height: 175px;
 
     object-fit: contain;
@@ -497,11 +547,11 @@ body {
     filter:
         drop-shadow(
             0 12px 12px
-            rgba(68, 16, 4, 0.14)
+            rgba(59, 32, 49, 0.14)
         );
 
     transition:
-        transform 0.4s ease;
+        transform .4s ease;
 }
 
 
@@ -515,6 +565,10 @@ body {
 ========================================================= */
 
 .sensor-card .categoria {
+    position: relative;
+
+    z-index: 2;
+
     margin-bottom: 25px;
 
     padding-bottom: 18px;
@@ -527,9 +581,10 @@ body {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.88rem;
+    font-size: .88rem;
 }
 
 
@@ -540,9 +595,9 @@ body {
         "Cinzel",
         serif;
 
-    font-size: 0.72rem;
+    font-size: .72rem;
 
-    letter-spacing: 0.04em;
+    letter-spacing: .04em;
 }
 
 
@@ -551,6 +606,10 @@ body {
 ========================================================= */
 
 .informacao-sensor {
+    position: relative;
+
+    z-index: 2;
+
     color: var(--sensor-texto);
 }
 
@@ -565,11 +624,11 @@ body {
         "Cinzel",
         serif;
 
-    font-size: 0.78rem;
+    font-size: .78rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
 
     text-transform: uppercase;
 }
@@ -587,9 +646,10 @@ body {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.9rem;
+    font-size: .9rem;
 
     line-height: 1.75;
 }
@@ -610,9 +670,10 @@ body {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.88rem;
+    font-size: .88rem;
 
     line-height: 1.6;
 }
@@ -623,12 +684,12 @@ body {
 }
 
 
-/* =========================================================
-   DESTAQUES DENTRO DAS INFORMAÇÕES
-========================================================= */
-
 .informacao-sensor strong {
     color: var(--sensor-bordo);
+
+    font-family:
+        "Cinzel",
+        serif;
 }
 
 
@@ -639,13 +700,11 @@ body {
 .comparativo {
     position: relative;
 
-    /* IMPORTANTE:
-       faz a tabela ocupar toda a largura do grid */
     grid-column: 1 / -1;
 
     width: 100%;
 
-    margin: 90px 0 30px;
+    margin: 65px 0 0;
 
     padding: 70px 60px;
 
@@ -654,24 +713,23 @@ body {
     background:
         linear-gradient(
             145deg,
-            #3B2031,
-            #2A0B0B
+            var(--sensor-bordo-escuro),
+            var(--sensor-bordo-profundo)
         );
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.22);
+        rgba(215, 180, 119, 0.22);
 
     box-shadow:
-        0 25px 60px
-        rgba(42, 11, 11, 0.15);
+        var(--sensor-sombra-forte);
 
     overflow: hidden;
 }
 
 
 /* =========================================================
-   DECORAÇÕES
+   DECORAÇÕES DA TABELA
 ========================================================= */
 
 .comparativo::before {
@@ -687,7 +745,7 @@ body {
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.17);
+        rgba(215, 180, 119, 0.17);
 
     border-radius: 50%;
 }
@@ -706,14 +764,14 @@ body {
 
     border:
         1px solid
-        rgba(239, 187, 85, 0.12);
+        rgba(215, 180, 119, 0.12);
 
     border-radius: 50%;
 }
 
 
 /* =========================================================
-   TÍTULO
+   TÍTULO DA TABELA
 ========================================================= */
 
 .comparativo .titulo-secao {
@@ -730,19 +788,21 @@ body {
 
 
 .comparativo .titulo-secao .destaque {
+    display: block;
+
     margin-bottom: 15px;
 
-    color: #D7B477;
+    color: var(--sensor-dourado-claro);
 
     font-family:
         "Cinzel",
         serif;
 
-    font-size: 0.68rem;
+    font-size: .68rem;
 
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: 0.25em;
+    letter-spacing: .25em;
 
     text-transform: uppercase;
 }
@@ -751,18 +811,18 @@ body {
 .comparativo .titulo-secao h2 {
     margin: 0;
 
-    color: #FFF9F7;
+    color: var(--sensor-creme);
 
     font-family:
-        "Playfair Display",
+        "Cinzel",
         serif;
 
     font-size:
-        clamp(2.2rem, 4vw, 3.5rem);
+        clamp(2rem, 4vw, 3rem);
 
-    font-weight: 400;
+    font-weight: 700;
 
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
 
@@ -772,7 +832,7 @@ body {
     display: block;
 
     width: 75px;
-    height: 1px;
+    height: 2px;
 
     margin: 22px auto;
 
@@ -780,7 +840,7 @@ body {
         linear-gradient(
             to right,
             transparent,
-            #B88945,
+            var(--sensor-dourado),
             transparent
         );
 }
@@ -792,13 +852,14 @@ body {
     margin: 0 auto;
 
     color:
-        rgba(251, 245, 210, 0.70);
+        rgba(255, 249, 247, 0.70);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.92rem;
+    font-size: .92rem;
 
     line-height: 1.8;
 }
@@ -839,8 +900,6 @@ body {
 }
 
 
-/* CABEÇALHO */
-
 .tabela-sensores thead {
     background:
         rgba(184, 137, 69, 0.16);
@@ -850,17 +909,17 @@ body {
 .tabela-sensores th {
     padding: 18px 20px;
 
-    color: #D7B477;
+    color: var(--sensor-dourado-claro);
 
     font-family:
         "Cinzel",
         serif;
 
-    font-size: 0.68rem;
+    font-size: .68rem;
 
     font-weight: 600;
 
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
 
     text-align: left;
 
@@ -868,53 +927,47 @@ body {
 
     border-bottom:
         1px solid
-        rgba(239, 187, 85, 0.30);
+        rgba(215, 180, 119, 0.30);
 }
 
-
-/* CÉLULAS */
 
 .tabela-sensores td {
     padding: 17px 20px;
 
     color:
-        rgba(251, 245, 210, 0.76);
+        rgba(255, 249, 247, 0.76);
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
-    font-size: 0.86rem;
+    font-size: .86rem;
 
     line-height: 1.55;
 
     border-bottom:
         1px solid
-        rgba(251, 245, 210, 0.09);
+        rgba(255, 249, 247, 0.09);
 
     vertical-align: middle;
 }
 
 
-/* LINHAS */
-
 .tabela-sensores tbody tr {
     transition:
-        background 0.3s ease;
+        background var(--sensor-transicao);
 }
 
 
 .tabela-sensores tbody tr:hover {
     background:
-        rgba(239, 187, 85, 0.07);
+        rgba(184, 137, 69, 0.07);
 }
 
 
-/* DESTAQUES */
-
 .tabela-sensores td strong {
-    color:
-        #D7B477;
+    color: var(--sensor-dourado-claro);
 
     font-weight: 600;
 }
@@ -955,13 +1008,127 @@ body {
 
 
 /* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+.voltar-topo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 900;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(184, 137, 69, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--sensor-bordo),
+            var(--sensor-bordo-escuro)
+        );
+
+    color: var(--sensor-creme);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(59, 32, 49, 0.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.voltar-topo.visivel {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.voltar-topo:hover {
+    background: var(--sensor-dourado);
+
+    color: var(--sensor-bordo-profundo);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
    RESPONSIVIDADE
 ========================================================= */
+
+@media (max-width: 950px) {
+
+    .pagina > .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 75px 8%;
+
+        text-align: center;
+    }
+
+    .pagina > .hero h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina > .hero > div > p:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto-sensor {
+        width: 100%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    #catalago {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 @media (max-width: 900px) {
 
     .comparativo {
-        padding: 55px 30px;
+        padding:
+            55px 30px;
     }
 
     .tabela-sensores {
@@ -972,10 +1139,35 @@ body {
 
 @media (max-width: 700px) {
 
-    .comparativo {
-        width: 100%;
+    .pagina > .hero {
+        padding:
+            65px 6%;
+    }
 
-        margin-top: 65px;
+    .pagina > .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    #catalago {
+        width: 92%;
+
+        padding: 75px 0;
+    }
+
+    .sensor-card {
+        padding:
+            28px 24px;
+    }
+
+    .imagem-sensor {
+        height: 200px;
+    }
+
+    .comparativo {
+        width: 92%;
+
+        margin:
+            65px auto 0;
 
         padding:
             45px 20px;
@@ -992,179 +1184,6 @@ body {
     .tabela-sensores {
         min-width: 720px;
     }
-
-    .tabela-sensores th,
-    .tabela-sensores td {
-        padding:
-            14px 15px;
-    }
-}
-
-
-/* =========================================================
-   BOTÃO VOLTAR AO TOPO
-========================================================= */
-
-.voltar-topo {
-    position: fixed;
-
-    right: 30px;
-    bottom: 30px;
-
-    z-index: 900;
-
-    width: 48px;
-    height: 48px;
-
-    border:
-        1px solid
-        rgba(184, 137, 69, 0.45);
-
-    background:
-        linear-gradient(
-            145deg,
-            #572F48,
-            #3B2031
-        );
-
-    color: var(--sensor-creme);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 0.04em;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 8px 25px
-        rgba(42, 11, 11, 0.20);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transform:
-        translateY(15px);
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease,
-        transform 0.3s ease,
-        background 0.3s ease;
-}
-
-
-.voltar-topo.visivel {
-    opacity: 1;
-
-    visibility: visible;
-
-    transform:
-        translateY(0);
-}
-
-
-.voltar-topo:hover {
-    background:
-        linear-gradient(
-            145deg,
-            #6A3A57,
-            #572F48
-        );
-
-    transform:
-        translateY(-3px);
-}
-
-
-/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
-
-@media (max-width: 950px) {
-
-    .pagina > .hero {
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-
-        padding:
-            85px 8%;
-
-        text-align: center;
-    }
-
-    .pagina > .hero h2::after {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .pagina > .hero > div > p:last-child {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .foto-sensor {
-        max-width: 650px;
-
-        width: 100%;
-
-        margin: 0 auto;
-    }
-
-    #catalago {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .pagina > .hero {
-        padding:
-            70px 6%;
-    }
-
-    .pagina > .hero h2 {
-        font-size: 2.8rem;
-    }
-
-    #catalago {
-        width: 92%;
-
-        margin-top: 65px;
-    }
-
-    .sensor-card {
-        padding: 28px 24px;
-    }
-
-    .imagem-sensor {
-        height: 200px;
-    }
-
-    .comparativo {
-        width: 92%;
-
-        padding:
-            45px 25px;
-
-        margin:
-            80px auto;
-    }
-
-    .tabela-sensores {
-        min-width: 650px;
-    }
-
-    .voltar-topo {
-        right: 18px;
-        bottom: 18px;
-    }
 }
 
 
@@ -1175,9 +1194,9 @@ body {
     }
 
     .pagina > .hero .destaque {
-        font-size: 0.62rem;
+        font-size: .62rem;
 
-        letter-spacing: 0.18em;
+        letter-spacing: .18em;
     }
 
     .sensor-card h3 {
@@ -1193,16 +1212,17 @@ body {
     }
 }
 
+
 /* =========================================================
    SUBNAVBAR — SENSORES
 ========================================================= */
 
 .submenu {
-    position: relative;
+    position: sticky;
+
+    top: 82px;
 
     z-index: 900;
-
-    width: 100%;
 
     min-height: 58px;
 
@@ -1212,24 +1232,22 @@ body {
 
     justify-content: center;
 
-    gap: 42px;
+    gap: 8px;
 
-    padding: 0 30px;
+    padding: 12px 25px;
 
     background:
-        linear-gradient(
-            to bottom,
-            #FFF9F7,
-            #F7F0E5
-        );
+        rgba(246, 239, 232, 0.96);
 
     border-bottom:
         1px solid
-        rgba(87, 47, 72, 0.10);
+        rgba(184, 137, 69, 0.25);
 
     box-shadow:
         0 5px 20px
-        rgba(68, 16, 4, 0.06);
+        rgba(59, 32, 49, 0.07);
+
+    backdrop-filter: blur(12px);
 }
 
 
@@ -1240,7 +1258,7 @@ body {
 .submenu a {
     position: relative;
 
-    padding: 19px 4px 17px;
+    padding: 8px 18px;
 
     color: var(--sensor-bordo);
 
@@ -1248,20 +1266,19 @@ body {
         "Cinzel",
         serif;
 
-    font-size: 0.68rem;
+    font-size: .72rem;
 
     font-weight: 600;
 
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
 
     text-decoration: none;
 
     transition:
-        color 0.3s ease;
+        color var(--sensor-transicao),
+        transform var(--sensor-transicao);
 }
 
-
-/* linha dourada */
 
 .submenu a::after {
     content: "";
@@ -1269,7 +1286,7 @@ body {
     position: absolute;
 
     left: 50%;
-    bottom: 10px;
+    bottom: 2px;
 
     width: 0;
     height: 1px;
@@ -1281,62 +1298,48 @@ body {
         translateX(-50%);
 
     transition:
-        width 0.3s ease;
+        width var(--sensor-transicao);
 }
 
 
 .submenu a:hover {
-    color:
-        var(--sensor-dourado);
+    color: var(--sensor-dourado);
+
+    transform:
+        translateY(-1px);
 }
 
 
-.submenu a:hover::after {
-    width: 70%;
-}
-
-
-/* =========================================================
-   LINK ATIVO
-========================================================= */
-
-.submenu a.ativo {
-    color:
-        var(--sensor-dourado);
-}
-
-
+.submenu a:hover::after,
 .submenu a.ativo::after {
     width: 70%;
 }
 
 
+.submenu a.ativo {
+    color: var(--sensor-dourado);
+}
+
+
 /* =========================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE DA SUBNAVBAR
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     .submenu {
-        gap: 22px;
+        gap: 3px;
 
         padding:
-            0 15px;
+            10px 15px;
 
-        overflow-x: auto;
-
-        justify-content: flex-start;
-
-        scrollbar-width: none;
-    }
-
-    .submenu::-webkit-scrollbar {
-        display: none;
+        flex-wrap: wrap;
     }
 
     .submenu a {
-        flex-shrink: 0;
+        font-size: .64rem;
 
-        font-size: 0.62rem;
+        padding:
+            8px 9px;
     }
 }

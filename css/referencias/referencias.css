@@ -1,0 +1,818 @@
+/* =========================================================
+   REFERÊNCIAS — INDÚSTRIA 4.0
+========================================================= */
+
+:root {
+    --ref-bordo: #572F48;
+    --ref-bordo-escuro: #3B2031;
+    --ref-bordo-profundo: #2A0B0B;
+
+    --ref-dourado: #B88945;
+    --ref-dourado-claro: #D7B477;
+
+    --ref-creme: #FFF9F7;
+    --ref-creme-escuro: #F6EFE8;
+
+    --ref-texto: #4E4C5E;
+    --ref-cinza: #817965;
+
+    --ref-sombra:
+        0 18px 45px rgba(59, 32, 49, 0.12);
+
+    --ref-sombra-forte:
+        0 24px 60px rgba(59, 32, 49, 0.18);
+
+    --ref-transicao: 0.3s ease;
+}
+
+
+/* =========================================================
+   SUBNAVBAR
+========================================================= */
+
+.submenu {
+    position: relative;
+    z-index: 900;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F6EFE8,
+            #FFF9F7
+        );
+
+    border-bottom: 1px solid rgba(184, 137, 69, 0.35);
+
+    box-shadow:
+        0 5px 18px rgba(59, 32, 49, 0.08);
+}
+
+.submenu a {
+    position: relative;
+
+    padding: 15px 24px;
+
+    color: var(--ref-bordo);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    transition:
+        color var(--ref-transicao),
+        background var(--ref-transicao);
+}
+
+.submenu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--ref-dourado);
+
+    transform: translateX(-50%);
+
+    transition: width var(--ref-transicao);
+}
+
+.submenu a:hover {
+    color: var(--ref-dourado);
+}
+
+.submenu a:hover::after,
+.submenu a.ativo::after {
+    width: 55%;
+}
+
+.submenu a.ativo {
+    color: var(--ref-dourado);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-referencias {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 70px 7%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-bordo-profundo),
+            var(--ref-bordo-escuro)
+        );
+
+    color: var(--ref-creme);
+}
+
+
+/* =========================================================
+   DETALHES GEOMÉTRICOS
+========================================================= */
+
+.hero-referencias::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: -190px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.25);
+
+    transform: rotate(45deg);
+}
+
+
+.hero-referencias::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -160px;
+    bottom: -160px;
+
+    border:
+        1px solid
+        rgba(215, 180, 119, 0.18);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.hero-referencias-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, 90%);
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.hero-referencias .destaque {
+    margin: 0 0 15px;
+
+    color:
+        var(--ref-dourado-claro);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.hero-referencias h1 {
+    margin: 0;
+
+    max-width: 850px;
+
+    color:
+        var(--ref-creme);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+.hero-referencias p:last-child {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color:
+        rgba(255, 249, 247, 0.78);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ÁREA DE REFERÊNCIAS
+========================================================= */
+
+.referencias-conteudo {
+    position: relative;
+
+    padding: 90px 7% 110px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFF9F7 0%,
+            #F6EFE8 100%
+        );
+}
+
+
+/* =========================================================
+   TÍTULO DA SEÇÃO
+========================================================= */
+
+.referencias-titulo {
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.referencias-titulo span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--ref-dourado);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+.referencias-titulo h2 {
+    margin: 0 0 18px;
+
+    color: var(--ref-bordo-escuro);
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.referencias-titulo p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--ref-cinza);
+
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.referencias-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.referencia-card {
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 42px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #F8F0EA
+        );
+
+    border: 1px solid rgba(184, 137, 69, 0.25);
+
+    box-shadow: var(--ref-sombra);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.referencia-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -90px;
+    top: -90px;
+
+    border: 1px solid rgba(184, 137, 69, 0.18);
+
+    transform: rotate(45deg);
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.referencia-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--ref-bordo),
+            var(--ref-dourado),
+            transparent
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+}
+
+.referencia-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(184, 137, 69, 0.55);
+
+    box-shadow: var(--ref-sombra-forte);
+}
+
+.referencia-card:hover::before {
+    transform:
+        rotate(45deg)
+        scale(1.15);
+
+    border-color:
+        rgba(184, 137, 69, 0.3);
+}
+
+.referencia-card:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.numero-referencia {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 25px;
+
+    color: var(--ref-creme);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-bordo),
+            var(--ref-bordo-escuro)
+        );
+
+    border-radius: 50%;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(59, 32, 49, 0.2);
+}
+
+
+/* =========================================================
+   LINHA DECORATIVA
+========================================================= */
+
+.referencia-linha {
+    width: 55px;
+    height: 2px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--ref-dourado),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   TÍTULO DO CARD
+========================================================= */
+
+.referencia-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 18px;
+
+    color: var(--ref-bordo-escuro);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1.35rem;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.referencia-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 500px;
+
+    margin: 0 0 30px;
+
+    color: var(--ref-texto);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.botao-referencia {
+    position: relative;
+    z-index: 3;
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 20px;
+
+    color: var(--ref-creme);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-bordo),
+            var(--ref-bordo-escuro)
+        );
+
+    border: 1px solid var(--ref-bordo);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 20px rgba(59, 32, 49, 0.15);
+
+    transition:
+        transform var(--ref-transicao),
+        box-shadow var(--ref-transicao),
+        background var(--ref-transicao);
+}
+
+.botao-referencia span {
+    color: var(--ref-dourado-claro);
+
+    font-size: 1rem;
+
+    transition:
+        transform var(--ref-transicao);
+}
+
+.botao-referencia:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-dourado),
+            #9A6D32
+        );
+
+    border-color: var(--ref-dourado);
+
+    box-shadow:
+        0 12px 28px rgba(59, 32, 49, 0.2);
+}
+
+.botao-referencia:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+.voltar-topo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 1000;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--ref-dourado);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-bordo),
+            var(--ref-bordo-escuro)
+        );
+
+    color: var(--ref-creme);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(59, 32, 49, 0.22);
+
+    transition:
+        transform var(--ref-transicao),
+        background var(--ref-transicao),
+        opacity var(--ref-transicao);
+}
+
+.voltar-topo:hover {
+    transform: translateY(-5px);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--ref-dourado),
+            #9A6D32
+        );
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE ENTRADA
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .referencias-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+    .hero-referencias {
+        min-height: 380px;
+
+        padding: 70px 7%;
+    }
+
+    .referencias-conteudo {
+        padding: 70px 6% 85px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .submenu {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding: 0 10px;
+
+        scrollbar-width: none;
+    }
+
+    .submenu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .submenu a {
+        flex-shrink: 0;
+
+        padding: 13px 16px;
+
+        font-size: 0.65rem;
+    }
+
+    .hero-referencias {
+        min-height: 350px;
+
+        padding: 55px 7%;
+    }
+
+    .hero-referencias h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-referencias p:last-child {
+        font-size: 0.95rem;
+    }
+
+    .referencias-conteudo {
+        padding: 60px 6% 70px;
+    }
+
+    .referencia-card {
+        min-height: auto;
+
+        padding: 32px 27px;
+    }
+
+    .referencia-card h3 {
+        font-size: 1.15rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero-referencias h1 {
+        font-size: 2.35rem;
+    }
+
+    .referencias-titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    .referencia-card {
+        padding: 28px 22px;
+    }
+
+    .botao-referencia {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .voltar-topo {
+        right: 16px;
+        bottom: 16px;
+
+        width: 44px;
+        height: 44px;
+    }
+}

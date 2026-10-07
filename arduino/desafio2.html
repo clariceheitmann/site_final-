@@ -1,40 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Desafio 2 - Estacionamento Inteligente</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 2 | Estacionamento Inteligente</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animacoes.css">
+
+
+    <!-- CSS específico do Arduino -->
+    <link rel="stylesheet" href="../css/arduino/arduino.css">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../assets/icon.SA.png">
+
 </head>
+
 
 <body>
 
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="index.html">Arduino</a>
-            <a href="../robos/index.html">Robôs</a>
-            <a href="../sensores/index.html">Sensores</a>
-            <a href="../perguntas.html">Perguntas</a>
-            <a href="../referencias/index.html">Referências</a>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <a href="../index.html" class="logo-link">
+
+                <span class="logo-detalhe">✦</span>
+
+                Indústria 4.0
+
+            </a>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a href="../index.html" class="nav-link">
+                Início
+            </a>
+
+            <a href="../robos/index.html" class="nav-link">
+                Robôs
+            </a>
+
+            <a href="index.html" class="nav-link ativo">
+                Arduino
+            </a>
+
+            <a href="../sensores/index.html" class="nav-link">
+                Sensores
+            </a>
+
+            <a href="../perguntas/index.html" class="nav-link">
+                Perguntas
+            </a>
+
+            <a href="../referencias/index.html" class="nav-link">
+                Referências
+            </a>
+
         </nav>
+
+
+        <div class="detalhe-navbar"></div>
+
     </header>
 
+
+
+    <!-- =====================================================
+         SUBMENU — ARDUINO
+    ====================================================== -->
+
     <div class="submenu">
-        <a href="index.html">Visão Geral</a>
-        <a href="desafio1.html">Desafio 1</a>
-        <a href="desafio2.html">Desafio 2</a>
-        <a href="desafio3.html">Desafio 3</a>
+
+        <a href="index.html">
+            Introdução
+        </a>
+
+        <a href="desafio1.html">
+            Desafio 1
+        </a>
+
+        <a href="desafio2.html" class="ativo">
+            Desafio 2
+        </a>
+
+        <a href="desafio3.html">
+            Desafio 3
+        </a>
+
     </div>
 
-    <section class="pagina-desafio">
 
-        <div class="topo-desafio">
-            <span class="tag">Desafio 2</span>
-            <h1>Estacionamento Inteligente</h1>
+
+    <!-- =====================================================
+         CONTEÚDO DO DESAFIO
+    ====================================================== -->
+
+    <main class="arduino-conteudo">
+
+
+        <!-- =================================================
+             TOPO DO DESAFIO
+        ================================================== -->
+
+        <section class="topo-desafio">
+
+            <span class="tag">
+                Desafio 2
+            </span>
+
+            <h1>
+                Estacionamento Inteligente
+            </h1>
+
             <p>
                 Neste desafio, o objetivo foi desenvolver um sistema de
                 estacionamento utilizando um Arduino, um sensor
@@ -46,11 +143,30 @@
                 o comportamento do LED, criando um alerta visual para
                 indicar a aproximação de um veículo.
             </p>
-        </div>
 
-        <div class="grid-duplo">
-            <div class="card destaque">
-                <h2>Proposta do Desafio</h2>
+        </section>
+
+
+
+        <!-- =================================================
+             PROPOSTA + COMPONENTES
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    01
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Proposta do Desafio
+                </h2>
+
                 <p>
                     O circuito deveria utilizar um sensor ultrassônico para
                     medir a distância de um objeto. O potenciômetro deveria
@@ -62,31 +178,90 @@
                     A partir dessa configuração, o LED deveria indicar
                     visualmente a proximidade do objeto.
                 </p>
-            </div>
 
-            <div class="card destaque">
-                <h2>Componentes</h2>
+            </article>
+
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    02
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Componentes
+                </h2>
+
                 <ul>
-                    <li>Arduino</li>
-                    <li>Sensor Ultrassônico</li>
-                    <li>LED</li>
-                    <li>Potenciômetro</li>
+
+                    <li>
+                        Arduino
+                    </li>
+
+                    <li>
+                        Sensor Ultrassônico
+                    </li>
+
+                    <li>
+                        LED
+                    </li>
+
+                    <li>
+                        Potenciômetro
+                    </li>
+
                 </ul>
-            </div>
-        </div>
 
-        <div class="grid-duplo">
+            </article>
 
-            <div class="card destaque">
-                <h3>Como o sistema funciona</h3>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FUNCIONAMENTO + DESAFIO ADICIONAL
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    03
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h3>
+                    Como o sistema funciona
+                </h3>
+
                 <p>
                     O comportamento do LED muda conforme a distância medida
                     pelo sensor e o limite configurado no potenciômetro.
                 </p>
-            </div>
 
-            <div class="card destaque">
-                <h3>Desafio adicional</h3>
+            </article>
+
+
+
+            <article class="arduino-card destaque">
+
+                <span class="arduino-numero">
+                    04
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h3>
+                    Desafio adicional
+                </h3>
+
                 <p>
                     Além do funcionamento básico, foi proposto modificar o
                     programa para que o LED piscasse cada vez mais rapidamente
@@ -98,38 +273,109 @@
                     seria o alerta visual, simulando um sistema de assistência
                     para estacionamento.
                 </p>
-            </div>
 
-        </div>
+            </article>
 
-        <div class="grid-duplo">
-            <div class="card">
-                <h2>Simulação</h2>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VÍDEOS
+        ================================================== -->
+
+        <section class="arduino-grid">
+
+
+            <!-- SIMULAÇÃO -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    05
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Simulação
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto dentro da plataforma Tinkercard.
                 </p>
-                <iframe src="https://www.youtube.com/embed/YMUV6nTJbcI?si=k57RYKaxH3KH7V-B"></iframe>
-            </div>
 
-            <div class="card">
-                <h2>Aplicação real</h2>
+                <div class="video-container">
+
+                    <iframe src="https://www.youtube.com/embed/YMUV6nTJbcI?si=k57RYKaxH3KH7V-B"
+                        title="Simulação do Desafio 2" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- APLICAÇÃO REAL -->
+
+            <article class="arduino-card">
+
+                <span class="arduino-numero">
+                    06
+                </span>
+
+                <div class="arduino-linha"></div>
+
+                <h2>
+                    Aplicação real
+                </h2>
+
                 <p>
                     Vídeo demonstrando o funcionamento do projeto fora da simulação,
                     com sua aplicação prática.
                 </p>
-                <iframe src="https://www.youtube.com/embed/q3nLmZelKnI"></iframe>
-            </div>
-        </div>
 
-        <div class="card codigo">
-            <h2>Código</h2>
+                <div class="video-container">
+
+                    <iframe src="https://www.youtube.com/embed/q3nLmZelKnI" title="Aplicação real do Desafio 2"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CÓDIGO
+        ================================================== -->
+
+        <section class="arduino-card codigo">
+
+            <span class="arduino-numero">
+                07
+            </span>
+
+            <div class="arduino-linha"></div>
+
+            <h2>
+                Código
+            </h2>
+
             <p>
                 O código é responsável por realizar a leitura da distância,
                 interpretar o valor configurado pelo potenciômetro e
                 controlar o LED de acordo com a proximidade do objeto.
             </p>
-            <pre><code>
-const int trig = 9;
+
+
+            <pre><code>const int trig = 9;
 const int echo = 10;
 const int led = 13;
 
@@ -149,9 +395,9 @@ void loop(){
   long duracao = pulseIn(echo, HIGH);
   int distancia = duracao * 0.034 / 2;
 
-  if(distancia < 10){
+  if(distancia &lt; 10){
     digitalWrite(led, HIGH);
-  } else if(distancia < 20){
+  } else if(distancia &lt; 20){
     digitalWrite(led, HIGH);
     delay(300);
     digitalWrite(led, LOW);
@@ -160,9 +406,137 @@ void loop(){
   }
 }
 </code></pre>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <div class="rodape-linha"></div>
+
+
+        <div class="rodape-conteudo">
+
+
+            <div class="rodape-marca">
+
+                <div class="rodape-simbolo">
+                    ✦
+                </div>
+
+                <h2>
+                    Indústria 4.0
+                </h2>
+
+                <p>
+                    Projetos de automação utilizando Arduino,
+                    sensores e lógica de programação.
+                </p>
+
+            </div>
+
+
+
+            <div class="rodape-links">
+
+                <span>
+                    NAVEGAÇÃO
+                </span>
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../robos/index.html">
+                    Robôs
+                </a>
+
+                <a href="index.html">
+                    Arduino
+                </a>
+
+                <a href="../sensores/index.html">
+                    Sensores
+                </a>
+
+                <a href="../perguntas/index.html">
+                    Perguntas
+                </a>
+
+                <a href="../referencias/index.html">
+                    Referências
+                </a>
+
+            </div>
+
+
+
+            <div class="rodape-projeto">
+
+                <span>SOBRE O PROJETO</span>
+
+                <p>
+                    Projeto acadêmico dedicado ao estudo das tecnologias
+                    presentes na Indústria 4.0, incluindo robótica,
+                    automação, sensores e sistemas inteligentes.
+                </p><br>
+
+                <span>
+                    DESENVOLVIMENTO
+                </span>
+
+                <p>
+                    Desenvolvido por
+                    <strong>Clarice Heitmann - 3B</strong>
+                </p>
+
+                <p>
+
+                    <a href="https://github.com/clariceheitmann" target="_blank" rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
         </div>
 
-    </section>
+
+
+        <div class="rodape-final">
+
+            <span>
+                &copy; 2026 - Internet das Coisas
+            </span>
+
+            <span>
+                Indústria 4.0
+            </span>
+
+        </div>
+
+    </footer>
+
+    <button id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <script src="../js/arduino.js"></script>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/arduino.js"></script>
 
 </body>
 
